@@ -25,40 +25,40 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_v {
+        combo_k {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            bindings = <&kp V>;
+            bindings = <&kp K>;
             layers = <DEF_L>;
         };
-        combo_q {
+        combo_z {
             timeout-ms = <50>;
-            key-positions = <1 3>;
-            bindings = <&kp Q>;
+            key-positions = <20 21>;
+            bindings = <&kp Z>;
             layers = <DEF_L>;
         };
-        combo_x {
+        combo_j {
             timeout-ms = <50>;
-            key-positions = <20 22>;
-            bindings = <&kp X>;
+            key-positions = <7 8>;
+            bindings = <&kp J>;
             layers = <DEF_L>;
         };
-        combo_upper_v {
+        combo_upper_k {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            bindings = <&kp LS(V)>;
+            bindings = <&kp LS(K)>;
             layers = <UPP_L>;
         };
-        combo_upper_q {
+        combo_upper_z {
             timeout-ms = <50>;
-            key-positions = <1 3>;
-            bindings = <&kp LS(Q)>;
+            key-positions = <20 21>;
+            bindings = <&kp LS(Z)>;
             layers = <UPP_L>;
         };
-        combo_upper_x {
+        combo_upper_j {
             timeout-ms = <50>;
-            key-positions = <20 22>;
-            bindings = <&kp LS(X)>;
+            key-positions = <7 8>;
+            bindings = <&kp LS(J)>;
             layers = <UPP_L>;
         };
         combo_slash {
@@ -116,9 +116,9 @@
 
         default_layer {
             bindings = <
-    &kp W      &kp F      &kp M      &kp P      &kp G      &kp J      &kp U      &kp O      &kp Y      &kp QUOT 
-    &kp R      &kp S      &kp N      &kp T      &kp B      &kp Z      &kp A      &kp E      &kp I      &kp H
-               &kp C      &kp L      &kp D                            &kp K      &kp COMMA  &kp DOT
+    &kp Q      &kp W      &kp D      &kp F      &kp G      &kp Y      &kp U      &kp R      &kp L      &kp QUOT 
+    &kp A      &kp S      &kp E      &kp T      &kp B      &kp P      &kp N      &kp I      &kp O      &kp H
+               &kp X      &kp C      &kp V                            &kp M      &kp COMMA  &kp DOT
                &mo NAV_L             &kp SPACE                        &mo UPP_L             &mo SYM_L
             >;
         };
@@ -135,9 +135,9 @@
 
         upper_layer {
             bindings = <
-    &kp LS(W)  &kp LS(F)  &kp LS(M)  &kp LS(P)  &kp LS(G)  &kp LS(J)  &kp LS(U)  &kp LS(O)  &kp LS(Y)  &kp DQT
-    &kp LS(R)  &kp LS(S)  &kp LS(N)  &kp LS(T)  &kp LS(B)  &kp LS(Z)  &kp LS(A)  &kp LS(E)  &kp LS(I)  &kp LS(H)
-               &kp LS(C)  &kp LS(L)  &kp LS(D)                        &kp LS(K)  &kp EXCL   &kp QMARK
+    &kp LS(Q)  &kp LS(W)  &kp LS(D)  &kp LS(F)  &kp LS(G)  &kp LS(Y)  &kp LS(U)  &kp LS(R)  &kp LS(L)  &kp DQT
+    &kp LS(A)  &kp LS(S)  &kp LS(E)  &kp LS(T)  &kp LS(B)  &kp LS(P)  &kp LS(N)  &kp LS(I)  &kp LS(O)  &kp LS(H)
+               &kp LS(X)  &kp LS(C)  &kp LS(V)                        &kp LS(M)  &kp EXCL   &kp QMARK
                &caps_word            &kp LS(SPACE)                    &trans                &trans
             >;
         };
