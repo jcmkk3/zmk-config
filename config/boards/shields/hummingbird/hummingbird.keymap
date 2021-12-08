@@ -128,8 +128,8 @@
             bindings = <
     &kp F1     &kp F2     &kp F3       &kp F4     &kp F5     &kp PG_UP  &kp HOME   &kp UARW   &kp END    &none
     &sk LGUI   &sk LALT   &sk LSHFT    &sk LCTRL  &kp LC(Z)  &kp PG_DN  &kp LARW   &kp ENTER  &kp RARW   &kp ESC
-             &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)                      &kp TAB    &kp DARW   &key_repeat
-             &trans                    &trans                           &kp BSPC              &kp DEL
+               &kp LC(X)  &kp LC(C)    &kp LC(V)                        &kp TAB    &kp DARW   &key_repeat
+               &trans                    &trans                         &kp BSPC              &kp DEL
             >;
         };
 
@@ -138,7 +138,7 @@
     &kp LS(W)  &kp LS(F)  &kp LS(M)  &kp LS(P)  &kp LS(G)  &kp LS(J)  &kp LS(U)  &kp LS(O)  &kp LS(Y)  &kp DQT
     &kp LS(R)  &kp LS(S)  &kp LS(N)  &kp LS(T)  &kp LS(B)  &kp LS(Z)  &kp LS(A)  &kp LS(E)  &kp LS(I)  &kp LS(H)
                &kp LS(C)  &kp LS(L)  &kp LS(D)                        &kp LS(K)  &kp EXCL   &kp QMARK
-               &caps_word            &kp LS(SPACE)                    &trans                &trans
+               &trans                &kp LS(SPACE)                    &trans                &trans
             >;
         };
 
@@ -155,9 +155,9 @@
         num_layer {
             label = "Num";
             bindings = <
-    &kp MINUS  &kp N7     &kp N8     &kp N9     &kp SLASH  &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
-    &kp DOT    &kp N4     &kp N5     &kp N6     &kp COMMA  &kp F11    &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI
-               &kp N1     &kp N2     &kp N3                           &none      &none      &none
+    &none      &kp N7     &kp N8     &kp N9     &none      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
+    &kp MINUS  &kp N4     &kp N5     &kp N6     &kp SLASH  &kp F11    &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI
+               &kp N1     &kp N2     &kp N3                           &kp F12    &kp COMMA  &kp DOT
                &kp N0                &trans                           &trans                &trans
             >;
         };
