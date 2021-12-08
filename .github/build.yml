@@ -1,0 +1,51 @@
+on: [pull_request, workflow_dispatch]
+
+name: Build
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: zmkfirmware/zmk-build-arm:2.4
+    name: Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cache west modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-zephyr-modules
+        with:
+          path: |
+            modules/
+            tools/
+            zephyr/
+            bootloader/
+            zmk/
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: West Init
+        run: west init -l config
+      - name: West Update
+        run: west update
+      - name: West Zephyr export
+        run: west zephyr-export
+      - name: West Build (Hummingbird)
+        run: west build -s zmk/app -b seeeduino_xiao -- -DSHIELD=hummingbird -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: UF2 Build
+        run: python3 ./tools/uf2/utils/uf2conv.py -c -f SAMD21 -o build/zephyr/zmk.uf2 build/zephyr/zmk.bin
+      - name: Hummingbird DTS File
+        if: ${{ always() }}
+        run: cat -n build/zephyr/seeeduino_xiao.dts.pre.tmp
+      - name: Hummingbird Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Rename zmk.uf2
+        run: cp build/zephyr/zmk.uf2 hummingbird.uf2
+      - name: Archive (Hummingbird)
+        uses: actions/upload-artifact@v2
+        with:
+          name: firmware
+          path: hummingbird.uf2
