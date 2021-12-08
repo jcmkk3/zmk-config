@@ -8,10 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEF_L 0
-#define NAV_L 1
-#define UPP_L 2
-#define SYM_L 3
-#define NUM_L 4
+#define DEF2_L 1
+#define NAV_L 2
+#define UPP_L 3
+#define UPP2_L 4
+#define SYM_L 5
+#define NUM_L 6
 
 /*                KEY POSITIONS
 
@@ -97,6 +99,44 @@
             bindings = <&kp LC(A)>;
             layers = <NAV_L>;
         };
+
+
+        combo_k2 {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp K>;
+            layers = <DEF2_L>;
+        };
+        combo_j2 {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp J>;
+            layers = <DEF2_L>;
+        };
+        combo_z2 {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp Z>;
+            layers = <DEF2_L>;
+        };
+        combo_upper_k2 {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp LS(K)>;
+            layers = <UPP2_L>;
+        };
+        combo_upper_j2 {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp LS(J)>;
+            layers = <UPP2_L>;
+        };
+        combo_upper_z2 {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LS(Z)>;
+            layers = <UPP2_L>;
+        };
     };
 };
 
@@ -105,6 +145,10 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <UPP_L SYM_L>;
+            then-layer = <NUM_L>;
+        };
+        tri_layer2 {
+            if-layers = <UPP2_L SYM_L>;
             then-layer = <NUM_L>;
         };
     };
@@ -120,6 +164,15 @@
     &kp R      &kp S      &kp N      &kp T      &kp B      &kp Z      &kp A      &kp E      &kp I      &kp H
                &kp C      &kp L      &kp D                            &kp K      &kp COMMA  &kp DOT
                &mo NAV_L             &kp SPACE                        &mo UPP_L             &mo SYM_L
+            >;
+        };
+
+        default2_layer {
+            bindings = <
+    &kp Q      &kp W      &kp D      &kp F      &kp G      &kp Y      &kp U      &kp R      &kp L      &kp QUOT 
+    &kp A      &kp S      &kp E      &kp T      &kp B      &kp P      &kp N      &kp I      &kp O      &kp H
+               &kp X      &kp C      &kp V                            &kp M      &kp COMMA  &kp DOT
+               &mo NAV_L             &kp SPACE                        &mo UPP2_L             &mo SYM_L
             >;
         };
 
@@ -142,6 +195,15 @@
             >;
         };
 
+        upper2_layer {
+            bindings = <
+    &kp LS(Q)  &kp LS(W)  &kp LS(D)  &kp LS(F)  &kp LS(G)  &kp LS(Y)  &kp LS(U)  &kp LS(R)  &kp LS(L)  &kp DQT
+    &kp LS(A)  &kp LS(S)  &kp LS(E)  &kp LS(T)  &kp LS(B)  &kp LS(P)  &kp LS(N)  &kp LS(I)  &kp LS(O)  &kp LS(H)
+               &kp LS(X)  &kp LS(C)  &kp LS(V)                        &kp LS(M)  &kp EXCL   &kp QMARK
+               &trans                &kp LS(SPACE)                    &trans                &trans
+            >;
+        };
+
         sym_layer {
             label = "Sym";
             bindings = <
@@ -157,7 +219,7 @@
             bindings = <
     &kp MINUS  &kp N7     &kp N8     &kp N9     &kp SLASH  &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
     &kp DOT    &kp N4     &kp N5     &kp N6     &kp COMMA  &kp F11    &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI
-               &kp N1     &kp N2     &kp N3                           &none      &none      &none
+               &kp N1     &kp N2     &kp N3                           &to DEF2_L &to DEF_L  &none
                &trans                &kp N0                           &trans                &trans
             >;
         };
