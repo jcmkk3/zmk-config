@@ -37,10 +37,10 @@
             bindings = <&kp Q>;
             layers = <DEF_L>;
         };
-        combo_x {
+        combo_z {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&kp X>;
+            bindings = <&kp Z>;
             layers = <DEF_L>;
         };
         combo_upper_v {
@@ -55,10 +55,10 @@
             bindings = <&kp LS(Q)>;
             layers = <UPP_L>;
         };
-        combo_upper_x {
+        combo_upper_z {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&kp LS(X)>;
+            bindings = <&kp LS(Z)>;
             layers = <UPP_L>;
         };
         combo_slash {
@@ -118,7 +118,7 @@
             bindings = <
     &kp W      &kp F      &kp M      &kp P      &kp G      &kp K      &kp U      &kp O      &kp Y      &kp QUOT 
     &kp R      &kp S      &kp N      &kp T      &kp B      &kp J      &kp A      &kp E      &kp I      &kp H
-               &kp C      &kp L      &kp D                            &kp Z      &kp COMMA  &kp DOT
+               &kp C      &kp L      &kp D                            &kp X      &kp COMMA  &kp DOT
                &mo NAV_L             &kp SPACE                        &mo UPP_L             &mo SYM_L
             >;
         };
@@ -137,7 +137,7 @@
             bindings = <
     &kp LS(W)  &kp LS(F)  &kp LS(M)  &kp LS(P)  &kp LS(G)  &kp LS(K)  &kp LS(U)  &kp LS(O)  &kp LS(Y)  &kp DQT
     &kp LS(R)  &kp LS(S)  &kp LS(N)  &kp LS(T)  &kp LS(B)  &kp LS(J)  &kp LS(A)  &kp LS(E)  &kp LS(I)  &kp LS(H)
-               &kp LS(C)  &kp LS(L)  &kp LS(D)                        &kp LS(Z)  &kp EXCL   &kp QMARK
+               &kp LS(C)  &kp LS(L)  &kp LS(D)                        &kp LS(X)  &kp EXCL   &kp QMARK
                &caps_word            &kp LS(SPACE)                    &trans                &trans
             >;
         };
