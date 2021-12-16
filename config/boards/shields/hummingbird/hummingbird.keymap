@@ -63,9 +63,7 @@
       COMBO(num_9, &kp N9, 8 18, DEF_L)
       COMBO(num_0, &kp N0, 9 19, DEF_L)
     };
-};
 
-/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -73,9 +71,7 @@
             then-layer = <NUM_L>;
         };
     };
-};
 
-/ {
     keymap {
         compatible = "zmk,keymap";
 
