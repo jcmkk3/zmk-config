@@ -73,6 +73,37 @@
         };
     };
 
+    &caps_word {
+      continue-list = <UNDERSCORE MINUS BACKSPACE>;
+    };
+    
+    &sk {
+      release-after-ms = 60000;
+    };
+    
+    nk: not_so_sticky_key {
+      compatible = "zmk,behavior-hold-tap";
+      label = "NOT_SO_STICKY_KEY";
+      #binding-cells = <2>;
+      tapping_term_ms = <200>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&sk>;
+    };
+
+    // A hold-tap that activates without delay (like `&mo`)
+    mo_tap: mo_with_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MO_WITH_TAP";
+      #binding-cells = <2>;
+      tapping_term_ms = <0>;
+      retro-tap;
+      flavor = "hold-preferred";
+      bindings = <&mo>, <&kp>;
+    };
+    
+    #define SK(KEY) &nk KEY KEY
+    #define MO(LAYER) &mo_tap LAYER F24
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -83,7 +114,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &mo NAV_L     &kp SPACE         &mo UPP_L     &mo SYM_L
+                                                       MO(NAV_L)     &kp SPACE         MO(UPP_L)     MO(SYM_L)
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
@@ -94,7 +125,7 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &kp HOME      &kp UARW      &kp END       &caps_word
-             &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp ESC
+             SK(LGUI)      SK(LALT)      SK(LSHFT)     SK(LCTRL)     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp ESC
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp TAB       &kp DARW      &key_repeat
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &kp BSPC      &kp DEL
@@ -120,7 +151,7 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp PIPE2     &kp LBKT      &kp LPAR      &kp LBRC      &kp PLUS          &kp AMPS      &kp RBRC      &kp RPAR      &kp RBKT      &kp GRAVE
-             &kp TILDE     &kp MINUS     &kp ASTRK     &kp EQUAL     &kp PRCNT         &kp CARET     &sk LCTRL     &sk LSHFT     &sk LALT      &sk LGUI
+             &kp TILDE     &kp MINUS     &kp ASTRK     &kp EQUAL     &kp PRCNT         &kp CARET     SK(LCTRL)     SK(LSHFT)     SK(LALT)      SK(LGUI)
                            &kp AT        &kp POUND     &kp DLLR                                      &kp BSLH      &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &kp UNDER         &trans        &trans
@@ -133,7 +164,7 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &none         &kp N7        &kp N8        &kp N9        &none             &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp SLASH         &kp F11       &sk LCTRL     &sk LSHFT     &sk LALT      &sk LGUI
+             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp SLASH         &kp F11       SK(LCTRL)     SK(LSHFT)     SK(LALT)      SK(LGUI)
                            &kp N1        &kp N2        &kp N3                                        &kp F12       &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &kp N0            &trans        &trans
