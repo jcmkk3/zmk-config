@@ -24,7 +24,7 @@
 };
 
 &sk {
-  release-after-ms = 60000;
+  release-after-ms = <60000>;
 };
 
 / {
