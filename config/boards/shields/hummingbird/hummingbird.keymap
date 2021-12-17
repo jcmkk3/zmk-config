@@ -7,20 +7,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+/* Layers */
 #define DEF_L 0
 #define NAV_L 1
 #define UPP_L 2
 #define SYM_L 3
 #define NUM_L 4
-
-/*                KEY POSITIONS
-
-  ╭────────────────────╮ ╭────────────────────╮
-  │  0   1   2   3   4 │ │  5   6   7   8   9 │
-  │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
-  │     20  21  22     │ │     23  24  25     │
-  ╰───────────╮ 26  27 │ │ 28  29 ╭───────────╯
-              ╰────────╯ ╰────────╯            */
 
 / {
     combos {
@@ -32,6 +24,15 @@
             key-positions = <KEYPOS>; \
             layers = <LAYERS>; \
           };
+
+        /*                KEY POSITIONS
+
+          ╭────────────────────╮ ╭────────────────────╮
+          │  0   1   2   3   4 │ │  5   6   7   8   9 │
+          │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+          │     20  21  22     │ │     23  24  25     │
+          ╰───────────╮ 26  27 │ │ 28  29 ╭───────────╯
+                      ╰────────╯ ╰────────╯            */
 
          /* Letters */
         COMBO(lower_v, &kp V, 1 2, DEF_L)
