@@ -17,7 +17,16 @@
 /* Key Shortcuts */
 #define SK(KEY) &nk KEY KEY
 #define MO(LAYER) &mo_tap LAYER F24
-    
+
+/* Behavior Settings */
+&caps_word {
+  continue-list = <UNDERSCORE MINUS BACKSPACE>;
+};
+
+&sk {
+  release-after-ms = 60000;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -75,14 +84,6 @@
             if-layers = <UPP_L SYM_L>;
             then-layer = <NUM_L>;
         };
-    };
-
-    &caps_word {
-      continue-list = <UNDERSCORE MINUS BACKSPACE>;
-    };
-    
-    &sk {
-      release-after-ms = 60000;
     };
 
     behaviors {
