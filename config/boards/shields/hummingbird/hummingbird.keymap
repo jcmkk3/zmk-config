@@ -14,6 +14,10 @@
 #define SYM_L 3
 #define NUM_L 4
 
+/* Key Shortcuts */
+#define SK(KEY) &nk KEY KEY
+#define MO(LAYER) &mo_tap LAYER F24
+    
 / {
     combos {
         compatible = "zmk,combos";
@@ -80,29 +84,28 @@
     &sk {
       release-after-ms = 60000;
     };
-    
-    nk: not_so_sticky_key {
-      compatible = "zmk,behavior-hold-tap";
-      label = "NOT_SO_STICKY_KEY";
-      #binding-cells = <2>;
-      tapping_term_ms = <200>;
-      flavor = "tap-preferred";
-      bindings = <&kp>, <&sk>;
-    };
 
-    // A hold-tap that activates without delay (like `&mo`)
-    mo_tap: mo_with_tap {
-      compatible = "zmk,behavior-hold-tap";
-      label = "MO_WITH_TAP";
-      #binding-cells = <2>;
-      tapping_term_ms = <0>;
-      retro-tap;
-      flavor = "hold-preferred";
-      bindings = <&mo>, <&kp>;
+    behaviors {
+        nk: not_so_sticky_key {
+          compatible = "zmk,behavior-hold-tap";
+          label = "NOT_SO_STICKY_KEY";
+          #binding-cells = <2>;
+          tapping_term_ms = <200>;
+          flavor = "tap-preferred";
+          bindings = <&kp>, <&sk>;
+        };
+
+        // A hold-tap that activates without delay (like `&mo`)
+        mo_tap: mo_with_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "MO_WITH_TAP";
+          #binding-cells = <2>;
+          tapping_term_ms = <0>;
+          retro-tap;
+          flavor = "hold-preferred";
+          bindings = <&mo>, <&kp>;
+        };
     };
-    
-    #define SK(KEY) &nk KEY KEY
-    #define MO(LAYER) &mo_tap LAYER F24
     
     keymap {
         compatible = "zmk,keymap";
