@@ -97,7 +97,7 @@
             then-layer = <NUM_L>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
