@@ -14,7 +14,32 @@
 #define SYM_L 3
 #define NUM_L 4
 
+/* Behavior Settings */
+&caps_word {
+  continue-list = <UNDERSCORE MINUS BACKSPACE>;
+};
+
+&sk {
+  release-after-ms = <60000>;
+};
+
 / {
+    behaviors {
+        // A hold-tap that activates without delay (like `&mo`)
+        mo_tap: mo_with_tap {
+          compatible = "zmk,behavior-hold-tap";
+          label = "MO_WITH_TAP";
+          #binding-cells = <2>;
+          tapping_term_ms = <0>;
+          retro-tap;
+          flavor = "hold-preferred";
+          bindings = <&mo>, <&kp>;
+        };
+        
+        #define MO(LAYER) &mo_tap LAYER F24
+        
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -83,7 +108,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &mo NAV_L     &kp SPACE         &mo UPP_L     &mo SYM_L
+                                                       MO(NAV_L)     &kp SPACE         MO(UPP_L)     MO(SYM_L)
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
