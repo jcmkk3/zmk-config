@@ -109,7 +109,7 @@
             label = "Nav";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &kp HOME      &kp UARW      &kp END       &caps_word
+             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &kp HOME      &kp UARW      &kp END       &none
              &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp ESC
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp TAB       &kp DARW      &key_repeat
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
@@ -126,7 +126,7 @@
              &kp LS(R)     &kp LS(S)     &kp LS(N)     &kp LS(T)     &kp LS(B)         &kp LS(J)     &kp LS(A)     &kp LS(E)     &kp LS(I)     &kp LS(H)
                            &kp LS(C)     &kp LS(L)     &kp LS(D)                                     &kp LS(X)     &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp LS(SPACE)     &trans        &trans
+                                                       &caps_word    &kp LS(SPACE)     &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
@@ -139,7 +139,7 @@
              &kp MINUS     &kp PLUS      &kp EQUAL     &kp ASTRK     &kp FSLH          &kp BSLH      &sk LCTRL     &sk LSHFT     &sk LALT      &sk LGUI
                            &kp TILDE     &kp GRAVE     &kp QMARK                                     &kp PIPE      &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp UNDER         &trans        &trans
+                                                       &kp UNDER     &trans            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
@@ -152,7 +152,7 @@
              &kp MINUS     &kp N4        &kp N5        &kp N6        &kp SLASH         &kp F11       &sk LCTRL     &sk LSHFT     &sk LALT      &sk LGUI
                            &kp N1        &kp N2        &kp N3                                        &kp F12       &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp N0            &trans        &trans
+                                                       &kp N0        &trans            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
