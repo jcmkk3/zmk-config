@@ -15,10 +15,10 @@ Here are my keyboards that this firmware powers.
 ![](images/hummingbird.jpeg)
 
 **[Rufous Splay](https://github.com/jcmkk3/trochilidae/releases/tag/rufous_splay_v0.2)**
-![](images/rufous_splay.jpeg)
+![](images/rufous_splay.jpg)
 
 **[Rufous MX](https://github.com/jcmkk3/trochilidae/releases/tag/rufous_mx_v0.1)**
-![](images/rufous_mx.jpeg)
+![](images/rufous_mx.jpg)
 
 **[Berylline](https://github.com/jcmkk3/trochilidae/releases/tag/berylline_v0.1)**
-![](images/berylline.jpeg)
+![](images/berylline.jpg)
