@@ -50,6 +50,15 @@
             layers = <LAYERS>; \
           };
 
+        // Adjusted settings for vertical combos
+        #define VCOMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+          combo_##NAME { \
+            bindings = <BINDINGS>; \
+            key-positions = <KEYPOS>; \
+            layers = <LAYERS>; \
+            timeout-ms = <70>; \
+          };          
+
         /*                KEY POSITIONS
 
           ╭────────────────────╮ ╭────────────────────╮
@@ -68,12 +77,12 @@
         COMBO(upper_z, &kp LS(Z), 20 21, UPP_L)
         
         /* Brackets */
-        COMBO(left_bracket, &kp LBKT, 1 11, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_bracket, &kp RBKT, 8 18, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_brace, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
+        VCOMBO(left_bracket, &kp LBKT, 1 11, DEF_L UPP_L SYM_L NUM_L)
+        VCOMBO(right_bracket, &kp RBKT, 8 18, DEF_L UPP_L SYM_L NUM_L)
+        VCOMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L UPP_L SYM_L NUM_L)
+        VCOMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L UPP_L SYM_L NUM_L)
+        VCOMBO(left_brace, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
+        VCOMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
 
         /* Convenience */
         COMBO(esc, &kp ESC, 3 4, DEF_L)
