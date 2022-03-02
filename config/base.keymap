@@ -75,6 +75,13 @@
         COMBO(left_brace, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
         COMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
 
+        COMBO(left_bracket, &kp LBKT, 1 2 3, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(right_bracket, &kp RBKT, 6 7 8, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_parenthesis, &kp LPAR, 11 12 13, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(right_parenthesis, &kp RPAR, 16 17 18, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_brace, &kp LBRC, 20 21 22, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(right_brace, &kp RBRC, 23 24 25, DEF_L UPP_L SYM_L NUM_L)        
+
         /* Convenience */
         COMBO(esc, &kp ESC, 3 4, DEF_L)
         COMBO(del, &kp DEL, 13 14, DEF_L)
