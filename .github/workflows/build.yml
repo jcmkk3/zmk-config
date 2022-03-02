@@ -71,9 +71,6 @@ jobs:
       - name: West Build (${{ steps.variables.outputs.display-name }})
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config ${{ steps.variables.outputs.extra-cmake-args }} ${{ matrix.cmake-args }}
-      - name: ${{ steps.variables.outputs.display-name }} UF2 Build
-        if: ${{ matrix.board == 'seeeduino_xiao'}}
-        run: python3 ./tools/uf2/utils/uf2conv.py -c -f SAMD21 -o build/zephyr/zmk.uf2 build/zephyr/zmk.bin
       - name: ${{ steps.variables.outputs.display-name }} DTS File
         if: ${{ always() }}
         run: |
