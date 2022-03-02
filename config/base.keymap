@@ -68,12 +68,12 @@
         COMBO(upper_z, &kp LS(Z), 20 21, UPP_L)
         
         /* Brackets */
-        COMBO(left_bracket, &kp LBKT, 1 11, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_bracket, &kp RBKT, 8 18, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_brace, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_bracket_v, &kp LBKT, 1 11, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(right_bracket_v, &kp RBKT, 8 18, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_parenthesis_v, &kp LPAR, 2 12, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(right_parenthesis_v, &kp RPAR, 7 17, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_brace_v, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(right_brace_v, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
 
         COMBO(left_bracket, &kp LBKT, 1 2 3, DEF_L UPP_L SYM_L NUM_L)
         COMBO(right_bracket, &kp RBKT, 6 7 8, DEF_L UPP_L SYM_L NUM_L)
