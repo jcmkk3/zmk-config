@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: petejohanson
-      revision: core/zephyr-27-upgrade
+      revision: core/zephyr-v3.0.0-update
       import: app/west.yml
   self:
     path: config
