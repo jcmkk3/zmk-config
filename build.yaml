@@ -19,5 +19,5 @@ include:
     shield: berylline_right
   - board: seeeduino_xiao
     shield: hummingbird
-#  - board: seeeduino_xiao_ble_nrf52840
-#    shield: hummingbird
+  - board: seeeduino_xiao_ble
+    shield: hummingbird
