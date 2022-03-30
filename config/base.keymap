@@ -36,7 +36,7 @@
           bindings = <&mo>, <&kp>;
         };
         
-        #define MO(LAYER) &mo_tap LAYER F24
+        #define MO(LAYER) &mo_tap LAYER K_CANCEL
         
     };
 
