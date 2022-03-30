@@ -24,9 +24,29 @@
 };
 
 / {
-    ZMK_MACRO(mo_nav, bindings = <&kp K_CANCEL &mo NAV_L>;)
-    ZMK_MACRO(mo_upp, bindings = <&kp K_CANCEL &mo UPP_L>;)
-    ZMK_MACRO(mo_sym, bindings = <&kp K_CANCEL &mo SYM_L>;)
+    ZMK_MACRO(mo_nav,
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp K_CANCEL>
+        , <&macro_press &mo NAV_L>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo NAV_L>;)
+
+    ZMK_MACRO(mo_upp,
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp K_CANCEL>
+        , <&macro_press &mo UPP_L>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo UPP_L>;)
+
+    ZMK_MACRO(mo_sym,
+        wait-ms = <0>;
+        bindings
+        = <&macro_tap &kp K_CANCEL>
+        , <&macro_press &mo SYM_L>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo SYM_L>;)
 
     combos {
         compatible = "zmk,combos";
