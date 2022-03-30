@@ -26,6 +26,7 @@
 / {
     ZMK_MACRO(mo_nav,
         wait-ms = <0>;
+        tap-ms = <0>;
         bindings
         = <&macro_tap &kp K_CANCEL>
         , <&macro_press &mo NAV_L>
@@ -34,6 +35,7 @@
 
     ZMK_MACRO(mo_upp,
         wait-ms = <0>;
+        tap-ms = <0>;
         bindings
         = <&macro_tap &kp K_CANCEL>
         , <&macro_press &mo UPP_L>
@@ -42,6 +44,7 @@
 
     ZMK_MACRO(mo_sym,
         wait-ms = <0>;
+        tap-ms = <0>;
         bindings
         = <&macro_tap &kp K_CANCEL>
         , <&macro_press &mo SYM_L>
