@@ -24,29 +24,23 @@
 };
 
 / {
-    ZMK_MACRO(mo_nav,
-        wait-ms = <0>;
-        bindings
-        = <&macro_tap &kp K_CANCEL>
-        , <&macro_press &mo NAV_L>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo NAV_L>;)
+    #define MO(NAME, LAYER) \
+        mo_##NAME: mo_##NAME { \
+            compatible = "zmk,behavior-macro";
+            label = "ZM_##NAME";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+            = <&macro_tap &kp K_CANCEL>
+            , <&macro_press &mo ##LAYER>
+            , <&macro_pause_for_release>
+            , <&macro_release &mo ##LAYER>;
+        };
 
-    ZMK_MACRO(mo_upp,
-        wait-ms = <0>;
-        bindings
-        = <&macro_tap &kp K_CANCEL>
-        , <&macro_press &mo UPP_L>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo UPP_L>;)
-
-    ZMK_MACRO(mo_sym,
-        wait-ms = <0>;
-        bindings
-        = <&macro_tap &kp K_CANCEL>
-        , <&macro_press &mo SYM_L>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo SYM_L>;)
+    MO(nav, NAV_L)
+    MO(upp, UPP_L)
+    MO(sym, SYM_L)
 
     combos {
         compatible = "zmk,combos";
