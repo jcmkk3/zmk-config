@@ -80,17 +80,19 @@
                   ╰────────────╯ ╰────────────╯            */
         
         /* Brackets */
-        COMBO(left_bracket, &kp LBKT, 1 11, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_bracket, &kp RBKT, 8 18, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_brace, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_bracket, &kp LBKT, 1 11, DEF_L ALT_L SYM_L NUM_L)
+        COMBO(right_bracket, &kp RBKT, 8 18, DEF_L ALT_L SYM_L NUM_L)
+        COMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L ALT_L SYM_L NUM_L)
+        COMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L ALT_L SYM_L NUM_L)
+        COMBO(left_brace, &kp LBRC, 3 13, DEF_L ALT_L SYM_L NUM_L)
+        COMBO(right_brace, &kp RBRC, 6 16, DEF_L ALT_L SYM_L NUM_L)
 
         /* Convenience */
-        COMBO(esc, &kp ESC, 3 4, DEF_L)
-        COMBO(del, &kp DEL, 13 14, DEF_L)
+        COMBO(esc, &kp ESC, 3 4, DEF_L ALT_L)
+        COMBO(del, &kp DEL, 13 14, DEF_L ALT_L)
         COMBO(select_all, &kp LC(A), 21 22, NAV_L)
+
+        COMBO(alt_alphas, &tog ALT_L, 5 15 25, DEF_L ALT_L)
     };
 
     keymap {
@@ -109,14 +111,14 @@
             >;
         };
 
-        alt_layer {
+        alt_alphas {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp W         &kp F         &kp M         &kp P         &kp V             &kp Q         &kp U         &kp O         &kp Y         &kp QUOT
              &kp R         &kp S         &kp N         &kp T         &kp G             &kp K         &kp A         &kp E         &kp I         &kp H
              &kp Z         &kp C         &kp L         &kp D         &kp B             &kp J         &kp X         &kp COMMA     &kp DOT       &kp FSLH
         // ╰─────────────┴─────────────╮                                                                                       ╭─────────────┴─────────────╯
-                                         &mo_nav       &kp SPACE     &none             &none         &mo_upp       &mo_sym
+                                         &mo_nav       &kp SPACE     &none             &none         &shift       &mo_sym
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                
             >;
