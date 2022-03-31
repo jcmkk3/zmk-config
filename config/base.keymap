@@ -24,21 +24,32 @@
 };
 
 / {
-    behaviors {
-        // A hold-tap that activates without delay (like `&mo`)
-        mo_tap: mo_with_tap {
-          compatible = "zmk,behavior-hold-tap";
-          label = "MO_WITH_TAP";
-          #binding-cells = <2>;
-          tapping_term_ms = <0>;
-          retro-tap;
-          flavor = "hold-preferred";
-          bindings = <&mo>, <&kp>;
-        };
-        
-        #define MO(LAYER) &mo_tap LAYER F24
-        
-    };
+    ZMK_MACRO(mo_nav,
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings
+        = <&macro_tap &kp K_CANCEL>
+        , <&macro_press &mo NAV_L>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo NAV_L>;)
+
+    ZMK_MACRO(mo_upp,
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings
+        = <&macro_tap &kp K_CANCEL>
+        , <&macro_press &mo UPP_L>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo UPP_L>;)
+
+    ZMK_MACRO(mo_sym,
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings
+        = <&macro_tap &kp K_CANCEL>
+        , <&macro_press &mo SYM_L>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo SYM_L>;)
 
     combos {
         compatible = "zmk,combos";
@@ -99,7 +110,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       MO(NAV_L)     &kp SPACE         MO(UPP_L)     MO(SYM_L)
+                                                       &mo_nav       &kp SPACE         &mo_upp       &mo_sym
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
