@@ -22,4 +22,6 @@ include:
   - board: seeeduino_xiao_ble
     shield: hummingbird
   - board: nice_nano_v2
-    shield: chocv    
+    shield: chocv
+  - board: seeeduino_xiao_ble
+    shiled: settings_reset
