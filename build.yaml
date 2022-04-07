@@ -23,5 +23,3 @@ include:
     shield: hummingbird
   - board: nice_nano_v2
     shield: chocv
-  - board: seeeduino_xiao_ble
-    shiled: settings_reset
