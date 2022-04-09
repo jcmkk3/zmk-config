@@ -3,8 +3,6 @@
 This repo contains the config for my keyboard's firmware and builds it!
 
 ## Keymap
-
-![](images/layout_alpha.png)
  
 ![](images/layout.png)
 
