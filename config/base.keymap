@@ -34,24 +34,6 @@
         , <&macro_pause_for_release>
         , <&macro_release &mo NAV_L>;)
 
-    ZMK_MACRO(mo_upp,
-        wait-ms = <0>;
-        tap-ms = <0>;
-        bindings
-        = <&macro_tap &kp K_CANCEL>
-        , <&macro_press &mo UPP_L>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo UPP_L>;)
-
-    ZMK_MACRO(mo_sym,
-        wait-ms = <0>;
-        tap-ms = <0>;
-        bindings
-        = <&macro_tap &kp K_CANCEL>
-        , <&macro_press &mo SYM_L>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo SYM_L>;)
-
     combos {
         compatible = "zmk,combos";
 
@@ -114,7 +96,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &mo_nav       &kp SPACE         &mo_upp       &mo_sym
+                                                       &mo_nav       &kp SPACE         &sl UPP_L     &sl SYM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
