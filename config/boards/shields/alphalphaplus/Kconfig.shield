@@ -1,0 +1,2 @@
+config SHIELD_ALPHALPHAPLUS
+    def_bool $(shields_list_contains,alphalphaplus)
