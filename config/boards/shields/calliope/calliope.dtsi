@@ -39,3 +39,5 @@
 		;
     };
 };
+
+&xiao_serial { status = "okay"; };
