@@ -17,7 +17,7 @@
              &kp W         &kp F         &kp M         &kp P         &kp U         &kp O         &kp Y         &kp QUOT
              &kp R         &kp S         &kp N         &kp T         &kp A         &kp E         &kp I         &kp H
         // ╰─────────────┴─────────────╮                                                       ╭─────────────┴─────────────╯
-                                         &kp TAB       &kp SPACE     &kp BSPC      &kp ENTER
+                                                       &kp SPACE     &kp BSPC
         //                              ╰─────────────┴─────────────┴─────────────┴─────────────╯ 
             >;
         };

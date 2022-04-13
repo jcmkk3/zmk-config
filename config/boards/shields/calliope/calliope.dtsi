@@ -14,12 +14,12 @@
 
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
-		columns = <20>;
+		columns = <18>;
 		rows = <1>;
 		map = <
-			RC(0,0)  RC(0,1)  RC(0,2)  RC(0,3)		RC(0,10) RC(0,11) RC(0,12) RC(0,13)  
-			RC(0,4)  RC(0,5)  RC(0,6)  RC(0,7)      RC(0,14) RC(0,15) RC(0,16) RC(0,17)
-							  RC(0,8)  RC(0,9)  	RC(0,18) RC(0,19)
+			RC(0,0)  RC(0,1)  RC(0,2)  RC(0,3)		RC(0,9)  RC(0,10) RC(0,11) RC(0,12)   
+			RC(0,4)  RC(0,5)  RC(0,6)  RC(0,7)      RC(0,13) RC(0,14) RC(0,15) RC(0,16)
+							           RC(0,8)    	RC(0,17)
 		>;
 	};
 
@@ -31,12 +31,11 @@
 			<&xiao_d 1  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
 			<&xiao_d 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
 			<&xiao_d 3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-			<&xiao_d 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-			<&xiao_d 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
 			<&xiao_d 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
 			<&xiao_d 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
 			<&xiao_d 8  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-			<&xiao_d 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			<&xiao_d 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+			<&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 		;
     };
 };

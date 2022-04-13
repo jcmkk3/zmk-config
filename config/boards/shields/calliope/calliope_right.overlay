@@ -7,5 +7,5 @@
 #include "calliope.dtsi"
 
 &default_transform {
-	col-offset = <10>;
+	col-offset = <9>;
 };
