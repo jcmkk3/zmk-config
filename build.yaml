@@ -17,3 +17,5 @@ include:
     shield: calliope_left
   - board: seeeduino_xiao
     shield: calliope_right
+  - board: seeeduino_xiao
+    shield: settings_reset
