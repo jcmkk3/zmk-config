@@ -1,0 +1,28 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_CALLIOPE_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Calliope"
+
+choice ZMK_SPLIT_SERIAL_ROLE
+	default ZMK_SPLIT_SERIAL_ROLE_CENTRAL
+endchoice
+
+endif
+
+if SHIELD_CALLIOPE_RIGHT
+
+choice ZMK_SPLIT_SERIAL_ROLE
+	default ZMK_SPLIT_SERIAL_ROLE_PERIPHERAL
+endchoice
+
+endif
+
+if SHIELD_CALLIOPE_LEFT || SHIELD_CALLIOPE_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif
