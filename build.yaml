@@ -13,13 +13,7 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: berylline_left
-  - board: nice_nano_v2
-    shield: berylline_right
   - board: seeeduino_xiao
-    shield: hummingbird
-  - board: seeeduino_xiao_ble
-    shield: hummingbird
-  - board: nice_nano_v2
-    shield: chocv
+    shield: calliope_left
+  - board: seeeduino_xiao
+    shield: calliope_right
