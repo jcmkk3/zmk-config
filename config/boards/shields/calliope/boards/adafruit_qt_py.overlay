@@ -6,6 +6,11 @@
 
 / {
 	chosen {
-        zmk,split-serial = &sercom0;
+        zmk,split-serial = &xiao_serial;
 	};
+};
+
+&xiao_serial
+{
+	status = "okay";
 };
