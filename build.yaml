@@ -13,9 +13,7 @@
 #
 ---
 include:
-  - board: seeeduino_xiao
+  - board: adafruit_qt_py
     shield: calliope_left
-  - board: seeeduino_xiao
+  - board: adafruit_qt_py
     shield: calliope_right
-  - board: seeeduino_xiao
-    shield: settings_reset
