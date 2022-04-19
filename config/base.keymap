@@ -133,7 +133,7 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp EXCL      &kp AT        &kp POUND     &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp STAR      &kp PLUS      &kp QUOT
-             &kp QMARK     &kp COLON     &kp SEMI      &kp UNDER     &kp TILDE         &kp BSLH      &kp MINUS     &sk SLASH     &sk EQUAL     &kp DQT
+             &kp QMARK     &kp COLON     &kp SEMI      &kp UNDER     &kp TILDE         &kp BSLH      &kp MINUS     &kp SLASH     &kp EQUAL     &kp DQT
                            &kp LT        &kp GT        &kp GRAVE                                     &kp PIPE      &trans        &trans
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &trans        &trans
