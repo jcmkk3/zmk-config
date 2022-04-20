@@ -70,8 +70,9 @@
         COMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
 
         /* Convenience */
-        COMBO(esc, &kp ESC, 3 4, DEF_L)
-        COMBO(del, &kp DEL, 13 14, DEF_L)
+        COMBO(esc, &kp ESC, 3 4, DEF_L UPP_L)
+        COMBO(esc, &kp ESC, 16 18, DEF_L UPP_L NAV_L)
+        COMBO(del, &kp DEL, 13 14, DEF_L UPP_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
 
         /* Bluetooth */
@@ -106,7 +107,7 @@
             label = "Nav";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &kp LS(TAB)   &kp UARW      &kp TAB       &kp HOME
+             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &key_repeat   &kp UARW      &kp TAB       &kp HOME
              &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp BSPC      &kp DARW      &kp DEL
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
