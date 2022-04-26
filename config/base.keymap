@@ -97,7 +97,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &mo_nav       &kp SPACE         &sl UPP_L     &sl SYM_L
+                                                       &mo_nav       &kp SPACE         &mo UPP_L     &mo SYM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
