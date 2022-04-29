@@ -4,3 +4,4 @@
     chosen {
         zmk,kscan = &kscan_facedown;
     };
+};
