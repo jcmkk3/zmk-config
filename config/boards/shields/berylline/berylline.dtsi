@@ -8,7 +8,7 @@
 
 / {
 	chosen {
-		zmk,kscan = &kscan0;
+		zmk,kscan = &kscan_faceup;
 		zmk,matrix_transform = &default_transform;
 	};
 
@@ -24,7 +24,12 @@
 		>;
 	};
 
-	kscan0: kscan {
+	kscan_faceup: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+		label = "KSCAN";
+    };
+
+	kscan_facedown: kscan {
 		compatible = "zmk,kscan-gpio-direct";
 		label = "KSCAN";
     };
