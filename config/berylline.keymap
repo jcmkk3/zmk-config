@@ -1,3 +1,6 @@
 #include "base.keymap"
 
-&chosen { zmk,kscan = &kscan_facedown; }
+/ {
+    chosen {
+        zmk,kscan = &kscan_facedown;
+    };
