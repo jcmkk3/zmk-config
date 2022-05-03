@@ -17,7 +17,7 @@
 
 	kscan_faceup: kscan_0 {
 		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN";
+		label = "KSCAN0";
 		input-gpios
 		= <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 		, <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -39,7 +39,7 @@
 
 	kscan_facedown: kscan_1 {
 		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN";
+		label = "KSCAN1";
 		input-gpios
 		= <&pro_micro 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 		, <&pro_micro 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
