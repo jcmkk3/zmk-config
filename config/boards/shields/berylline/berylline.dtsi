@@ -24,14 +24,14 @@
 		>;
 	};
 
-	kscan_faceup: kscan {
+	kscan_faceup: kscan_faceup {
 		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN";
+		label = "KSCAN FACEUP";
     };
 
-	kscan_facedown: kscan {
+	kscan_facedown: kscan_facedown {
 		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN";
+		label = "KSCAN FACEDOWN";
     };
 
 };
