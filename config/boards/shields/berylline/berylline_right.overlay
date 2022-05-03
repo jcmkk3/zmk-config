@@ -6,12 +6,14 @@
 
 #include "berylline.dtsi"
 
-&default_transform {
-	col-offset = <15>;
+/ {
+	chosen {
+		zmk,kscan = &kscan_faceup;
+	};
 };
 
-&chosen {
-	zmk,kscan = &kscan_faceup;
+&default_transform {
+	col-offset = <15>;
 };
 
 &kscan_faceup {

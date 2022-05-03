@@ -6,8 +6,10 @@
 
 #include "berylline.dtsi"
 
-&chosen {
-	zmk,kscan = &kscan_faceup;
+/ {
+	chosen {
+		zmk,kscan = &kscan_faceup;
+	};
 };
 
 &kscan_faceup {
