@@ -10,6 +10,10 @@
 	col-offset = <15>;
 };
 
+&chosen {
+	zmk,kscan = &kscan_faceup;
+};
+
 &kscan_faceup {
 	input-gpios
 	= <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
