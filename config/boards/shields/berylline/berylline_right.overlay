@@ -15,7 +15,7 @@
 		zmk,kscan = &kscan_faceup;
 	};
 
-	kscan_faceup: kscan {
+	kscan_faceup: kscan_0 {
 		compatible = "zmk,kscan-gpio-direct";
 		label = "KSCAN";
 		input-gpios
@@ -37,7 +37,7 @@
 		;
 	};
 
-	kscan_facedown: kscan {
+	kscan_facedown: kscan_1 {
 		compatible = "zmk,kscan-gpio-direct";
 		label = "KSCAN";
 		input-gpios
