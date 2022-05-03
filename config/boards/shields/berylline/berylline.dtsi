@@ -26,12 +26,12 @@
 
 	kscan_faceup: kscan_0 {
 		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN0";
+		label = "KSCAN";
     };
 
 	kscan_facedown: kscan_1 {
 		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN1";
+		label = "KSCAN";
     };
 
 };
