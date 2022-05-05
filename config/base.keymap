@@ -129,8 +129,8 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp EXCL      &kp AT        &kp POUND     &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp SEMI      &kp COLON     &kp GRAVE
-             &kp QMARK     &kp PLUS      &kp EQUAL     &kp ASTRK     &kp PIPE          &kp TILDE     &cm LCTRL     &cm LSHFT     &cm LALT      &cm LGUI
-                           &kp MINUS     &kp UNDER     &kp FSLH                                      &kp BSLH      &kp LT        &kp GT
+             &kp QMARK     &kp ASTRK     &kp PLUS      &kp EQUAL     &kp PIPE          &kp BSLH      &cm LCTRL     &cm LSHFT     &cm LALT      &cm LGUI
+                           &kp FSLH      &kp MINUS     &kp UNDER                                     &kp TILDE     &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
@@ -142,8 +142,8 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
-                           &kp MINUS     &kp UNDER     &kp FSLH                                      &kp BSLH      &kp COMMA     &kp DOT
+             &kp N1        &kp N2        &kp N3        &kp N4        &kp F11           &kp F12       &kp N7        &kp N8        &kp N9        &kp N0
+                           &kp FSLH      &kp MINUS     &kp N5                                        &kp N6        &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
