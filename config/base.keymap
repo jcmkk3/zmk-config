@@ -141,9 +141,9 @@
             label = "Num";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp MINUS     &kp N5        &kp KP_N5     &kp N5        &kp MINUS          &kp COMMA    &kp N9        &kp KP_N9     &kp N9        &kp COMMA
+             &kp MINUS     &kp N5        &kp N5        &kp N5        &kp MINUS          &kp COMMA    &kp N9        &kp N9        &kp N9        &kp COMMA
              &kp FSLH      &kp N2        &kp N3        &kp N4        &kp FSLH           &kp DOT      &kp N6        &kp N7        &kp N8        &kp DOT
-                           &kp N1        &kp KP_N1     &kp N1                                        &kp N0        &kp KP_N0     &kp N0
+                           &kp N1        &kp N1        &kp N1                                        &kp N0        &kp N0        &kp N0
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
