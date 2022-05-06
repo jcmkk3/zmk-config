@@ -96,14 +96,6 @@
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <UPP_L SYM_L>;
-            then-layer = <NUM_L>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
