@@ -4,7 +4,7 @@ This repo contains the config for my keyboard's firmware and builds it!
 
 ## Keymap
  
-![](images/layout.png)
+![](keymap_visual/keymap.svg)
 
 ## Keyboards
 Here are my keyboards that this firmware powers.

@@ -1,0 +1,80 @@
+layout:
+    split: true
+    rows: 3
+    columns: 5
+    thumbs: 2
+layers:
+  Base:
+    left:
+      - [W, F, M, P, G]
+      - [R, S, N, T, B]
+      - [null, C, L, D, null]
+    right:
+      - [K, U, O, Y, "'"]
+      - [J, A, E, L, H]
+      - [null, X, ",", ".", null]
+    left_thumbs: &left_thumbs
+      - Nav
+      - Space
+    right_thumbs: &right_thumbs
+      - Shift
+      - Num
+    combos:
+      - positions: [1, 2]
+        key: V
+      - positions: [21, 22]
+        key: Z
+      - positions: [1, 11]
+        key: "["
+      - positions: [8, 18]
+        key: "]"
+      - positions: [2, 12]
+        key: "("
+      - positions: [7, 17]
+        key: ")"
+      - positions: [3, 13]
+        key: "{"
+      - positions: [6, 16]
+        key: "}"
+  Nav:
+    left:
+      - [F1, F2, F3, F4, F5]
+      - [{hold: sticky, tap: Super}, {hold: sticky, tap: Alt}, {hold: sticky, tap: Shift}, {hold: sticky, tap: Ctrl}, Undo]
+      - [null, Cut, Copy, Paste, null]
+    right:
+      - ["Pg ↑", Esc, "↑", Tab, Home]
+      - ["Pg ↓", "←", Enter, "→", End]
+      - [null, "Back Space", "↓", Delete, null]
+    left_thumbs:
+      - {tap: Nav, type: held}
+      - Space
+    right_thumbs: *right_thumbs
+    combos:
+      - positions: [21, 22]
+        key: "Select All"
+  Num:
+    left:
+      - ["+", "7", "8", "9", "*"]
+      - ["-", "4", "5", "6", "/"]
+      - [null, "1", "2", "3", null]
+    right:
+      - ["`", "?", ":", ";", "\""]
+      - ["\\", {hold: sticky, tap: Ctrl}, {hold: sticky, tap: Shift}, {hold: sticky, tap: Alt}, {hold: sticky, tap: Super}]
+      - [null, "=", "<", ">", null]
+    left_thumbs: *left_thumbs
+    right_thumbs:
+      - Shift
+      - {tap: Num, type: held}
+    combos:
+      - positions: [1, 11]
+        key: "["
+      - positions: [8, 18]
+        key: "]"
+      - positions: [2, 12]
+        key: "("
+      - positions: [7, 17]
+        key: ")"
+      - positions: [3, 13]
+        key: "{"
+      - positions: [6, 16]
+        key: "}"
