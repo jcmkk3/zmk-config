@@ -263,7 +263,7 @@
 <rect rx="6" ry="6" x="206.5" y="746" width="55" height="50"/>
 <text x="234.0" y="771.0">Nav</text>
 <rect rx="6" ry="6" x="265.5" y="746" width="55" height="50"/>
-<text x="293.0" y="771.0">Space</text>
+<text x="293.0" y="771.0">0</text>
 <rect rx="6" ry="6" x="352.0" y="746" width="55" height="50"/>
 <text x="379.5" y="771.0">Shift</text>
 <rect rx="6" ry="6" x="411.0" y="746" width="55" height="50" class="held"/>

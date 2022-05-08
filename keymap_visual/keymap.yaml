@@ -61,7 +61,9 @@ layers:
       - ["`", "?", ":", ";", "\""]
       - ["\\", {hold: sticky, tap: Ctrl}, {hold: sticky, tap: Shift}, {hold: sticky, tap: Alt}, {hold: sticky, tap: Super}]
       - [null, "=", "<", ">", null]
-    left_thumbs: *left_thumbs
+    left_thumbs:
+      - Nav
+      - "0"
     right_thumbs:
       - Shift
       - {tap: Num, type: held}
