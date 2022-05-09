@@ -63,7 +63,7 @@
 
         spcunder: spcunder {
             compatible = "zmk,behavior-mod-morph";
-            label = "N0_UNDER";
+            label = "SPACE_UNDER";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
