@@ -20,6 +20,7 @@
 
 &sk {
   release-after-ms = <250>;
+  quick-release;
 };
 
 &sl {
@@ -35,6 +36,7 @@
             release-after-ms = <60000>;
             bindings = <&kp>;
             ignore-modifiers;
+            quick-release;
         };
 
         n8tilde: n8tilde {
