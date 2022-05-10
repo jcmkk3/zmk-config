@@ -100,8 +100,8 @@
 
          /* Letters */
         COMBO(v, &kp V, 1 2, DEF_L)
+        COMBO(q, &kp Q, 1 3, DEF_L)
         COMBO(z, &kp Z, 20 21, DEF_L)
-        COMBO(q, &kp Q, 7 8, DEF_L)
 
         /* Brackets */
         COMBO(left_bracket, &kp LBKT, 1 11, DEF_L NUM_L)
@@ -115,7 +115,7 @@
         COMBO(esc, &kp ESC, 3 4, DEF_L)
         COMBO(del, &kp DEL, 13 14, DEF_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
-        COMBO(repeat, &key_repeat, 24 25, DEF_L NUM_L)
+        COMBO(repeat, &key_repeat, 24 25, DEF_L)
     };
 
     keymap {
