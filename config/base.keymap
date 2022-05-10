@@ -60,6 +60,14 @@
             bindings = <&kp N0>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        spcunder: spcunder {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_UNDER";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     ZMK_MACRO(sl_nav,
@@ -108,7 +116,6 @@
         COMBO(del, &kp DEL, 13 14, DEF_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
         COMBO(repeat, &key_repeat, 24 25, DEF_L NUM_L)
-
     };
 
     keymap {
@@ -121,7 +128,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &sl_nav       &kp SPACE         &sk LSHIFT    &sl NUM_L
+                                                       &sl_nav       &spcunder         &sk LSHIFT    &sl NUM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
@@ -148,7 +155,7 @@
              &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp BSLH      &sm LCTRL     &sm LSHFT     &sm LALT      &sm LGUI
                            &kp N1        &kp N2        &kp N3                                        &kp EQUAL     &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &n0under      &trans            &trans        &trans
+                                                       &trans        &n0under          &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
