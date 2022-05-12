@@ -11,9 +11,7 @@
 /* Layers */
 #define DEF_L 0
 #define NAV_L 1
-#define UPP_L 2
-#define SYM_L 3
-#define NUM_L 4
+#define NUM_L 2
 
 /* Behavior Settings */
 &caps_word {
@@ -21,18 +19,67 @@
 };
 
 &sk {
-  release-after-ms = <60000>;
+  release-after-ms = <250>;
+  quick-release;
+};
+
+&sl {
+  release-after-ms = <250>;
 };
 
 / {
-    ZMK_MACRO(mo_nav,
+    behaviors {
+        sm: sticky_mod {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICK_MOD";
+            #binding-cells = <1>;
+            release-after-ms = <60000>;
+            bindings = <&kp>;
+            ignore-modifiers;
+            quick-release;
+        };
+
+        n8tilde: n8tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N8_TILDE";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n9pipe: n9pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N9_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n0under: n0under {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N0_UNDER";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        spcunder: spcunder {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_UNDER";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    ZMK_MACRO(sl_nav,
         wait-ms = <0>;
         tap-ms = <0>;
         bindings
         = <&macro_tap &kp K_CANCEL>
-        , <&macro_press &mo NAV_L>
+        , <&macro_press &sl NAV_L>
         , <&macro_pause_for_release>
-        , <&macro_release &mo NAV_L>;)
+        , <&macro_release &sl NAV_L>;)
 
     combos {
         compatible = "zmk,combos";
@@ -54,37 +101,23 @@
                       ╰────────╯ ╰────────╯            */
 
          /* Letters */
-        COMBO(lower_v, &kp V, 1 2, DEF_L)
-        COMBO(lower_q, &kp Q, 1 3, DEF_L)
-        COMBO(lower_z, &kp Z, 20 21, DEF_L)
-        COMBO(upper_v, &kp LS(V), 1 2, UPP_L)
-        COMBO(upper_q, &kp LS(Q), 1 3, UPP_L)
-        COMBO(upper_z, &kp LS(Z), 20 21, UPP_L)
-        
+        COMBO(v, &kp V, 1 2, DEF_L)
+        COMBO(q, &kp Q, 1 3, DEF_L)
+        COMBO(z, &kp Z, 20 21, DEF_L)
+
         /* Brackets */
-        COMBO(left_bracket, &kp LBKT, 1 11, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_bracket, &kp RBKT, 8 18, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(left_brace, &kp LBRC, 3 13, DEF_L UPP_L SYM_L NUM_L)
-        COMBO(right_brace, &kp RBRC, 6 16, DEF_L UPP_L SYM_L NUM_L)
+        COMBO(left_bracket, &kp LBKT, 1 11, DEF_L NUM_L)
+        COMBO(right_bracket, &kp RBKT, 8 18, DEF_L NUM_L)
+        COMBO(left_parenthesis, &kp LPAR, 2 12, DEF_L NUM_L)
+        COMBO(right_parenthesis, &kp RPAR, 7 17, DEF_L NUM_L)
+        COMBO(left_brace, &kp LBRC, 3 13, DEF_L NUM_L)
+        COMBO(right_brace, &kp RBRC, 6 16, DEF_L NUM_L)
 
         /* Convenience */
-        COMBO(left_esc, &kp ESC, 3 4, DEF_L UPP_L)
-        COMBO(right_esc, &kp ESC, 16 18, DEF_L UPP_L NAV_L)
-        COMBO(del, &kp DEL, 13 14, DEF_L UPP_L)
+        COMBO(esc, &kp ESC, 3 4, DEF_L)
+        COMBO(del, &kp DEL, 13 14, DEF_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
-
-        /* Bluetooth */
-        COMBO(bt_clear, &bt BT_CLR, 1 2, NUM_L)
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <UPP_L SYM_L>;
-            then-layer = <NUM_L>;
-        };
+        COMBO(repeat, &key_repeat, 24 25, DEF_L)
     };
 
     keymap {
@@ -97,7 +130,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &mo_nav       &kp SPACE         &mo UPP_L     &mo SYM_L
+                                                       &sl_nav       &spcunder         &sk LSHIFT    &sl NUM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
@@ -107,37 +140,11 @@
             label = "Nav";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &key_repeat   &kp UARW      &kp TAB       &kp HOME
-             &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
+             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &kp ESC       &kp UARW      &kp TAB       &kp HOME
+             &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp BSPC      &kp DARW      &kp DEL
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &trans        &trans
-        //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        upper_layer {
-            label = "Upp";
-            bindings = <
-        // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp LS(W)     &kp LS(F)     &kp LS(M)     &kp LS(P)     &kp LS(G)         &kp LS(K)     &kp LS(U)     &kp LS(O)     &kp LS(Y)     &kp DQT
-             &kp LS(R)     &kp LS(S)     &kp LS(N)     &kp LS(T)     &kp LS(B)         &kp LS(J)     &kp LS(A)     &kp LS(E)     &kp LS(I)     &kp LS(H)
-                           &kp LS(C)     &kp LS(L)     &kp LS(D)                                     &kp LS(X)     &kp LT        &kp GT
-        // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp LS(SPACE)     &trans        &trans
-        //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        sym_layer {
-            label = "Sym";
-            bindings = <
-        // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp EXCL      &kp AT        &kp POUND     &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp SEMI      &kp COLON     &kp DQT
-             &kp MINUS     &kp PLUS      &kp EQUAL     &kp ASTRK     &kp FSLH          &kp BSLH      &sk LCTRL     &sk LSHFT     &sk LALT      &sk LGUI
-                           &kp TILDE     &kp GRAVE     &kp QMARK                                     &kp PIPE      &kp LT        &kp GT
-        // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp UNDER         &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
@@ -146,11 +153,11 @@
             label = "Num";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &none         &kp N7        &kp N8        &kp N9        &none             &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp SLASH         &kp F11       &sk LCTRL     &sk LSHFT     &sk LALT      &sk LGUI
-                           &kp N1        &kp N2        &kp N3                                        &kp F12       &kp COMMA     &kp DOT
+             &kp PLUS      &kp N7        &n8tilde      &n9pipe       &kp ASTRK         &kp GRAVE     &kp QMARK     &kp SEMI      &kp COLON     &kp DQT
+             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp BSLH      &sm LCTRL     &sm LSHFT     &sm LALT      &sm LGUI
+                           &kp N1        &kp N2        &kp N3                                        &kp EQUAL     &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp N0            &trans        &trans
+                                                       &trans        &n0under          &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
