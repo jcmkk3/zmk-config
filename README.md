@@ -13,7 +13,15 @@ Here are my keyboards that this firmware powers.
 ![](images/hummingbird.jpeg)
 
 **[Berylline](https://github.com/jcmkk3/trochilidae/releases/tag/berylline_v0.1)**
+
+Choc
 ![](images/berylline.jpg)
+
+Choc Min Spaced
+![](images/berylline_choc_min.jpg)
+
+MX Min Spaced
+![](images/berylline_mx_min.jpg)
 
 **[Rufous Variations](https://github.com/jcmkk3/trochilidae/)**
 
