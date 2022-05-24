@@ -144,7 +144,7 @@
              &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp BSPC      &kp DARW      &kp DEL
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &trans            &trans        &trans
+                                                       &trans        &trans            &kp LCTRL     &kp LALT
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
