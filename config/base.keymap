@@ -45,9 +45,9 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <50>;
             global-quick-tap;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -113,11 +113,11 @@
         default_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp W         &kp F         &kp M         &kp P         &kp G             &kp K         &kp U         &kp O         &kp Y         &gqt LALT QUOT
-             &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &gqt LCTRL H
+             &kp W         &kp F         &kp M         &kp P         &kp G             &kp K         &kp U         &kp O         &kp Y         &kp QUOT
+             &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &sl_nav       &kp SPACE         &sk LSHIFT    &sl NUM_L
+                                                       &sl_nav       &kp NAV SPACE     &sk LSHIFT    &sl NUM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
