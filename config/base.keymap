@@ -16,26 +16,26 @@
 
 /* Behavior Settings */
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE>;
+};
+
+&sk {
+    release-after-ms = <250>;
+    quick-release;
+};
+
+&sl {
+    release-after-ms = <250>;
+};
+
+&lt {
+    quick-tap-ms = <150>;
+    global-quick-tap;
+};
+
 / {
     behaviors {
-        &caps_word {
-            continue-list = <UNDERSCORE MINUS BACKSPACE>;
-        };
-
-        &sk {
-            release-after-ms = <250>;
-            quick-release;
-        };
-
-        &sl {
-            release-after-ms = <250>;
-        };
-
-        &lt {
-            quick-tap-ms = <150>;
-            global-quick-tap;
-        };
-
         ss: sticky_mod {
             compatible = "zmk,behavior-sticky-key";
             label = "STICK_MOD";
