@@ -120,7 +120,7 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
-             &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp GRAVE         &kp TILDE     &kp N4        &kp N5        &kp N6        &none
+             &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp PIPE          &kp TILDE     &kp N4        &kp N5        &kp N6        &none
                            &kp UNDER     &kp MINUS     &kp FSLH                                      &kp N1        &kp N2        &kp N3
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &kp N0        &trans
@@ -132,8 +132,8 @@
             label = "Sym";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp EXCL      &kp AT        &kp DOLLAR    &kp PERCENT   &kp CARET         &kp AMPS      &kp PIPE      &kp SEMI      &kp COLON     &kp DQT
-             &kp QMARK     &kp EQUAL     &kp PLUS      &kp ASTRK     &kp GRAVE         &kp TILDE     &sm LCTRL     &sm LSHFT     &sm LALT      &sm LGUI
+             &kp EXCL      &kp AT        &kp POUND     &kp DOLLAR    &kp PERCENT       &kp CARET     &kp AMPS      &kp SEMI      &kp COLON     &kp GRAVE
+             &kp QMARK     &kp EQUAL     &kp PLUS      &kp ASTRK     &kp PIPE          &kp TILDE     &sm LCTRL     &sm LSHFT     &sm LALT      &sm LGUI
                            &kp UNDER     &kp MINUS     &kp FSLH                                      &kp BSLH      &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &trans            &trans        &trans
