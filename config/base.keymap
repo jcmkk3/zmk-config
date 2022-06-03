@@ -36,7 +36,7 @@
 
 / {
     behaviors {
-        ss: sticky_mod {
+        sm: sticky_mod {
             compatible = "zmk,behavior-sticky-key";
             label = "STICK_MOD";
             #binding-cells = <1>;
