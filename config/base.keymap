@@ -119,11 +119,11 @@
             label = "Num";
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
-             &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp PIPE          &kp TILDE     &kp N4        &kp N5        &kp N6        &none
-                           &kp UNDER     &kp MINUS     &kp FSLH                                      &kp N1        &kp N2        &kp N3
+             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp N0
+             &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp PIPE          &kp TILDE     &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp KP_NUM
+                           &kp UNDER     &kp MINUS     &kp FSLH                                      &kp KP_N1     &kp KP_N2     &kp KP_N3
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &trans            &kp N0        &trans
+                                                       &trans        &trans            &kp KP_N0     &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
