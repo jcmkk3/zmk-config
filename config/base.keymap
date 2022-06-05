@@ -38,17 +38,6 @@
             ignore-modifiers;
             quick-release;
         };
-
-        gqt: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&mo>, <&kp>;
-        };
     };
 
     ZMK_MACRO(sl_nav,
@@ -117,7 +106,7 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &none       &gqt NAV_L SPACE  &sk LSHIFT    &sl NUM_L
+                                                       &sl_nav       &kp SPACE         &sk LSHIFT    &sl NUM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
             >;
