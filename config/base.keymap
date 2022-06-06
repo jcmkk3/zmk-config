@@ -10,8 +10,8 @@
 
 /* Layers */
 #define DEF_L 0
-#define NAV_L 1
-#define NUM_L 2
+#define NUM_L 1
+#define NAV_L 2
 
 /* Behavior Settings */
 &caps_word {
@@ -37,38 +37,6 @@
             bindings = <&kp>;
             ignore-modifiers;
             quick-release;
-        };
-
-        n8tilde: n8tilde {
-            compatible = "zmk,behavior-mod-morph";
-            label = "N8_TILDE";
-            #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp TILDE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n9pipe: n9pipe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "N9_PIPE";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp PIPE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n0under: n0under {
-            compatible = "zmk,behavior-mod-morph";
-            label = "N0_UNDER";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        spcunder: spcunder {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_UNDER";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -113,11 +81,19 @@
         COMBO(left_brace, &kp LBRC, 3 13, DEF_L NUM_L)
         COMBO(right_brace, &kp RBRC, 6 16, DEF_L NUM_L)
 
+        /* Symbols */
+        COMBO(dollar, &kp DOLLAR, 1 2, NUM_L)
+        COMBO(backslash, &kp BACKSLASH, 11 12, NUM_L)
+        COMBO(percent, &kp PERCENT, 20 21, NUM_L)
+        COMBO(ampersand, &kp AMPERSAND, 2 3, NUM_L)
+        COMBO(pipe, &kp PIPE, 12 13, NUM_L)
+        COMBO(caret, &kp CARET, 21 22, NUM_L)
+
         /* Convenience */
         COMBO(esc, &kp ESC, 3 4, DEF_L)
         COMBO(del, &kp DEL, 13 14, DEF_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
-        COMBO(repeat, &key_repeat, 24 25, DEF_L)
+
     };
 
     keymap {
@@ -130,9 +106,22 @@
              &kp R         &kp S         &kp N         &kp T         &kp B             &kp J         &kp A         &kp E         &kp I         &kp H
                            &kp C         &kp L         &kp D                                         &kp X         &kp COMMA     &kp DOT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &sl_nav       &spcunder         &sk LSHIFT    &sl NUM_L
+                                                       &sl_nav       &kp SPACE         &sk LSHIFT    &sl NUM_L
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                
+            >;
+        };
+
+        num_layer {
+            label = "Num";
+            bindings = <
+        // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+             &kp PLUS      &kp N7        &kp N8        &kp N9        &kp ASTRK         &kp HASH      &kp AT        &kp EXCL      &kp QMARK     &kp DQT
+             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp TILDE     &kp UNDER     &kp SEMI      &kp COLON     &kp GRAVE
+                           &kp N1        &kp N2        &kp N3                                        &kp EQUAL     &kp LT        &kp GT
+        // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
+                                                       &trans        &kp N0            &trans        &trans
+        //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
@@ -144,20 +133,7 @@
              &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp BSPC      &kp DARW      &kp DEL
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &trans            &trans        &trans
-        //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;
-        };
-
-        num_layer {
-            label = "Num";
-            bindings = <
-        // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp PLUS      &kp N7        &n8tilde      &n9pipe       &kp ASTRK         &kp GRAVE     &kp QMARK     &kp SEMI      &kp COLON     &kp DQT
-             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp BSLH      &sm LCTRL     &sm LSHFT     &sm LALT      &sm LGUI
-                           &kp N1        &kp N2        &kp N3                                        &kp EQUAL     &kp LT        &kp GT
-        // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &n0under          &trans        &trans
+                                                       &trans        &trans            &sk LCTRL     &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
