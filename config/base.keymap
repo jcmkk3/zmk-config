@@ -82,16 +82,17 @@
         COMBO(right_brace, &kp RBRC, 6 16, DEF_L NUM_L)
 
         /* Symbols */
-        COMBO(dollar, &kp DOLLAR, 1 2, NUM_L)
-        COMBO(backslash, &kp BACKSLASH, 11 12, NUM_L)
-        COMBO(percent, &kp PERCENT, 20 21, NUM_L)
-        COMBO(ampersand, &kp AMPERSAND, 2 3, NUM_L)
-        COMBO(pipe, &kp PIPE, 12 13, NUM_L)
-        COMBO(caret, &kp CARET, 21 22, NUM_L)
+        COMBO(pipe, &kp PIPE, 1 2, NUM_L)
+        COMBO(backslash, &kp BACKSLASH, 2 3, NUM_L)
+        COMBO(caret, &kp CARET, 11 12, NUM_L)
+        COMBO(dollar, &kp DOLLAR, 12 13, NUM_L)
+        COMBO(ampersand, &kp AMPERSAND, 20 21, NUM_L)
+        COMBO(percent, &kp PERCENT, 21 22, NUM_L)
 
         /* Convenience */
-        COMBO(esc, &kp ESC, 3 4, DEF_L)
-        COMBO(del, &kp DEL, 13 14, DEF_L)
+        COMBO(esc_left, &kp ESC, 3 4, DEF_L NUM_L)
+        COMBO(esc_right, &kp ESC, 24 25, DEF_L NUM_L)
+        COMBO(del, &kp DEL, 13 14, DEF_L NUM_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
 
     };
