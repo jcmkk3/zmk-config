@@ -90,11 +90,11 @@
         COMBO(percent, &kp PERCENT, 21 22, NUM_L)
 
         /* Convenience */
-        COMBO(esc_left, &kp ESC, 3 4, DEF_L NUM_L)
-        COMBO(esc_right, &kp ESC, 24 25, DEF_L NUM_L)
+        COMBO(esc, &kp ESC, 3 4, DEF_L NUM_L)
         COMBO(del, &kp DEL, 13 14, DEF_L NUM_L)
+        COMBO(alt, &sm LALT, 23 24, DEF_L NUM_L)
+        COMBO(ctrl, &sm LCTRL, 24 25, DEF_L NUM_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
-
     };
 
     keymap {
@@ -134,7 +134,7 @@
              &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
                            &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp BSPC      &kp DARW      &kp DEL
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &trans            &sk LCTRL     &trans
+                                                       &trans        &trans            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
