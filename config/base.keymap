@@ -88,12 +88,11 @@
         COMBO(dollar, &kp DOLLAR, 12 13, NUM_L)
         COMBO(ampersand, &kp AMPERSAND, 20 21, NUM_L)
         COMBO(percent, &kp PERCENT, 21 22, NUM_L)
+        COMBO(underscore, &kp UNDERSCORE, 24 25, DEF_L NUM_L)
 
         /* Convenience */
         COMBO(esc, &kp ESC, 3 4, DEF_L NUM_L)
         COMBO(del, &kp DEL, 13 14, DEF_L NUM_L)
-        COMBO(alt, &sm LALT, 23 24, DEF_L NUM_L)
-        COMBO(ctrl, &sm LCTRL, 24 25, DEF_L NUM_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
     };
 
@@ -118,8 +117,8 @@
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp PLUS      &kp N7        &kp N8        &kp N9        &kp ASTRK         &kp HASH      &kp AT        &kp EXCL      &kp QMARK     &kp DQT
-             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp TILDE     &kp UNDER     &kp SEMI      &kp COLON     &kp GRAVE
-                           &kp N1        &kp N2        &kp N3                                        &kp EQUAL     &kp LT        &kp GT
+             &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp TILDE     &kp EQUAL     &kp SEMI      &kp COLON     &kp GRAVE
+                           &kp N1        &kp N2        &kp N3                                        &kp UNDER     &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
                                                        &trans        &kp N0            &trans        &trans
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
