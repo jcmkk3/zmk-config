@@ -38,6 +38,27 @@
             ignore-modifiers;
             quick-release;
         };
+        cut: cut {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CUT";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DELETE)>, <&kp X>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        copy: copy {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COPY";
+            #binding-cells = <0>;
+            bindings = <&kp LC(INSERT)>, <&kp C>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        paste: paste {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp LS(INSERT)>, <&kp V>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     ZMK_MACRO(sl_nav,
@@ -88,12 +109,22 @@
         COMBO(dollar, &kp DOLLAR, 12 13, NUM_L)
         COMBO(ampersand, &kp AMPERSAND, 20 21, NUM_L)
         COMBO(percent, &kp PERCENT, 21 22, NUM_L)
-        COMBO(underscore, &kp UNDERSCORE, 24 25, DEF_L NUM_L)
 
         /* Convenience */
         COMBO(esc, &kp ESC, 3 4, DEF_L NUM_L)
         COMBO(del, &kp DEL, 13 14, DEF_L NUM_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
+
+        thumb_ctrl {
+            key-positions = <26 28>;
+            bindings = <&kp LCTRL>;
+            slow-release;
+        };
+        thumb_alt {
+            key-positions = <26 29>;
+            bindings = <&kp LALT>;
+            slow-release;
+        };
     };
 
     keymap {
@@ -131,9 +162,9 @@
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
              &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp PG_UP     &kp ESC       &kp UARW      &kp TAB       &kp HOME
              &sm LGUI      &sm LALT      &sm LSHFT     &sm LCTRL     &kp LC(Z)         &kp PG_DN     &kp LARW      &kp ENTER     &kp RARW      &kp END
-                           &kp LC(X)     &kp LC(C)     &kp LC(V)                                     &kp BSPC      &kp DARW      &kp DEL
+                           &cut          &copy         &paste                                        &kp BSPC      &kp DARW      &kp DEL
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &trans            &trans        &trans
+                                                       &trans        &trans            &kp LCTRL     &kp LALT
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
