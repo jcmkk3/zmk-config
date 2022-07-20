@@ -114,6 +114,8 @@
         COMBO(esc, &kp ESC, 3 4, DEF_L NUM_L)
         COMBO(del, &kp DEL, 13 14, DEF_L NUM_L)
         COMBO(select_all, &kp LC(A), 20 21, NAV_L)
+        COMBO(thumb_ctrl, &kp LCTRL, 26 28)
+        COMBO(thumb_alt, &kp LALT, 26 29)
     };
 
     keymap {
@@ -140,7 +142,7 @@
              &kp MINUS     &kp N4        &kp N5        &kp N6        &kp FSLH          &kp TILDE     &kp EQUAL     &kp SEMI      &kp COLON     &kp GRAVE
                            &kp N1        &kp N2        &kp N3                                        &kp UNDER     &kp LT        &kp GT
         // ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                       &trans        &kp N0            &trans        &trans
+                                                       &trans        &kp N0            &kp LCTRL     &kp LALT
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
