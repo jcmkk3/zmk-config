@@ -140,8 +140,8 @@
             label = "Nav";
             bindings = <
                 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp ESC    &kp HOME   &kp UARW   &kp END    &kp PG_UP
-                &sm LGUI   &sm LALT   &sm LSHFT  &sm LCTRL  &kp LC(Z)      &kp DEL    &kp LARW   &kp DARW   &kp RARW   &kp PG_DN
-                           &cut       &copy      &paste                               &kp BSPC   &kp TAB    &kp ENTER
+                &sm LGUI   &sm LALT   &sm LSHFT  &sm LCTRL  &kp LC(Z)      &kp TAB    &kp LARW   &kp ENTER  &kp RARW   &kp PG_DN
+                           &cut       &copy      &paste                               &kp BSPC   &kp DARW   &kp DEL
                                                  &trans     &trans         &kp LCTRL  &kp LALT
             >;
         };
