@@ -21,6 +21,11 @@
 #define UNDO LC(Z)
 #define SLALL LC(A)
 
+/* Key Position Groups */
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22  // left-hand keys
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 23 24 25  // right-hand keys
+#define THUMBS 26 27 28 29                        // thumb keys
+
 /* Behavior Settings */
 &sk {
   release-after-ms = <250>;
@@ -33,7 +38,7 @@
 
 / {
     behaviors {
-        sm: sticky_mod {
+        sm: sticky-mod {
             compatible = "zmk,behavior-sticky-key";
             label = "STICK_MOD";
             #binding-cells = <1>;
@@ -42,10 +47,34 @@
             ignore-modifiers;
             quick-release;
         };
+        hml: home-row-left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_LEFT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // double tapping same key allows for repeating
+            global-quick-tap-ms = <150>;         // without PR #1387 use global-quick-tap instead
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;             // requires PR #1423
+        };
+        hmr: home-row-right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_RIGHT";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // double tapping same key allows for repeating
+            global-quick-tap-ms = <150>;         // without PR #1387 use global-quick-tap instead
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;             // requires PR #1423
+        };
     };
 
     macros {
-        sl_nav: sl_nav {
+        sl_nav: sl-nav {
             label = "SL_NAV";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -102,7 +131,7 @@
         default_layer {
             bindings = <
                 &kp W     &kp F     &kp M     &kp P     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
-                &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp A     &kp E     &kp I     &kp H
+                &hml LGUI R  &hml LALT S  &hml LSHFT N  &hml LCTRL T  &kp B  &kp J  &hmr LCTRL A  &hmr LSHFT E  &hmr LALT I  &hmr LGUI H
                           &kp C     &kp L     &kp D                           &kp X     &kp COMMA &kp DOT
                                     &sl_nav   &kp SPACE             &sk LSHFT &sl SYM_L
                
