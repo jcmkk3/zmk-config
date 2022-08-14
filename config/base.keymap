@@ -9,10 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 /* Layers */
-#define DEF_L 0
-#define NAV_L 1
-#define SYM_L 2
-#define NUM_L 3
+#define BASE_L 0
+#define LOWER_L 1
+#define RAISE_L 2
 
 /* Shortcuts */
 #define CUT LC(X)
@@ -74,26 +73,18 @@
     };
 
     macros {
-        sl_nav: sl-nav {
-            label = "SL_NAV";
+        sl_lower: sl-lower {
+            label = "SL_LOWER";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
                 = <&macro_tap &kp K_CANCEL>
-                , <&macro_press &sl NAV_L>
+                , <&macro_press &sl LOWER_L>
                 , <&macro_pause_for_release>
-                , <&macro_release &sl NAV_L>
+                , <&macro_release &sl LOWER_L>
                 ;
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAV_L SYM_L>;
-            then-layer = <NUM_L>;
         };
     };
 
@@ -108,59 +99,54 @@
                         26  27     28  29              */
 
          /* Letters */
-        v { key-positions = <1 2>; bindings = <&kp V>; layers = <DEF_L>; };
-        q { key-positions = <1 3>; bindings = <&kp Q>; layers = <DEF_L>; };
-        z { key-positions = <20 21>; bindings = <&kp Z>; layers = <DEF_L>; };
+        v { key-positions = <1 2>; bindings = <&kp V>; layers = <BASE_L>; };
+        q { key-positions = <1 3>; bindings = <&kp Q>; layers = <BASE_L>; };
+        z { key-positions = <20 21>; bindings = <&kp Z>; layers = <BASE_L>; };
 
         /* Brackets */
-        left_bracket { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF_L SYM_L NUM_L>; };
-        right_bracket { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF_L SYM_L NUM_L>; };
-        left_parenthesis { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <DEF_L SYM_L NUM_L>; };
-        right_parenthesis { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <DEF_L SYM_L NUM_L>; };
-        left_brace { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <DEF_L SYM_L NUM_L>; };
-        right_brace { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF_L SYM_L NUM_L>; };
+        left_bracket { key-positions = <1 11>; bindings = <&kp LBKT>; };
+        right_bracket { key-positions = <8 18>; bindings = <&kp RBKT>; };
+        left_parenthesis { key-positions = <2 12>; bindings = <&kp LPAR>; };
+        right_parenthesis { key-positions = <7 17>; bindings = <&kp RPAR>; };
+        left_brace { key-positions = <3 13>; bindings = <&kp LBRC>; };
+        right_brace { key-positions = <6 16>; bindings = <&kp RBRC>; };
 
         /* Convenience */
         esc { key-positions = <3 4>; bindings = <&kp ESC>; };
         del { key-positions = <13 14>; bindings = <&kp DEL>; };
-        select_all { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L>; };
+        select_all { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <LOWER_L>; };
+        home { key-positions = <23 24>; bindings = <&kp HOME>; layers = <LOWER_L>; };
+        end { key-positions = <24 25>; bindings = <&kp END>; layers = <LOWER_L>; };
+
     };
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        base_layer {
+            label = "BASE";
             bindings = <
                 &kp W     &kp F     &kp M     &kp P     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
                 &hml LGUI R  &hml LALT S  &hml LSHFT N  &hml LCTRL T  &kp B  &kp J  &hmr LCTRL A  &hmr LSHFT E  &hmr LALT I  &hmr LGUI H
                           &kp C     &kp L     &kp D                           &kp X     &kp COMMA &kp DOT
-                                    &sl_nav   &kp SPACE             &sk LSHFT &sl SYM_L
+                                    &sl_lower &kp SPACE             &sk LSHFT &sl RAISE_L
                
             >;
         };
-        nav_layer {
-            label = "Nav";
+        lower_layer {
+            label = "LOWER";
             bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp ESC   &kp HOME  &kp UARW  &kp END   &kp PG_UP
-                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp LC(Z)   &kp DEL   &kp LARW  &kp ENTER &kp RARW  &kp PG_DN
-                          &kp CUT   &kp COPY  &kp PASTE                       &kp BSPC  &kp DARW  &kp TAB
+                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp LC(Z)   &kp DEL   &kp BSPC  &kp UARW  &kp TAB   &kp ENTER
+                          &kp CUT   &kp COPY  &kp PASTE                       &kp LARW  &kp DARW  &kp RARW
                                               &trans    &trans      &trans    &trans
             >;
         };
-        sym_layer {
-            label = "Sym";
+        raise_layer {
+            label = "RAISE";
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp GRAVE
                 &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp TILDE   &kp PIPE  &sm LCTRL &sm LSHFT &sm LALT  &sm LGUI
                           &kp PLUS  &kp UNDER &kp FSLH                        &kp BSLH  &kp LT    &kp GT
-                                              &trans    &trans      &trans    &trans
-            >;
-        };
-        num_layer {
-            label = "Num";
-            bindings = <
-                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &trans      &trans    &sm LCTRL &sm LSHFT &sm LALT  &sm LGUI
-                          &trans    &trans    &trans                          &trans    &trans    &trans
                                               &trans    &trans      &trans    &trans
             >;
         };
