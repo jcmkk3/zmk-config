@@ -35,7 +35,7 @@
     behaviors {
         sm: sticky_mod {
             compatible = "zmk,behavior-sticky-key";
-            label = "STICK_MOD";
+            label = "STICKY_MOD";
             #binding-cells = <1>;
             release-after-ms = <60000>;
             bindings = <&kp>;
@@ -45,7 +45,7 @@
     };
 
     macros {
-        sl_nav: sl_nav {
+        slnav: sl_nav {
             label = "SL_NAV";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -84,17 +84,17 @@
         z { key-positions = <20 21>; bindings = <&kp Z>; layers = <DEF_L>; };
 
         /* Brackets */
-        left_bracket { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF_L SYM_L NUM_L>; };
-        right_bracket { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF_L SYM_L NUM_L>; };
-        left_parenthesis { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <DEF_L SYM_L NUM_L>; };
-        right_parenthesis { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <DEF_L SYM_L NUM_L>; };
-        left_brace { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <DEF_L SYM_L NUM_L>; };
-        right_brace { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF_L SYM_L NUM_L>; };
+        lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF_L SYM_L NUM_L>; };
+        rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF_L SYM_L NUM_L>; };
+        lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <DEF_L SYM_L NUM_L>; };
+        rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <DEF_L SYM_L NUM_L>; };
+        lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <DEF_L SYM_L NUM_L>; };
+        rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF_L SYM_L NUM_L>; };
 
         /* Convenience */
         esc { key-positions = <3 4>; bindings = <&kp ESC>; };
         del { key-positions = <13 14>; bindings = <&kp DEL>; };
-        select_all { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L>; };
+        slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L>; };
     };
 
     keymap {
@@ -104,15 +104,14 @@
                 &kp W     &kp F     &kp M     &kp P     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
                 &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp A     &kp E     &kp I     &kp H
                           &kp C     &kp L     &kp D                           &kp X     &kp COMMA &kp DOT
-                                    &sl_nav   &kp SPACE             &sk LSHFT &sl SYM_L
-               
+                                    &slnav    &kp SPACE             &sk LSHFT &sl SYM_L
             >;
         };
         nav_layer {
             label = "Nav";
             bindings = <
                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp ESC   &kp HOME  &kp UARW  &kp END   &kp PG_UP
-                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp LC(Z)   &kp DEL   &kp LARW  &kp ENTER &kp RARW  &kp PG_DN
+                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp UNDO    &kp DEL   &kp LARW  &kp ENTER &kp RARW  &kp PG_DN
                           &kp CUT   &kp COPY  &kp PASTE                       &kp BSPC  &kp DARW  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
@@ -129,9 +128,9 @@
         num_layer {
             label = "Num";
             bindings = <
-                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &trans      &trans    &sm LCTRL &sm LSHFT &sm LALT  &sm LGUI
-                          &trans    &trans    &trans                          &trans    &trans    &trans
+                &none     &none     &none     &none     &none       &none     &none     &none     &none     &none 
+                &kp N1    &kp N2    &kp N3    &kp N4    &none       &none     &kp N7    &kp N8    &kp N9    &kp N0
+                          &none     &none     &kp N5                          &kp N6    &none     &none 
                                               &trans    &trans      &trans    &trans
             >;
         };
