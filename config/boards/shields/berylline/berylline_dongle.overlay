@@ -1,1 +1,9 @@
 #include "berylline.dtsi"
+
+&kscan_faceup {
+	input-gpios = 
+};
+
+&kscan_facedown {
+	input-gpios = 
+};
