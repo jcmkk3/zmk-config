@@ -1,9 +1,13 @@
 #include "berylline.dtsi"
 
 &kscan_faceup {
-	input-gpios = 
+	input-gpios
+	= <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+	;
 };
 
 &kscan_facedown {
-	input-gpios = 
+	input-gpios
+	= <&pro_micro 3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+	;
 };
