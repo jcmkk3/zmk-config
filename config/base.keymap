@@ -42,22 +42,6 @@
             ignore-modifiers;
             quick-release;
         };
-        hbootloader: hold_bootloader {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOLD_BOOTLOADER";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <1000>;
-			bindings = <&bootloader>, <&none>;
-		};
-        hbtclear: hold_bt_clear {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOLD_BT";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <1000>;
-			bindings = <&bt BT_CLR>, <&none>;
-		};
     };
 
     macros {
@@ -146,7 +130,7 @@
             bindings = <
                 &none     &none     &none     &none     &none       &none     &none     &none     &none     &none 
                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                          &none     &hbootloader 0 0  &none                   &none     &hbtclear 0 0 &none 
+                          &none     &none     &none                 &none     &none 
                                               &trans    &trans      &trans    &trans
             >;
         };
