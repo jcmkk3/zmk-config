@@ -52,7 +52,7 @@
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&sm>, <&sm>;
+            bindings = <&kp>, <&sm>;
         };
     };
 
