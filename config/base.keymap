@@ -20,9 +20,6 @@
 #define UNDO LC(Z)
 #define SLALL LC(A)
 
-/* Sticky Mods */
-#define SM(KEY) &nsm KEY KEY
-
 /* Behavior Settings */
 &sk {
   release-after-ms = <250>;
@@ -43,16 +40,6 @@
             bindings = <&kp>;
             ignore-modifiers;
             quick-release;
-        };
-        // Sticky key on tap, normal key on hold
-        // Useful for modifier-clicking without the modifier remaining active
-        nsm: not_so_sticky_mod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NOT_SO_STICKY_MOD";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&sm>;
         };
     };
 
@@ -123,7 +110,7 @@
             label = "Nav";
             bindings = <
                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp ESC   &kp HOME  &kp UARW  &kp END   &kp PG_UP
-                SM(LGUI)  SM(LALT)  SM(LSHFT) SM(LCTRL) &kp UNDO    &kp DEL   &kp LARW  &kp ENTER &kp RARW  &kp PG_DN
+                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp UNDO    &kp DEL   &kp LARW  &kp ENTER &kp RARW  &kp PG_DN
                           &kp CUT   &kp COPY  &kp PASTE                       &kp BSPC  &kp DARW  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
@@ -132,7 +119,7 @@
             label = "Sym";
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp GRAVE
-                &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp TILDE   &kp PIPE  SM(LCTRL) SM(LSHFT) SM(LALT)  SM(LGUI)
+                &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp TILDE   &kp PIPE  &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI
                           &kp PLUS  &kp UNDER &kp FSLH                        &kp BSLH  &kp LT    &kp GT
                                               &trans    &trans      &trans    &trans
             >;
