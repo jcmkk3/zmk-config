@@ -12,6 +12,8 @@
 #define NAV_L 1
 #define SYM_L 2
 #define NUM_L 3
+#define TMP_L 4
+#define MSE_L 5
 
 /* Shortcuts */
 #define CUT LC(X)
@@ -28,6 +30,7 @@
 
 &sl {
   release-after-ms = <250>;
+  bindings = <&to>;
 };
 
 / {
@@ -61,9 +64,13 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        num_layer {
             if-layers = <NAV_L SYM_L>;
             then-layer = <NUM_L>;
+        };
+        mouse_layer {
+            if-layers = <NAV_L TMP_L>;
+            then-layer = <MSE_L>;
         };
     };
 
@@ -93,7 +100,11 @@
         /* Convenience */
         esc { key-positions = <3 4>; bindings = <&kp ESC>; };
         del { key-positions = <13 14>; bindings = <&kp DEL>; };
-        slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L>; };
+        slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L MSE_L>; };
+
+        /* Mouse Layer */
+        togmse { key-positions = <6 7 8>; bindings = <&tog TMP_L>; layers = <NAV_L MSE_L>; };
+        nlck { key-positions = <23 24 35>; bindings = <&kp KP_NLCK>; layers = <MSE_L>; };
     };
 
     keymap {
@@ -131,6 +142,24 @@
                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
                           &none     &none     &none                 &none     &none 
                                               &trans    &trans      &trans    &trans
+            >;
+        };
+        tmp_layer {
+            label = "Temp";
+            bindings = <
+                &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans 
+                &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans
+                          &trans    &trans    &trans                          &trans    &trans    &trans
+                                              &trans    &trans      &trans    &trans
+            >;
+        };
+        mse_layer {
+            label = "Mouse";
+            bindings = <
+                &trans    &trans    &trans    &trans    &trans      &kp KP_SLASH &kp KP_N7 &kp KP_N8 &kp KP_N9 &trans 
+                &trans    &trans    &trans    &trans    &trans      &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &trans
+                          &trans    &trans    &trans                          &kp KP_N1 &kp KP_N2 &kp KP_N3
+                                              &trans    &trans      &kp KP_N0 &trans
             >;
         };
     };
