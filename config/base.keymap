@@ -119,7 +119,7 @@
             label = "Sym";
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp GRAVE
-                &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp TILDE   &kp PIPE  &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI
+                &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp PIPE    &kp TILDE &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI
                           &kp PLUS  &kp UNDER &kp FSLH                        &kp BSLH  &kp LT    &kp GT
                                               &trans    &trans      &trans    &trans
             >;
