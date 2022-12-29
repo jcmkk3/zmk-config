@@ -91,45 +91,43 @@
         rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF_L SYM_L NUM_L>; };
 
         /* Convenience */
-        esc { key-positions = <3 4>; bindings = <&kp ESC>; };
-        del { key-positions = <13 14>; bindings = <&kp DEL>; };
-        slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L>; };
+        slall { key-positions = <1 2>; bindings = <&kp SLALL>; layers = <NAV_L>; };
     };
 
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp W     &kp F     &kp M     &kp P     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
+                &kp W     &kp F     &kp M     &kp P     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp X
                 &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp A     &kp E     &kp I     &kp H
-                          &kp C     &kp L     &kp D                           &kp X     &kp COMMA &kp DOT
-                                    &slnav    &kp SPACE             &sk LSHFT &sl SYM_L
+                          &kp C     &kp L     &kp D                           &kp DOT   &kp COMMA &kp QUOT
+                                            &slnav    &kp SPACE     &sk LSHFT &sl SYM_L
             >;
         };
         nav_layer {
             label = "Nav";
             bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp ESC   &kp HOME  &kp UARW  &kp END   &kp PG_UP
-                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp UNDO    &kp DEL   &kp LARW  &kp ENTER &kp RARW  &kp PG_DN
-                          &kp CUT   &kp COPY  &kp PASTE                       &kp BSPC  &kp DARW  &kp TAB
+                &kp UNDO  &kp CUT   &kp COPY  &kp PASTE &kp DEL     &kp PG_UP &kp HOME  &kp UARW  &kp END   &kp DEL
+                &sm LGUI  &sm LALT  &sm LSHFT &sm LCTRL &kp ESC     &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp ESC
+                          &none     &none     &none                           &kp BSPC  &kp DARW  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
         };
         sym_layer {
             label = "Sym";
             bindings = <
-                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp GRAVE
-                &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp PIPE    &kp TILDE &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI
-                          &kp PLUS  &kp UNDER &kp FSLH                        &kp BSLH  &kp LT    &kp GT
+                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp LT    &kp GT    &kp GRAVE &kp BSLH
+                &kp QMARK &kp MINUS &kp EQUAL &kp FSLH  &kp PIPE    &kp AMPS  &kp COLON &kp SEMI  &kp DQT   &kp TILDE
+                          &kp PLUS  &kp UNDER &kp ASTRK                       &trans    &trans    &trans
                                               &trans    &trans      &trans    &trans
             >;
         };
         num_layer {
             label = "Num";
             bindings = <
-                &none     &none     &none     &none     &none       &none     &none     &none     &none     &none 
+                &none     &none     &kp N1    &none     &none       &none     &none     &kp N0     &none     &none 
                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                          &none     &none     &none                 &none     &none 
+                          &none     &none     &none                           &none     &none     &none
                                               &trans    &trans      &trans    &trans
             >;
         };
