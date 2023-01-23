@@ -81,6 +81,7 @@
         v { key-positions = <1 2>; bindings = <&kp V>; layers = <DEF_L>; };
         q { key-positions = <1 3>; bindings = <&kp Q>; layers = <DEF_L>; };
         z { key-positions = <20 21>; bindings = <&kp Z>; layers = <DEF_L>; };
+        semi { key-positions = <24 25>; bindings = <&kp SEMI>; layers = <DEF_L SYM_L NUM_L>; };
 
         /* Brackets */
         lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF_L SYM_L NUM_L>; };
@@ -118,7 +119,7 @@
         sym_layer {
             label = "Sym";
             bindings = <
-                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp GRAVE
+                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp COLON &kp GRAVE &kp QUOT
                 &kp QMARK &kp MINUS &kp EQUAL &kp ASTRK &kp PIPE    &kp TILDE &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI
                           &kp PLUS  &kp UNDER &kp FSLH                        &kp BSLH  &kp LT    &kp GT
                                               &trans    &trans      &trans    &trans
