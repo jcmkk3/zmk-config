@@ -133,7 +133,7 @@ path {
 <rect rx="6.0" ry="6.0" x="526.0" y="183.0" width="28.0" height="26.0" class="combo"/>
 <text x="540.0" y="196.0" class="small">;</text>
 <rect rx="6.0" ry="6.0" x="106.0" y="99.0" width="28.0" height="26.0" class="combo"/>
-<text x="120.0" y="112.0" class="small">]</text>
+<text x="120.0" y="112.0" class="small">[</text>
 <rect rx="6.0" ry="6.0" x="556.0" y="99.0" width="28.0" height="26.0" class="combo"/>
 <text x="570.0" y="112.0" class="small">]</text>
 <rect rx="6.0" ry="6.0" x="166.0" y="99.0" width="28.0" height="26.0" class="combo"/>
@@ -213,7 +213,8 @@ path {
 <path d="M150.0,505.0 h-24.0 a6.0,6.0 0 0 1 -6.0,-6.0 v-4.333333333333332"/>
 <path d="M150.0,505.0 h24.0 a6.0,6.0 0 0 0 6.0,-6.0 v-4.333333333333332"/>
 <rect rx="6.0" ry="6.0" x="136.0" y="492.0" width="28.0" height="26.0" class="combo"/>
-<text x="150.0" y="505.0" class="small">LC(A)</text>
+<text x="150.0" y="505.0" class="small">
+<tspan x="150.0" dy="-0.6em">Sel</tspan><tspan x="150.0" dy="1.2em">All</tspan></text>
 <text x="30.0" y="588.0" class="label">Sym:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="646.0" width="56.0" height="52.0"/>
 <text x="60.0" y="672.0">!</text>
@@ -278,7 +279,7 @@ path {
 <rect rx="6.0" ry="6.0" x="526.0" y="743.0" width="28.0" height="26.0" class="combo"/>
 <text x="540.0" y="756.0" class="small">;</text>
 <rect rx="6.0" ry="6.0" x="106.0" y="659.0" width="28.0" height="26.0" class="combo"/>
-<text x="120.0" y="672.0" class="small">]</text>
+<text x="120.0" y="672.0" class="small">[</text>
 <rect rx="6.0" ry="6.0" x="556.0" y="659.0" width="28.0" height="26.0" class="combo"/>
 <text x="570.0" y="672.0" class="small">]</text>
 <rect rx="6.0" ry="6.0" x="166.0" y="659.0" width="28.0" height="26.0" class="combo"/>
@@ -333,7 +334,7 @@ path {
 <rect rx="6.0" ry="6.0" x="526.0" y="1023.0" width="28.0" height="26.0" class="combo"/>
 <text x="540.0" y="1036.0" class="small">;</text>
 <rect rx="6.0" ry="6.0" x="106.0" y="939.0" width="28.0" height="26.0" class="combo"/>
-<text x="120.0" y="952.0" class="small">]</text>
+<text x="120.0" y="952.0" class="small">[</text>
 <rect rx="6.0" ry="6.0" x="556.0" y="939.0" width="28.0" height="26.0" class="combo"/>
 <text x="570.0" y="952.0" class="small">]</text>
 <rect rx="6.0" ry="6.0" x="166.0" y="939.0" width="28.0" height="26.0" class="combo"/>
