@@ -3,8 +3,10 @@
 This repo contains the config for my keyboard's firmware and builds it!
 
 ## Keymap
+
+*Generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer)*
  
-![](images/keymap.png)
+![](images/keymap.svg)
 
 ## Keyboards
 Here are my keyboards that this firmware powers.
