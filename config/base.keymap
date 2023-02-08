@@ -101,9 +101,9 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp W     &kp F     &kp M     &kp P     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
+                &kp W     &kp C     &kp L     &kp D     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
                 &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp A     &kp E     &kp I     &kp H
-                          &kp C     &kp L     &kp D                           &kp X     &kp COMMA &kp DOT
+                          &kp F     &kp M     &kp P                           &kp X     &kp COMMA &kp DOT
                                     &slnav    &kp SPACE             &sk LSHFT &sl SYM_L
             >;
         };
