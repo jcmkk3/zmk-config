@@ -1,4 +1,3 @@
-# bootstrapped from https://github.com/jcmkk3/zmk-config/blob/main/config/hummingbird.keymap
 layout:
     ortho_layout:
         split: true
@@ -23,7 +22,7 @@ layers:
     - [Cut, Copy, Paste, Back Space, 🠗, Tab]
     - [{t: '', type: held}, '', '', '']
     Sym:
-    - ['!', '@', '#', $, '%', ^, '&', '''', '`', '"']
+    - ['!', '@', '#', $, '%', ^, '&', ':', '`', '"']
     - ['?', '-', '=', '*', '|',
        '~', {t: Ctrl, h: sticky}, {t: Shift, h: sticky}, {t: Alt, h: sticky}, {t: Super, h: sticky}]
     - [+, _, /, \, <, '>']
