@@ -57,7 +57,7 @@
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
             global-quick-tap;
-        }
+        };
 
         phr: positional_hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
@@ -69,7 +69,7 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
             global-quick-tap;
-        }
+        };
     };
 
     macros {
