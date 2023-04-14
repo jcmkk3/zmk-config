@@ -50,6 +50,7 @@
         phl: positional_hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
             label = "POSITIONAL_HOLD_TAP_LEFT";
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -62,6 +63,7 @@
         phr: positional_hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
             label = "POSITIONAL_HOLD_TAP_RIGHT";
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
