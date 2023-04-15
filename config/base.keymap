@@ -47,9 +47,9 @@
             quick-release;
         };
 
-        phl: positional_hold_tap_left {
+        mtl: mod_tap_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP_LEFT";
+            label = "MOD_TAP_LEFT";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
@@ -60,9 +60,9 @@
             global-quick-tap;
         };
 
-        phr: positional_hold_tap_right {
+        mtr: mod_tap_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP_RIGHT";
+            label = "MOD_TAP_RIGHT";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
@@ -133,7 +133,7 @@
         default_layer {
             bindings = <
                 &kp W     &kp C     &kp L     &kp D     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
-                &phl LGUI R &phl LALT S &phl LSHFT N &phl LCTRL T &kp B &kp J &phr LCTRL A &phr LSHFT E &phr LALT I &phr LGUI H
+                &mtl LGUI R &mtl LALT S &mtl LSHFT N &mtl LCTRL T &kp B &kp J &mtr LCTRL A &mtr LSHFT E &mtr LALT I &mtr LGUI H
                           &kp F     &kp M     &kp P                           &kp X     &kp COMMA &kp DOT
                                     &slnav    &kp SPACE             &sk LSHFT &sl SYM_L
             >;
@@ -160,7 +160,7 @@
             label = "Num";
             bindings = <
                 &none     &none     &none     &none     &none       &none     &none     &none     &none     &none 
-                &phl LGUI N1 &phl LALT N2 &phl LSHFT N3 &phl LCTRL N4 &kp N5 &kp N6 &phr LCTRL N7 &phr LSHFT N8 &phr LALT N9 &phr LGUI N0
+                &mtl LGUI N1 &mtl LALT N2 &mtl LSHFT N3 &mtl LCTRL N4 &kp N5 &kp N6 &mtr LCTRL N7 &mtr LSHFT N8 &mtr LALT N9 &mtr LGUI N0
                           &none     &none     &none                 &none     &none 
                                               &trans    &trans      &trans    &trans
             >;
