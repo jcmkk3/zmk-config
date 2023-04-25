@@ -9,7 +9,8 @@ layout:
 layers:
     Def:
     - [W, C, L, D, G, K, U, O, Y, "'"]
-    - [R, S, N, T, B, J, A, E, I, H]
+    - [{t: R, h: Super}, {t: S, h: Alt}, {t: N, h: Shift}, {t: T, h: Ctrl}, B,
+       J, {t: A, h: Ctrl}, {t: E, h: Shift}, {t: I, h: Alt}, {t: H, h: Super}]
     -    [F, M, P,       X, ',', .]
     - Nav
     - Space
@@ -17,19 +18,20 @@ layers:
     - Sym
     Nav:
     - [F1, F2, F3, F4, F5, Esc, Home, 🠕, End, Pg🠕]
-    - [{t: Super, h: sticky}, {t: Alt, h: sticky}, {t: Shift, h: sticky}, {t: Ctrl, h: sticky}, Undo,
+    - [{t: Super}, {t: Alt}, {t: Shift}, {t: Ctrl}, Undo,
         Del, 🠔, Enter, ➝, Pg🠗]
     - [Cut, Copy, Paste, Back Space, 🠗, Tab]
     - [{t: '', type: held}, '', '', '']
     Sym:
     - ['!', '@', '#', $, '%', ^, '&', ':', '`', '"']
     - ['?', '-', '=', '*', '|',
-       '~', {t: Ctrl, h: sticky}, {t: Shift, h: sticky}, {t: Alt, h: sticky}, {t: Super, h: sticky}]
+       '~', {t: Ctrl}, {t: Shift}, {t: Alt}, {t: Super}]
     - [+, _, /, \, <, '>']
     - ['', '', '', {t: '', type: held}]
     Num:
     - ['', '', '', '', '', '', '', '', '', '']
-    - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    - [{t: '1', h: Super}, {t: '2', h: Alt}, {t: '3', h: Shift}, {t: '4', h: Ctrl}, '5',
+       '6', {t: '7', h: Ctrl}, {t: '8', h: Shift}, {t: '9', h: Alt}, {t: '0', h: Super}]
     - ['', '', '', '', '', '']
     - [{t: '', type: held}, '', '', {t: '', type: held}]
 combos:
