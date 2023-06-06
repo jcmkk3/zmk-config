@@ -20,11 +20,6 @@
 #define UNDO LC(Z)
 #define SLALL LC(A)
 
-/* Key Position Groups */
-#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22  // left-hand keys
-#define KEYS_R 5 6 7 8 9 15 16 17 18 19 23 24 25  // right-hand keys
-#define THUMBS 26 27 28 29                        // thumb keys
-
 /* Behavior Settings */
 &sk {
   release-after-ms = <250>;
@@ -36,34 +31,6 @@
 };
 
 / {
-    behaviors {
-        mtl: mod_tap_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_LEFT";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;
-            global-quick-tap;
-        };
-
-        mtr: mod_tap_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_RIGHT";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;
-            global-quick-tap;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -107,7 +74,7 @@
         default_layer {
             bindings = <
                 &kp W     &kp C     &kp L     &kp D     &kp G       &kp K     &kp U     &kp O     &kp Y     &kp QUOT
-                &mtl LGUI R &mtl LALT S &mtl LSHFT N &mtl LCTRL T &kp B &kp J &mtr LCTRL A &mtr LSHFT E &mtr LALT I &mtr LGUI H
+                &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp A     &kp E     &kp I     &kp H    
                           &kp F     &kp M     &kp P                           &kp X     &kp COMMA &kp DOT
                                     &sl NAV_L &kp SPACE             &sk LSHFT &sl SYM_L
             >;
@@ -134,7 +101,7 @@
             label = "Num";
             bindings = <
                 &none     &none     &none     &none     &none       &none     &none     &none     &none     &none 
-                &mtl LGUI N1 &mtl LALT N2 &mtl LSHFT N3 &mtl LCTRL N4 &kp N5 &kp N6 &mtr LCTRL N7 &mtr LSHFT N8 &mtr LALT N9 &mtr LGUI N0
+                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    
                           &none     &none     &none                 &none     &none 
                                               &trans    &trans      &trans    &trans
             >;
