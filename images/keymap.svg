@@ -156,10 +156,8 @@ path.combo {
 <text x="450.0" y="252.0" class="tap">sym</text>
 <rect rx="6.0" ry="6.0" x="136.0" y="71.0" width="28.0" height="26.0" class="combo"/>
 <text x="150.0" y="84.0" class="combo tap">v</text>
-<path d="M180.0,55.0 h-54.0 a6.0,6.0 0 0 0 -6.0,6.0 v4.333333333333332" class="combo"/>
-<path d="M180.0,55.0 h54.0 a6.0,6.0 0 0 1 6.0,6.0 v4.333333333333332" class="combo"/>
-<rect rx="6.0" ry="6.0" x="166.0" y="42.0" width="28.0" height="26.0" class="combo"/>
-<text x="180.0" y="55.0" class="combo tap">q</text>
+<rect rx="6.0" ry="6.0" x="196.0" y="71.0" width="28.0" height="26.0" class="combo"/>
+<text x="210.0" y="84.0" class="combo tap">q</text>
 <rect rx="6.0" ry="6.0" x="136.0" y="183.0" width="28.0" height="26.0" class="combo"/>
 <text x="150.0" y="196.0" class="combo tap">z</text>
 <rect rx="6.0" ry="6.0" x="106.0" y="99.0" width="28.0" height="26.0" class="combo"/>

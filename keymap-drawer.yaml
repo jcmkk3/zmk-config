@@ -34,10 +34,9 @@ combos:
 -   p: [1, 2]
     k: v
     l: [base]
--   p: [1, 3]
+-   p: [2, 3]
     k: q
     l: [base]
-    a: top
 -   p: [20, 21]
     k: z
     l: [base]
