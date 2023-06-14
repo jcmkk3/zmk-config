@@ -92,76 +92,76 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 </style>
-<g class="layer-Def">
-<text x="30.0" y="28.0" class="label">Def:</text>
+<g class="layer-base">
+<text x="30.0" y="28.0" class="label">base:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="86.0" width="56.0" height="52.0" class="key"/>
-<text x="60.0" y="112.0" class="tap">W</text>
+<text x="60.0" y="112.0" class="tap">w</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="58.0" width="56.0" height="52.0" class="key"/>
-<text x="120.0" y="84.0" class="tap">C</text>
+<text x="120.0" y="84.0" class="tap">c</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="58.0" width="56.0" height="52.0" class="key"/>
-<text x="180.0" y="84.0" class="tap">L</text>
+<text x="180.0" y="84.0" class="tap">l</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="58.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="84.0" class="tap">D</text>
+<text x="240.0" y="84.0" class="tap">d</text>
 <rect rx="6.0" ry="6.0" x="272.0" y="86.0" width="56.0" height="52.0" class="key"/>
-<text x="300.0" y="112.0" class="tap">G</text>
+<text x="300.0" y="112.0" class="tap">g</text>
 <rect rx="6.0" ry="6.0" x="362.0" y="86.0" width="56.0" height="52.0" class="key"/>
-<text x="390.0" y="112.0" class="tap">K</text>
+<text x="390.0" y="112.0" class="tap">k</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="58.0" width="56.0" height="52.0" class="key"/>
-<text x="450.0" y="84.0" class="tap">U</text>
+<text x="450.0" y="84.0" class="tap">u</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="58.0" width="56.0" height="52.0" class="key"/>
-<text x="510.0" y="84.0" class="tap">O</text>
+<text x="510.0" y="84.0" class="tap">o</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="58.0" width="56.0" height="52.0" class="key"/>
-<text x="570.0" y="84.0" class="tap">Y</text>
+<text x="570.0" y="84.0" class="tap">y</text>
 <rect rx="6.0" ry="6.0" x="602.0" y="86.0" width="56.0" height="52.0" class="key"/>
 <text x="630.0" y="112.0" class="tap">&#x27;</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="142.0" width="56.0" height="52.0" class="key"/>
-<text x="60.0" y="168.0" class="tap">R</text>
+<text x="60.0" y="168.0" class="tap">r</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="114.0" width="56.0" height="52.0" class="key"/>
-<text x="120.0" y="140.0" class="tap">S</text>
+<text x="120.0" y="140.0" class="tap">s</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="114.0" width="56.0" height="52.0" class="key"/>
-<text x="180.0" y="140.0" class="tap">N</text>
+<text x="180.0" y="140.0" class="tap">n</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="114.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="140.0" class="tap">T</text>
+<text x="240.0" y="140.0" class="tap">t</text>
 <rect rx="6.0" ry="6.0" x="272.0" y="142.0" width="56.0" height="52.0" class="key"/>
-<text x="300.0" y="168.0" class="tap">B</text>
+<text x="300.0" y="168.0" class="tap">b</text>
 <rect rx="6.0" ry="6.0" x="362.0" y="142.0" width="56.0" height="52.0" class="key"/>
-<text x="390.0" y="168.0" class="tap">J</text>
+<text x="390.0" y="168.0" class="tap">j</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="114.0" width="56.0" height="52.0" class="key"/>
-<text x="450.0" y="140.0" class="tap">A</text>
+<text x="450.0" y="140.0" class="tap">a</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="114.0" width="56.0" height="52.0" class="key"/>
-<text x="510.0" y="140.0" class="tap">E</text>
+<text x="510.0" y="140.0" class="tap">e</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="114.0" width="56.0" height="52.0" class="key"/>
-<text x="570.0" y="140.0" class="tap">I</text>
+<text x="570.0" y="140.0" class="tap">i</text>
 <rect rx="6.0" ry="6.0" x="602.0" y="142.0" width="56.0" height="52.0" class="key"/>
-<text x="630.0" y="168.0" class="tap">H</text>
+<text x="630.0" y="168.0" class="tap">h</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="170.0" width="56.0" height="52.0" class="key"/>
-<text x="120.0" y="196.0" class="tap">F</text>
+<text x="120.0" y="196.0" class="tap">f</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="170.0" width="56.0" height="52.0" class="key"/>
-<text x="180.0" y="196.0" class="tap">M</text>
+<text x="180.0" y="196.0" class="tap">m</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="170.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="196.0" class="tap">P</text>
+<text x="240.0" y="196.0" class="tap">p</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="170.0" width="56.0" height="52.0" class="key"/>
-<text x="450.0" y="196.0" class="tap">X</text>
+<text x="450.0" y="196.0" class="tap">x</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="170.0" width="56.0" height="52.0" class="key"/>
 <text x="510.0" y="196.0" class="tap">,</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="170.0" width="56.0" height="52.0" class="key"/>
 <text x="570.0" y="196.0" class="tap">.</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="226.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="252.0" class="tap">Nav</text>
+<text x="240.0" y="252.0" class="tap">nav</text>
 <rect rx="6.0" ry="6.0" x="272.0" y="226.0" width="56.0" height="52.0" class="key"/>
-<text x="300.0" y="252.0" class="tap">Space</text>
+<text x="300.0" y="252.0" class="tap">space</text>
 <rect rx="6.0" ry="6.0" x="362.0" y="226.0" width="56.0" height="52.0" class="key"/>
-<text x="390.0" y="252.0" class="tap">Shift</text>
+<text x="390.0" y="252.0" class="tap">shift</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="226.0" width="56.0" height="52.0" class="key"/>
-<text x="450.0" y="252.0" class="tap">Sym</text>
+<text x="450.0" y="252.0" class="tap">sym</text>
 <rect rx="6.0" ry="6.0" x="136.0" y="71.0" width="28.0" height="26.0" class="combo"/>
-<text x="150.0" y="84.0" class="combo tap">V</text>
+<text x="150.0" y="84.0" class="combo tap">v</text>
 <path d="M180.0,55.0 h-54.0 a6.0,6.0 0 0 0 -6.0,6.0 v4.333333333333332" class="combo"/>
 <path d="M180.0,55.0 h54.0 a6.0,6.0 0 0 1 6.0,6.0 v4.333333333333332" class="combo"/>
 <rect rx="6.0" ry="6.0" x="166.0" y="42.0" width="28.0" height="26.0" class="combo"/>
-<text x="180.0" y="55.0" class="combo tap">Q</text>
+<text x="180.0" y="55.0" class="combo tap">q</text>
 <rect rx="6.0" ry="6.0" x="136.0" y="183.0" width="28.0" height="26.0" class="combo"/>
-<text x="150.0" y="196.0" class="combo tap">Z</text>
+<text x="150.0" y="196.0" class="combo tap">z</text>
 <rect rx="6.0" ry="6.0" x="106.0" y="99.0" width="28.0" height="26.0" class="combo"/>
 <text x="120.0" y="112.0" class="combo tap">[</text>
 <rect rx="6.0" ry="6.0" x="556.0" y="99.0" width="28.0" height="26.0" class="combo"/>
@@ -175,65 +175,65 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="436.0" y="99.0" width="28.0" height="26.0" class="combo"/>
 <text x="450.0" y="112.0" class="combo tap">}</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="85.0" width="28.0" height="26.0" class="combo"/>
-<text x="270.0" y="98.0" class="combo tap">ESC</text>
+<text x="270.0" y="98.0" class="combo tap">esc</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="141.0" width="28.0" height="26.0" class="combo"/>
-<text x="270.0" y="154.0" class="combo tap">DEL</text>
+<text x="270.0" y="154.0" class="combo tap">del</text>
 </g>
-<g class="layer-Nav">
-<text x="30.0" y="308.0" class="label">Nav:</text>
+<g class="layer-nav">
+<text x="30.0" y="308.0" class="label">nav:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="366.0" width="56.0" height="52.0" class="key"/>
-<text x="60.0" y="392.0" class="tap">F1</text>
+<text x="60.0" y="392.0" class="tap">f1</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="338.0" width="56.0" height="52.0" class="key"/>
-<text x="120.0" y="364.0" class="tap">F2</text>
+<text x="120.0" y="364.0" class="tap">f2</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="338.0" width="56.0" height="52.0" class="key"/>
-<text x="180.0" y="364.0" class="tap">F3</text>
+<text x="180.0" y="364.0" class="tap">f3</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="338.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="364.0" class="tap">F4</text>
+<text x="240.0" y="364.0" class="tap">f4</text>
 <rect rx="6.0" ry="6.0" x="272.0" y="366.0" width="56.0" height="52.0" class="key"/>
-<text x="300.0" y="392.0" class="tap">F5</text>
+<text x="300.0" y="392.0" class="tap">f5</text>
 <rect rx="6.0" ry="6.0" x="362.0" y="366.0" width="56.0" height="52.0" class="key"/>
-<text x="390.0" y="392.0" class="tap">Esc</text>
+<text x="390.0" y="392.0" class="tap">esc</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="338.0" width="56.0" height="52.0" class="key"/>
-<text x="450.0" y="364.0" class="tap">Home</text>
+<text x="450.0" y="364.0" class="tap">home</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="338.0" width="56.0" height="52.0" class="key"/>
 <text x="510.0" y="364.0" class="tap">🠕</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="338.0" width="56.0" height="52.0" class="key"/>
-<text x="570.0" y="364.0" class="tap">End</text>
+<text x="570.0" y="364.0" class="tap">end</text>
 <rect rx="6.0" ry="6.0" x="602.0" y="366.0" width="56.0" height="52.0" class="key"/>
-<text x="630.0" y="392.0" class="tap">Pg🠕</text>
+<text x="630.0" y="392.0" class="tap">pg🠕</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="422.0" width="56.0" height="52.0" class="key"/>
-<text x="60.0" y="448.0" class="tap">Super</text>
+<text x="60.0" y="448.0" class="tap">gui</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="394.0" width="56.0" height="52.0" class="key"/>
-<text x="120.0" y="420.0" class="tap">Alt</text>
+<text x="120.0" y="420.0" class="tap">alt</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="394.0" width="56.0" height="52.0" class="key"/>
-<text x="180.0" y="420.0" class="tap">Shift</text>
+<text x="180.0" y="420.0" class="tap">shift</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="394.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="420.0" class="tap">Ctrl</text>
+<text x="240.0" y="420.0" class="tap">ctrl</text>
 <rect rx="6.0" ry="6.0" x="272.0" y="422.0" width="56.0" height="52.0" class="key"/>
-<text x="300.0" y="448.0" class="tap">Undo</text>
+<text x="300.0" y="448.0" class="tap">undo</text>
 <rect rx="6.0" ry="6.0" x="362.0" y="422.0" width="56.0" height="52.0" class="key"/>
-<text x="390.0" y="448.0" class="tap">Del</text>
+<text x="390.0" y="448.0" class="tap">del</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="394.0" width="56.0" height="52.0" class="key"/>
 <text x="450.0" y="420.0" class="tap">🠔</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="394.0" width="56.0" height="52.0" class="key"/>
-<text x="510.0" y="420.0" class="tap">Enter</text>
+<text x="510.0" y="420.0" class="tap">enter</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="394.0" width="56.0" height="52.0" class="key"/>
 <text x="570.0" y="420.0" class="tap">➝</text>
 <rect rx="6.0" ry="6.0" x="602.0" y="422.0" width="56.0" height="52.0" class="key"/>
-<text x="630.0" y="448.0" class="tap">Pg🠗</text>
+<text x="630.0" y="448.0" class="tap">pg🠗</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="450.0" width="56.0" height="52.0" class="key"/>
-<text x="120.0" y="476.0" class="tap">Cut</text>
+<text x="120.0" y="476.0" class="tap">cut</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="450.0" width="56.0" height="52.0" class="key"/>
-<text x="180.0" y="476.0" class="tap">Copy</text>
+<text x="180.0" y="476.0" class="tap">copy</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="450.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="476.0" class="tap">Paste</text>
+<text x="240.0" y="476.0" class="tap">paste</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="450.0" width="56.0" height="52.0" class="key"/>
 <text x="450.0" y="476.0" class="tap">
-<tspan x="450.0" dy="-0.6em">Back</tspan><tspan x="450.0" dy="1.2em">Space</tspan></text>
+<tspan x="450.0" dy="-0.6em">back</tspan><tspan x="450.0" dy="1.2em">space</tspan></text>
 <rect rx="6.0" ry="6.0" x="482.0" y="450.0" width="56.0" height="52.0" class="key"/>
 <text x="510.0" y="476.0" class="tap">🠗</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="450.0" width="56.0" height="52.0" class="key"/>
-<text x="570.0" y="476.0" class="tap">Tab</text>
+<text x="570.0" y="476.0" class="tap">tab</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="506.0" width="56.0" height="52.0" class="held key"/>
 <rect rx="6.0" ry="6.0" x="272.0" y="506.0" width="56.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="362.0" y="506.0" width="56.0" height="52.0" class="key"/>
@@ -241,10 +241,10 @@ path.combo {
 <path d="M150.0,505.0 h-24.0 a6.0,6.0 0 0 1 -6.0,-6.0 v-4.333333333333332" class="combo"/>
 <path d="M150.0,505.0 h24.0 a6.0,6.0 0 0 0 6.0,-6.0 v-4.333333333333332" class="combo"/>
 <rect rx="6.0" ry="6.0" x="136.0" y="492.0" width="28.0" height="26.0" class="combo"/>
-<text x="150.0" y="505.0" class="combo tap">All</text>
+<text x="150.0" y="505.0" class="combo tap">all</text>
 </g>
-<g class="layer-Sym">
-<text x="30.0" y="588.0" class="label">Sym:</text>
+<g class="layer-sym">
+<text x="30.0" y="588.0" class="label">sym:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="646.0" width="56.0" height="52.0" class="key"/>
 <text x="60.0" y="672.0" class="tap">!</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="618.0" width="56.0" height="52.0" class="key"/>
@@ -278,13 +278,13 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="362.0" y="702.0" width="56.0" height="52.0" class="key"/>
 <text x="390.0" y="728.0" class="tap">\</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="674.0" width="56.0" height="52.0" class="key"/>
-<text x="450.0" y="700.0" class="tap">Ctrl</text>
+<text x="450.0" y="700.0" class="tap">ctrl</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="674.0" width="56.0" height="52.0" class="key"/>
-<text x="510.0" y="700.0" class="tap">Shift</text>
+<text x="510.0" y="700.0" class="tap">shift</text>
 <rect rx="6.0" ry="6.0" x="542.0" y="674.0" width="56.0" height="52.0" class="key"/>
-<text x="570.0" y="700.0" class="tap">Alt</text>
+<text x="570.0" y="700.0" class="tap">alt</text>
 <rect rx="6.0" ry="6.0" x="602.0" y="702.0" width="56.0" height="52.0" class="key"/>
-<text x="630.0" y="728.0" class="tap">Super</text>
+<text x="630.0" y="728.0" class="tap">gui</text>
 <rect rx="6.0" ry="6.0" x="92.0" y="730.0" width="56.0" height="52.0" class="key"/>
 <text x="120.0" y="756.0" class="tap">_</text>
 <rect rx="6.0" ry="6.0" x="152.0" y="730.0" width="56.0" height="52.0" class="key"/>
@@ -314,8 +314,8 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="436.0" y="659.0" width="28.0" height="26.0" class="combo"/>
 <text x="450.0" y="672.0" class="combo tap">}</text>
 </g>
-<g class="layer-Num">
-<text x="30.0" y="868.0" class="label">Num:</text>
+<g class="layer-num">
+<text x="30.0" y="868.0" class="label">num:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="926.0" width="56.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="92.0" y="898.0" width="56.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="152.0" y="898.0" width="56.0" height="52.0" class="key"/>

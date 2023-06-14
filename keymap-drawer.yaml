@@ -7,65 +7,65 @@ layout:
         drop_pinky: true
         drop_inner: true
 layers:
-    Def:
-    - [W, C, L, D, G, K, U, O, Y, "'"]
-    - [R, S, N, T, B, J, A, E, I, H]
-    -    [F, M, P,       X, ',', .]
-    - Nav
-    - Space
-    - Shift
-    - Sym
-    Nav:
-    - [F1, F2, F3, F4, F5, Esc, Home, 🠕, End, Pg🠕]
-    - [Super, Alt, Shift, Ctrl, Undo, Del, 🠔, Enter, ➝, Pg🠗]
-    - [Cut, Copy, Paste, Back Space, 🠗, Tab]
+    base:
+    - [w, c, l, d, g, k, u, o, y, "'"]
+    - [r, s, n, t, b, j, a, e, i, h]
+    -    [f, m, p,       x, ',', .]
+    - nav
+    - space
+    - shift
+    - sym
+    nav:
+    - [f1, f2, f3, f4, f5, esc, home, 🠕, end, pg🠕]
+    - [gui, alt, shift, ctrl, undo, del, 🠔, enter, ➝, pg🠗]
+    - [cut, copy, paste, back space, 🠗, tab]
     - [{t: '', type: held}, '', '', '']
-    Sym:
+    sym:
     - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
-    - ['~', '=', '-', '/', '`', '\', Ctrl, Shift, Alt, Super]
+    - ['~', '=', '-', '/', '`', '\', ctrl, shift, alt, gui]
     - ['_', '+', '*', '|', <, '>']
     - ['', '', '', {t: '', type: held}]
-    Num:
+    num:
     - ['', '', '', '', '', '', '', '', '', '']
     - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
     - ['', '', '', '', '', '']
     - [{t: '', type: held}, '', '', {t: '', type: held}]
 combos:
 -   p: [1, 2]
-    k: V
-    l: [Def]
+    k: v
+    l: [base]
 -   p: [1, 3]
-    k: Q
-    l: [Def]
+    k: q
+    l: [base]
     a: top
 -   p: [20, 21]
-    k: Z
-    l: [Def]
+    k: z
+    l: [base]
 -   p: [1, 11]
     k: '['
-    l: [Def, Sym, Num]
+    l: [base, sym, num]
 -   p: [8, 18]
     k: ']'
-    l: [Def, Sym, Num]
+    l: [base, sym, num]
 -   p: [2, 12]
     k: (
-    l: [Def, Sym, Num]
+    l: [base, sym, num]
 -   p: [7, 17]
     k: )
-    l: [Def, Sym, Num]
+    l: [base, sym, num]
 -   p: [3, 13]
     k: '{'
-    l: [Def, Sym, Num]
+    l: [base, sym, num]
 -   p: [6, 16]
     k: '}'
-    l: [Def, Sym, Num]
+    l: [base, sym, num]
 -   p: [3, 4]
-    k: ESC
-    l: [Def]
+    k: esc
+    l: [base]
 -   p: [13, 14]
-    k: DEL
-    l: [Def]
+    k: del
+    l: [base]
 -   p: [20, 21]
-    k: All
-    l: [Nav]
+    k: all
+    l: [nav]
     a: bottom
