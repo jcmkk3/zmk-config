@@ -17,15 +17,13 @@ layers:
     - Sym
     Nav:
     - [F1, F2, F3, F4, F5, Esc, Home, 🠕, End, Pg🠕]
-    - [{t: Super}, {t: Alt}, {t: Shift}, {t: Ctrl}, Undo,
-        Del, 🠔, Enter, ➝, Pg🠗]
+    - [Super, Alt, Shift, Ctrl, Undo, Del, 🠔, Enter, ➝, Pg🠗]
     - [Cut, Copy, Paste, Back Space, 🠗, Tab]
     - [{t: '', type: held}, '', '', '']
     Sym:
-    - ['!', '@', '#', $, '%', ^, '&', ':', '`', '"']
-    - ['?', '-', '=', '*', '|',
-       '~', {t: Ctrl}, {t: Shift}, {t: Alt}, {t: Super}]
-    - [+, _, /, \, <, '>']
+    - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
+    - ['~', '=', '-', '/', '`', '\', Ctrl, Shift, Alt, Super]
+    - ['_', '+', '*', '|', <, '>']
     - ['', '', '', {t: '', type: held}]
     Num:
     - ['', '', '', '', '', '', '', '', '', '']
@@ -43,9 +41,6 @@ combos:
 -   p: [20, 21]
     k: Z
     l: [Def]
--   p: [24, 25]
-    k: ;
-    l: [Def, Sym, Num]
 -   p: [1, 11]
     k: '['
     l: [Def, Sym, Num]
@@ -71,6 +66,6 @@ combos:
     k: DEL
     l: [Def]
 -   p: [20, 21]
-    k: Sel All
+    k: All
     l: [Nav]
     a: bottom
