@@ -33,3 +33,5 @@ include:
     shield: alphalphaplus
   - board: nice_nano_v2
     shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
