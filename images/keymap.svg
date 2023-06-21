@@ -103,7 +103,7 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="212.0" y="58.0" width="56.0" height="52.0" class="key"/>
 <text x="240.0" y="84.0" class="tap">d</text>
 <rect rx="6.0" ry="6.0" x="272.0" y="86.0" width="56.0" height="52.0" class="key"/>
-<text x="300.0" y="112.0" class="tap">g</text>
+<text x="300.0" y="112.0" class="tap">p</text>
 <rect rx="6.0" ry="6.0" x="362.0" y="86.0" width="56.0" height="52.0" class="key"/>
 <text x="390.0" y="112.0" class="tap">k</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="58.0" width="56.0" height="52.0" class="key"/>
@@ -139,7 +139,7 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="152.0" y="170.0" width="56.0" height="52.0" class="key"/>
 <text x="180.0" y="196.0" class="tap">m</text>
 <rect rx="6.0" ry="6.0" x="212.0" y="170.0" width="56.0" height="52.0" class="key"/>
-<text x="240.0" y="196.0" class="tap">p</text>
+<text x="240.0" y="196.0" class="tap">g</text>
 <rect rx="6.0" ry="6.0" x="422.0" y="170.0" width="56.0" height="52.0" class="key"/>
 <text x="450.0" y="196.0" class="tap">x</text>
 <rect rx="6.0" ry="6.0" x="482.0" y="170.0" width="56.0" height="52.0" class="key"/>

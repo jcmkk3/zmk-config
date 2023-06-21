@@ -8,9 +8,9 @@ layout:
         drop_inner: true
 layers:
     base:
-    - [w, c, l, d, g, k, u, o, y, "'"]
+    - [w, c, l, d, p, k, u, o, y, "'"]
     - [r, s, n, t, b, j, a, e, i, h]
-    -    [f, m, p,       x, ',', .]
+    -    [f, m, g,       x, ',', .]
     - nav
     - space
     - shift
