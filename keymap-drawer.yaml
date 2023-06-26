@@ -16,7 +16,7 @@ layers:
     - shift
     - sym
     nav:
-    - [f1, f2, f3, f4, f5, pg🠕, tab, 🠕, esc, home]
+    - [f1, f2, f3, f4, f5, pg🠕, esc, 🠕, tab, home]
     - [gui, alt, shift, ctrl, undo, pg🠗, 🠔, enter, ➝, end]
     - [cut, copy, paste, back space, 🠗, del]
     - [{t: '', type: held}, '', '', '']
