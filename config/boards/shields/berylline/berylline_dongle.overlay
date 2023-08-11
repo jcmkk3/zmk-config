@@ -4,4 +4,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "berylline03.dtsi"
+#include "berylline.dtsi"
