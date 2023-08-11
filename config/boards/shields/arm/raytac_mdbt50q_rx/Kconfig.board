@@ -1,0 +1,3 @@
+config BOARD_RAYTAC_MDBT50Q_RX
+	bool "Raytac MDBT50Q-RX"
+	depends on SOC_NRF52840_QIAA
