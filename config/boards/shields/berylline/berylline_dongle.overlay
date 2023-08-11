@@ -5,3 +5,12 @@
  */
 
 #include "berylline.dtsi"
+
+// No gpios assigned
+&kscan_faceup {
+	input-gpios = <>;
+};
+
+&kscan_facedown {
+	input-gpios = <>;
+};
