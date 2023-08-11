@@ -7,9 +7,13 @@
 #include "berylline.dtsi"
 
 &kscan_faceup {
-	input-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	input-gpios
+	= <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+	;
 };
 
 &kscan_facedown {
-	input-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	input-gpios
+	= <&xiao_d 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+	;
 };
