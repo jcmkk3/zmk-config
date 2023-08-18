@@ -9,8 +9,14 @@
 
 &kscan_faceup {
 	compatible = "zmk,kscan-mock";
+    columns = <1>;
+    rows = <0>;
+    events = <>;
 };
 
 &kscan_facedown {
 	compatible = "zmk,kscan-mock";
+    columns = <1>;
+    rows = <0>;
+    events = <>;
 };
