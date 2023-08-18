@@ -8,11 +8,11 @@
 #include "berylline.dtsi"
 
 &kscan_faceup {
-	compatible = "zmk,kscan-mock";
+    compatible = "zmk,kscan-mock";
     events = <>;
 };
 
 &kscan_facedown {
-	compatible = "zmk,kscan-mock";
+    compatible = "zmk,kscan-mock";
     events = <>;
 };
