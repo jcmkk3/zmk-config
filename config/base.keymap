@@ -61,7 +61,7 @@
             hold-trigger-on-release;
             global-quick-tap;
         };
-    }
+    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
