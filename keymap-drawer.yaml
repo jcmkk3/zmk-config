@@ -1,70 +1,72 @@
 layout:
-    ortho_layout:
-        split: true
-        rows: 3
-        columns: 5
-        thumbs: 2
-        drop_pinky: true
-        drop_inner: true
+  ortho_layout:
+    split: true
+    rows: 3
+    columns: 5
+    thumbs: 2
+    drop_pinky: true
+    drop_inner: true
+draw_config:
+    n_columns: 2
 layers:
-    base:
-    - [x, c, l, f, p, k, y, o, u, "'"]
-    - [r, s, n, t, b, j, h, e, i, a]
-    -    [w, m, g,       d, ',', .]
-    - nav
-    - space
-    - shift
-    - sym
-    nav:
-    - [f1, f2, f3, f4, f5, pg🠕, esc, 🠕, tab, home]
-    - [gui, alt, shift, ctrl, undo, pg🠗, 🠔, enter, ➝, end]
-    - [cut, copy, paste, back space, 🠗, del]
-    - [{t: '', type: held}, '', '', '']
-    sym:
-    - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
-    - ['~', '=', '-', '/', '`', '\', ctrl, shift, alt, gui]
-    - ['_', '+', '*', '|', <, '>']
-    - ['', '', '', {t: '', type: held}]
-    num:
-    - ['', '', '', '', '', '', '', '', '', '']
-    - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-    - ['', '', '', '', '', '']
-    - [{t: '', type: held}, '', '', {t: '', type: held}]
+  base:
+  - [x, c, l, f, p, k, y, o, u, "'"]
+  - [r, s, n, t, b, j, h, e, i, a]
+  -    [w, m, g,       d, ',', .]
+  - nav
+  - space
+  - shift
+  - sym
+  nav:
+  - [f1, f2, f3, f4, f5, pg🠕, esc, 🠕, tab, home]
+  - [gui, alt, shift, ctrl, undo, pg🠗, 🠔, enter, ➝, end]
+  - [cut, copy, paste, back space, 🠗, del]
+  - [{t: '', type: held}, '', '', '']
+  sym:
+  - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
+  - ['~', '=', '-', '/', '`', '\', ctrl, shift, alt, gui]
+  - ['_', '+', '*', '|', <, '>']
+  - ['', '', '', {t: '', type: held}]
+  num:
+  - ['', '', '', '', '', '', '', '', '', '']
+  - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+  - ['', '', '', '', '', '']
+  - [{t: '', type: held}, '', '', {t: '', type: held}]
 combos:
--   p: [1, 2]
-    k: v
-    l: [base]
--   p: [2, 3]
-    k: q
-    l: [base]
--   p: [20, 21]
-    k: z
-    l: [base]
--   p: [1, 11]
-    k: '['
-    l: [base, sym, num]
--   p: [8, 18]
-    k: ']'
-    l: [base, sym, num]
--   p: [2, 12]
-    k: (
-    l: [base, sym, num]
--   p: [7, 17]
-    k: )
-    l: [base, sym, num]
--   p: [3, 13]
-    k: '{'
-    l: [base, sym, num]
--   p: [6, 16]
-    k: '}'
-    l: [base, sym, num]
--   p: [3, 4]
-    k: esc
-    l: [base]
--   p: [13, 14]
-    k: del
-    l: [base]
--   p: [20, 21]
-    k: all
-    l: [nav]
-    a: bottom
+- p: [1, 2]
+  k: v
+  l: [base]
+- p: [2, 3]
+  k: q
+  l: [base]
+- p: [20, 21]
+  k: z
+  l: [base]
+- p: [1, 11]
+  k: '['
+  l: [base, sym, num]
+- p: [8, 18]
+  k: ']'
+  l: [base, sym, num]
+- p: [2, 12]
+  k: (
+  l: [base, sym, num]
+- p: [7, 17]
+  k: )
+  l: [base, sym, num]
+- p: [3, 13]
+  k: '{'
+  l: [base, sym, num]
+- p: [6, 16]
+  k: '}'
+  l: [base, sym, num]
+- p: [4, 14]
+  k: del
+  l: [base]
+- p: [5, 15]
+  k: esc
+  l: [base]
+- p: [20, 21]
+  k: all
+  l: [nav]
+  a: bottom

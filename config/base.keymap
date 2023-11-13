@@ -63,8 +63,8 @@
         rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF_L SYM_L NUM_L>; };
 
         /* Convenience */
-        esc { key-positions = <3 4>; bindings = <&kp ESC>; };
-        del { key-positions = <13 14>; bindings = <&kp DEL>; };
+        del { key-positions = <4 14>; bindings = <&kp DEL>; };
+        esc { key-positions = <5 15>; bindings = <&kp ESC>; };
         slall { key-positions = <20 21>; bindings = <&kp SLALL>; layers = <NAV_L>; };
     };
 
