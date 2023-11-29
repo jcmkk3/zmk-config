@@ -391,6 +391,10 @@ path.combo {
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 </g>
 <g class="combo combopos-0">
+<rect rx="6" ry="6" x="76" y="43" width="28" height="26" class="combo"/>
+<text x="90" y="56" class="combo tap">[</text>
+</g>
+<g class="combo combopos-1">
 <path d="M120,169 h-24 a6.0,6.0 0 0 1 -6.0,-6.0 v-4" class="combo"/>
 <path d="M120,169 h24 a6.0,6.0 0 0 0 6.0,-6.0 v-4" class="combo"/>
 <rect rx="6" ry="6" x="106" y="156" width="28" height="26" class="combo"/>

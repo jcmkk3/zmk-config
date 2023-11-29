@@ -45,28 +45,28 @@ combos:
   l: [base]
 - p: [1, 11]
   k: '['
-  l: [base, sym, num]
+  draw_separate: true
 - p: [8, 18]
   k: ']'
-  l: [base, sym, num]
+  draw_separate: true
 - p: [2, 12]
   k: (
-  l: [base, sym, num]
+  draw_separate: true
 - p: [7, 17]
   k: )
-  l: [base, sym, num]
+  draw_separate: true
 - p: [3, 13]
   k: '{'
-  l: [base, sym, num]
+  draw_separate: true
 - p: [6, 16]
   k: '}'
-  l: [base, sym, num]
+  draw_separate: true
 - p: [4, 14]
   k: del
-  l: [base]
+  draw_separate: true
 - p: [5, 15]
   k: esc
-  l: [base]
+  draw_separate: true
 - p: [20, 21]
   k: all
   l: [nav]
