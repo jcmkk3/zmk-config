@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: MIT
+
+if SHIELD_UT22
+
+config ZMK_KEYBOARD_NAME
+    default "ut22"
+
+endif

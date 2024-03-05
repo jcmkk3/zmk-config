@@ -1,0 +1,354 @@
+/*
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+
+// LAYERS
+// ====================================================
+#define BASE    0
+#define BLE     1
+
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+&lt { quick_tap_ms = <200>; };
+// Sticky Layer Behavior - release sticky behavior after x ms
+&sk { release-after-ms = <1800>; };
+
+// TAIPO DEFINITIONS (use in conjunction with TAIPO COMBOS)
+// ====================================================
+// ZMK forces you to define combos in terms of HW key positions
+/*
+	.-----------------------------------------------------------.
+	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
+	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
+	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
+	'-----'     '-----------------------------------'     '-----'
+*/
+// {Top,Bottom}{Left,Right}{Index,Middle,Ring,Pinky}
+
+// LEFT SIDE
+#define TLI 3 // TOP
+#define TLM 2 // TOP
+#define TLR 1 // TOP
+#define TLP 0 // TOP
+#define BLI 11 // BOTTOM
+#define BLM 10 // BOTTOM
+#define BLR 9 // BOTTOM
+#define BLP 8 // BOTTOM
+#define LOT 18 // O-THUMB
+#define LIT 17 // I-THUMB
+#define LOP 16 // PINKY
+
+// RIGHT SIDE
+#define TRI 4 // TOP
+#define TRM 5 // TOP
+#define TRR 6 // TOP
+#define TRP 7 // TOP
+#define BRI 12 // BOTTOM
+#define BRM 13 // BOTTOM
+#define BRR 14 // BOTTOM
+#define BRP 15 // BOTTOM
+#define ROT 19 // O-THUMB
+#define RIT 20 // I-THUMB
+#define ROP 21 // PINKY
+
+// BEHAVIOR
+// ====================================================
+
+/{
+	behaviors {
+		// Enables holding the first mod-tap key
+		// by performing a tap-release-hold sequence.
+		// To use it: "&qt KEYCODE1 KEYCODE2"
+		qt: quick_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "QUICK_TAP";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <200>;
+			bindings = <&kp>, <&kp>;
+		};
+	};
+
+
+// COMBOS
+// ====================================================
+/*
+	.-----------------------------------------------------------.
+	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
+	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
+	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
+	'-----'     '-----------------------------------'     '-----'
+*/
+// TAIPO COMBOS
+
+	#define COMBO(NAME, BINDINGS, KEYPOS) \
+	combo_##NAME { \
+		timeout-ms = <50>; \
+		bindings = <BINDINGS>; \
+		key-positions = <KEYPOS>; \
+	};
+
+    combos {
+        compatible = "zmk,combos";
+		COMBO(1,&kp LS(E),BLI LOT)
+		COMBO(2,&kp LS(E),BRI ROT)
+		COMBO(3,&kp LS(T),BLM LOT)
+		COMBO(4,&kp LS(T),BRM ROT)
+		COMBO(5,&kp LS(O),BLR LOT)
+		COMBO(6,&kp LS(O),BRR ROT)
+		COMBO(7,&kp LS(A),BLP LOT)
+		COMBO(8,&kp LS(A),BRP ROT)
+		COMBO(9,&kp LPAR,BLI LIT)
+		COMBO(10,&kp LPAR,BRI RIT)
+		COMBO(11,&kp LBKT,BLM LIT)
+		COMBO(12,&kp LBKT,BRM RIT)
+		COMBO(13,&kp LBRC,BLR LIT)
+		COMBO(14,&kp LBRC,BRR RIT)
+		COMBO(15,&kp LT,BLP LIT)
+		COMBO(16,&kp LT,BRP RIT)
+		COMBO(17,&kp LS(I),LOT TLI)
+		COMBO(18,&kp LS(I),ROT TRI)
+		COMBO(19,&kp LS(N),LOT TLM)
+		COMBO(20,&kp LS(N),ROT TRM)
+		COMBO(21,&kp LS(S),LOT TLR)
+		COMBO(22,&kp LS(S),ROT TRR)
+		COMBO(23,&kp LS(R),LOT TLP)
+		COMBO(24,&kp LS(R),ROT TRP)
+		COMBO(25,&kp RPAR,LIT TLI)
+		COMBO(26,&kp RPAR,RIT TRI)
+		COMBO(27,&kp RBKT,LIT TLM)
+		COMBO(28,&kp RBKT,RIT TRM)
+		COMBO(29,&kp RBRC,LIT TLR)
+		COMBO(30,&kp RBRC,RIT TRR)
+		COMBO(31,&kp GT,LIT TLP)
+		COMBO(32,&kp GT,RIT TRP)
+		COMBO(33,&kp H,BLI BLM)
+		COMBO(34,&kp H,BRI BRM)
+		COMBO(35,&kp L,BLP BLR)
+		COMBO(36,&kp L,BRP BRR)
+		COMBO(37,&kp Y,TLI TLM)
+		COMBO(38,&kp Y,TRI TRM)
+		COMBO(39,&kp B,TLP TLR)
+		COMBO(40,&kp B,TRP TRR)
+		COMBO(41,&kp LS(H),BLI BLM LOT)
+		COMBO(42,&kp LS(H),BRI BRM ROT)
+		COMBO(43,&kp LS(L),BLP BLR LOT)
+		COMBO(44,&kp LS(L),BRP BRR ROT)
+		COMBO(45,&kp LS(Y),LOT TLI TLM)
+		COMBO(46,&kp LS(Y),ROT TRI TRM)
+		COMBO(47,&kp LS(B),LOT TLP TLR)
+		COMBO(48,&kp LS(B),ROT TRP TRR)
+		COMBO(49,&kp N0,BLI BLM LIT)
+		COMBO(50,&kp N0,BRI BRM RIT)
+		COMBO(51,&kp N4,BLP BLR LIT)
+		COMBO(52,&kp N4,BRP BRR RIT)
+		COMBO(53,&kp N5,LIT TLI TLM)
+		COMBO(54,&kp N5,RIT TRI TRM)
+		COMBO(55,&kp N9,LIT TLP TLR)
+		COMBO(56,&kp N9,RIT TRP TRR)
+		COMBO(57,&kp G,TLI TLP)
+		COMBO(58,&kp G,TRI TRP)
+		COMBO(59,&kp U,BLM BLR)
+		COMBO(60,&kp U,BRM BRR)
+		COMBO(61,&kp D,BLI BLP)
+		COMBO(62,&kp D,BRI BRP)
+		COMBO(63,&kp P,TLM TLR)
+		COMBO(64,&kp P,TRM TRR)
+		COMBO(65,&kp LS(G),LOT TLI TLP)
+		COMBO(66,&kp LS(G),ROT TRI TRP)
+		COMBO(67,&kp LS(U),BLM BLR LOT)
+		COMBO(68,&kp LS(U),BRM BRR ROT)
+		COMBO(69,&kp LS(D),BLI BLP LOT)
+		COMBO(70,&kp LS(D),BRI BRP ROT)
+		COMBO(71,&kp LS(P),LOT TLM TLR)
+		COMBO(72,&kp LS(P),ROT TRM TRR)
+		COMBO(73,&kp HASH,LIT TLI TLP)
+		COMBO(74,&kp HASH,RIT TRI TRP)
+		COMBO(75,&kp N2,BLM BLR LIT)
+		COMBO(76,&kp N2,BRM BRR RIT)
+		COMBO(77,&kp AT,BLI BLP LIT)
+		COMBO(78,&kp AT,BRI BRP RIT)
+		COMBO(79,&kp N7,LIT TLM TLR)
+		COMBO(80,&kp N7,RIT TRM TRR)
+		COMBO(81,&kp C,BLI BLR)
+		COMBO(82,&kp C,BRI BRR)
+		COMBO(83,&kp Q,BLM BLP)
+		COMBO(84,&kp Q,BRM BRP)
+		COMBO(85,&kp F,TLI TLR)
+		COMBO(86,&kp F,TRI TRR)
+		COMBO(87,&kp Z,TLM TLP)
+		COMBO(88,&kp Z,TRM TRP)
+		COMBO(89,&kp LS(C),BLI BLR LOT)
+		COMBO(90,&kp LS(C),BRI BRR ROT)
+		COMBO(91,&kp LS(Q),BLM BLP LOT)
+		COMBO(92,&kp LS(Q),BRM BRP ROT)
+		COMBO(93,&kp LS(F),LOT TLI TLR)
+		COMBO(94,&kp LS(F),ROT TRI TRR)
+		COMBO(95,&kp LS(Z),LOT TLM TLP)
+		COMBO(96,&kp LS(Z),ROT TRM TRP)
+		COMBO(97,&kp N1,BLI BLR LIT)
+		COMBO(98,&kp N1,BRI BRR RIT)
+		COMBO(99,&kp N3,BLM BLP LIT)
+		COMBO(100,&kp N3,BRM BRP RIT)
+		COMBO(101,&kp N6,LIT TLI TLR)
+		COMBO(102,&kp N6,RIT TRI TRR)
+		COMBO(103,&kp N8,LIT TLM TLP)
+		COMBO(104,&kp N8,RIT TRM TRP)
+		COMBO(105,&kp V,BLI TLR)
+		COMBO(106,&kp V,BRI TRR)
+		COMBO(107,&kp X,BLM TLP)
+		COMBO(108,&kp X,BRM TRP)
+		COMBO(109,&kp K,BLR TLI)
+		COMBO(110,&kp K,BRR TRI)
+		COMBO(111,&kp J,BLP TLM)
+		COMBO(112,&kp J,BRP TRM)
+		COMBO(113,&kp LS(V),BLI LOT TLR)
+		COMBO(114,&kp LS(V),BRI ROT TRR)
+		COMBO(115,&kp LS(X),BLM LOT TLP)
+		COMBO(116,&kp LS(X),BRM ROT TRP)
+		COMBO(117,&kp LS(K),BLR LOT TLI)
+		COMBO(118,&kp LS(K),BRR ROT TRI)
+		COMBO(119,&kp LS(J),BLP LOT TLM)
+		COMBO(120,&kp LS(J),BRP ROT TRM)
+		COMBO(121,&kp STAR,BLI LIT TLR)
+		COMBO(122,&kp STAR,BRI RIT TRR)
+		COMBO(123,&kp CARET,BLM LIT TLP)
+		COMBO(124,&kp CARET,BRM RIT TRP)
+		COMBO(125,&kp PLUS,BLR LIT TLI)
+		COMBO(126,&kp PLUS,BRR RIT TRI)
+		COMBO(127,&kp EQUAL,BLP LIT TLM)
+		COMBO(128,&kp EQUAL,BRP RIT TRM)
+		COMBO(129,&kp MINUS,BLR TLM)
+		COMBO(130,&kp MINUS,BRR TRM)
+		COMBO(131,&kp W,BLP TLI)
+		COMBO(132,&kp W,BRP TRI)
+		COMBO(133,&kp M,BLI TLP)
+		COMBO(134,&kp M,BRI TRP)
+		COMBO(135,&kp FSLH,BLM TLR)
+		COMBO(136,&kp FSLH,BRM TRR)
+		COMBO(137,&kp UNDER,BLR LOT TLM)
+		COMBO(138,&kp UNDER,BRR ROT TRM)
+		COMBO(139,&kp LS(W),BLP LOT TLI)
+		COMBO(140,&kp LS(W),BRP ROT TRI)
+		COMBO(141,&kp LS(M),BLI LOT TLP)
+		COMBO(142,&kp LS(M),BRI ROT TRP)
+		COMBO(143,&kp BSLH,BLM LOT TLR)
+		COMBO(144,&kp BSLH,BRM ROT TRR)
+		COMBO(145,&kp PRCNT,BLR LIT TLM)
+		COMBO(146,&kp PRCNT,BRR RIT TRM)
+		COMBO(147,&kp AMPS,BLP LIT TLI)
+		COMBO(148,&kp AMPS,BRP RIT TRI)
+		COMBO(149,&kp DLLR,BLI LIT TLP)
+		COMBO(150,&kp DLLR,BRI RIT TRP)
+		COMBO(151,&kp PIPE,BLM LIT TLR)
+		COMBO(152,&kp PIPE,BRM RIT TRR)
+		COMBO(153,&kp SQT,BLP TLR)
+		COMBO(154,&kp SQT,BRP TRR)
+		COMBO(155,&kp SEMI,BLR TLP)
+		COMBO(156,&kp SEMI,BRR TRP)
+		COMBO(157,&kp QMARK,BLM TLI)
+		COMBO(158,&kp QMARK,BRM TRI)
+		COMBO(159,&kp COMMA,BLI TLM)
+		COMBO(160,&kp COMMA,BRI TRM)
+		COMBO(161,&kp DQT,BLP LOT TLR)
+		COMBO(162,&kp DQT,BRP ROT TRR)
+		COMBO(163,&kp COLON,BLR LOT TLP)
+		COMBO(164,&kp COLON,BRR ROT TRP)
+		COMBO(165,&kp EXCL,BLM LOT TLI)
+		COMBO(166,&kp EXCL,BRM ROT TRI)
+		COMBO(167,&kp DOT,BLI LOT TLM)
+		COMBO(168,&kp DOT,BRI ROT TRM)
+		COMBO(169,&kp GRAVE,BLP LIT TLR)
+		COMBO(170,&kp GRAVE,BRP RIT TRR)
+		COMBO(171,&kp TILDE,BLI LIT TLM)
+		COMBO(172,&kp TILDE,BRI RIT TRM)
+		COMBO(173,&kp LEFT_GUI,BLP TLP)
+		COMBO(174,&kp LEFT_GUI,BRP TRP)
+		COMBO(175,&kp LEFT_ALT,BLR TLR)
+		COMBO(176,&kp LEFT_ALT,BRR TRR)
+		COMBO(177,&kp LEFT_CONTROL,BLM TLM)
+		COMBO(178,&kp LEFT_CONTROL,BRM TRM)
+		COMBO(179,&kp LEFT_SHIFT,BLI TLI)
+		COMBO(180,&kp LEFT_SHIFT,BRI TRI)
+		COMBO(181,&kp RIGHT,BLP TLP LOT)
+		COMBO(182,&kp RIGHT,BRP TRP ROT)
+		COMBO(183,&kp UP,BLR TLR LOT)
+		COMBO(184,&kp UP,BRR TRR ROT)
+		COMBO(185,&kp DOWN,BLM TLM LOT)
+		COMBO(186,&kp DOWN,BRM TRM ROT)
+		COMBO(187,&kp LEFT,BLI TLI LOT)
+		COMBO(188,&kp LEFT,BRI TRI ROT)
+		COMBO(189,&kp PG_UP,BLP TLP LIT)
+		COMBO(190,&kp PG_UP,BRP TRP RIT)
+		COMBO(191,&kp HOME,BLR TLR LIT)
+		COMBO(192,&kp HOME,BRR TRR RIT)
+		COMBO(193,&kp END,BLM TLM LIT)
+		COMBO(194,&kp END,BRM TRM RIT)
+		COMBO(195,&kp PG_DN,BLI TLI LIT)
+		COMBO(196,&kp PG_DN,BRI TRI RIT)
+		COMBO(197,&kp ENTER,BLI BLM BLR)
+		COMBO(198,&kp ENTER,BRI BRM BRR)
+		COMBO(199,&kp TAB,TLI TLM TLR)
+		COMBO(200,&kp TAB,TRI TRM TRR)
+		COMBO(201,&kp ESC,BLI BLM BLR LOT)
+		COMBO(202,&kp ESC,BRI BRM BRR ROT)
+		COMBO(203,&kp DEL,TLI TLM TLR LOT)
+		COMBO(204,&kp DEL,TRI TRM TRR ROT)
+		COMBO(205,&kp RALT,BLI BLM BLR LIT)
+		COMBO(206,&kp RALT,BRI BRM BRR RIT)
+
+    };
+
+// KEYMAP
+// ====================================================
+
+/*  0 = Base
+	.-----------------------------------------------------------.
+	|  R  |  S  |  N  |  I  |           |  I  |  N  |  S  |  R  |
+	|  A  |  O  |  T  |  E  |           |  E  |  T  |  O  |  A  |
+	|     |-----| BKSP| SPC |           | SPC | BKSP|-----|     |
+	'-----'     '-----------------------------------'     '-----'
+*/
+	keymap {
+		compatible = "zmk,keymap";
+
+		// LAYER: BASE 0
+		default_layer {
+			label = "Base";
+			bindings = <
+			&kp R       &kp S       &kp N       &kp I          &kp I       &kp N       &kp S       &kp R
+			&kp A       &kp O       &kp T       &kp E          &kp E       &kp T       &kp O       &kp A
+			&none                   &kp BKSP    &kp SPACE      &kp SPACE   &kp BKSP                &none
+			>;
+		};
+
+// -----------------------------------------------------------------------------
+
+/*  1 = Bluetooth
+	.-----------------------------------------------------------.
+	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
+	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
+	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
+	'-----'     '-----------------------------------'     '-----'
+*/
+        // LAYER: BLE 1
+		ble_layer {
+			label = "BLE";
+			bindings = <
+			&kp R       &kp S       &kp N       &kp I          &kp I       &kp N       &kp S       &kp R
+			&kp A       &kp O       &kp T       &kp E          &kp E       &kp T       &kp O       &kp A
+			&kp Z                   &kp RALT    &kp SPACE      &kp SPACE   &kp RALT                &kp Z     
+			>;
+		};
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+    };
+};
