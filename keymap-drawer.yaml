@@ -29,8 +29,8 @@ layers:
   - ['', '', '', {t: '', type: held}]
   num:
   - ['', '', '', '', '', '', '', '', '', '']
-  - [{t: '1', h: Super}, {t: '2', h: Alt}, {t: '3', h: Shift}, {t: '4', h: Ctrl}, '5',
-      '6', {t: '7', h: Ctrl}, {t: '8', h: Shift}, {t: '9', h: Alt}, {t: '0', h: Super}]
+  - [{t: '1', h: gui}, {t: '2', h: alt}, {t: '3', h: shift}, {t: '4', h: ctrl}, '5',
+      '6', {t: '7', h: ctrl}, {t: '8', h: shift}, {t: '9', h: alt}, {t: '0', h: gui}]
   - ['', '', '', '', '', '']
   - [{t: '', type: held}, '', '', {t: '', type: held}]
 combos:
