@@ -19,6 +19,8 @@
 #define PASTE LC(V)
 #define UNDO LC(Z)
 #define SLALL LC(A)
+#define FHOME LC(HOME)
+#define FEND LC(END)
 
 /* Key Position Groups */
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22  // left-hand keys
@@ -60,6 +62,18 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
             global-quick-tap;
+        };
+        home: home_ignoring_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp HOME>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        end: end_ignoring_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp END>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -113,8 +127,8 @@
         nav_layer {
             label = "Nav";
             bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp PG_UP &kp ESC   &kp UARW  &kp TAB   &kp HOME
-                &kp LGUI  &kp LALT  &kp LSHFT &kp LCTRL &kp UNDO    &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp END
+                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp FHOME &kp ESC   &kp UARW  &kp TAB   &home
+                &kp LGUI  &kp LALT  &kp LSHFT &kp LCTRL &kp UNDO    &kp FEND  &kp LARW  &kp ENTER &kp RARW  &end
                           &kp CUT   &kp COPY  &kp PASTE                       &kp BSPC  &kp DARW  &kp DEL
                                               &trans    &trans      &trans    &trans
             >;

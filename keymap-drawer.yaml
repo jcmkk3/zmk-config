@@ -18,19 +18,19 @@ layers:
   - shift
   - sym
   nav:
-  - [f1, f2, f3, f4, f5, pg🠕, esc, 🠕, tab, home]
-  - [gui, alt, shift, ctrl, undo, pg🠗, 🠔, enter, ➝, end]
-  - [cut, copy, paste, back space, 🠗, del]
+  - [f1, f2, f3, f4, f5, first, esc, 🠕, tab, home]
+  - [gui, alt, shft, ctrl, undo, last, 🠔, entr, ➝, end]
+  - [cut, copy, paste, bksp, 🠗, del]
   - [{t: '', type: held}, '', '', '']
   sym:
   - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
-  - ['~', '=', '-', '/', '`', '\', ctrl, shift, alt, gui]
+  - ['~', '=', '-', '/', '`', '\', ctrl, shft, alt, gui]
   - ['_', '+', '*', '|', <, '>']
   - ['', '', '', {t: '', type: held}]
   num:
   - ['', '', '', '', '', '', '', '', '', '']
-  - [{t: '1', h: gui}, {t: '2', h: alt}, {t: '3', h: shift}, {t: '4', h: ctrl}, '5',
-      '6', {t: '7', h: ctrl}, {t: '8', h: shift}, {t: '9', h: alt}, {t: '0', h: gui}]
+  - [{t: '1', h: gui}, {t: '2', h: alt}, {t: '3', h: shft}, {t: '4', h: ctrl}, '5',
+      '6', {t: '7', h: ctrl}, {t: '8', h: shft}, {t: '9', h: alt}, {t: '0', h: gui}]
   - ['', '', '', '', '', '']
   - [{t: '', type: held}, '', '', {t: '', type: held}]
 combos:
