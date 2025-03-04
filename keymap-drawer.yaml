@@ -10,7 +10,7 @@ draw_config:
     n_columns: 2
 layers:
   base:
-  - [z, c, l, f, p, k, y, o, u, "'"]
+  - [x, c, l, f, p, k, y, o, u, "'"]
   - [r, s, n, t, b, j, h, e, i, a]
   -    [w, m, g,       d, ',', .]
   - nav
@@ -40,7 +40,7 @@ combos:
   k: q
   l: [base]
 - p: [20, 21]
-  k: x
+  k: z
   l: [base]
 - p: [1, 11]
   k: '['

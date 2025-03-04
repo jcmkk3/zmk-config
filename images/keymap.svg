@@ -140,7 +140,7 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(0, 56)">
 <g transform="translate(30, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">z</text>
+<text x="0" y="0" class="key tap">x</text>
 </g>
 <g transform="translate(90, 28)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
@@ -270,7 +270,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="106" y="127" width="28" height="26" class="combo"/>
-<text x="120" y="140" class="combo tap">x</text>
+<text x="120" y="140" class="combo tap">z</text>
 </g>
 </g>
 </g>

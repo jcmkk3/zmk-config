@@ -2,10 +2,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 /* Layers */
-#define DEF_L 0
-#define NAV_L 1
-#define SYM_L 2
-#define NUM_L 3
+#define DEF 0
+#define NAV 1
+#define SYM 2
+#define NUM 3
 
 /* Shortcuts */
 #define CUT LC(X)
@@ -45,8 +45,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NAV_L SYM_L>;
-            then-layer = <NUM_L>;
+            if-layers = <NAV SYM>;
+            then-layer = <NUM>;
         };
     };
 
@@ -61,36 +61,35 @@
                         26  27     28  29              */
 
          /* Letters */
-        v { key-positions = <1 2>; bindings = <&kp V>; layers = <DEF_L>; };
-        q { key-positions = <2 3>; bindings = <&kp Q>; layers = <DEF_L>; };
-        x { key-positions = <20 21>; bindings = <&kp X>; layers = <DEF_L>; };
+        v { key-positions = <1 2>; bindings = <&kp V>; layers = <DEF>; };
+        q { key-positions = <2 3>; bindings = <&kp Q>; layers = <DEF>; };
+        z { key-positions = <20 21>; bindings = <&kp Z>; layers = <DEF>; };
 
         /* Brackets */
-        lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF_L SYM_L NUM_L>; };
-        rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF_L SYM_L NUM_L>; };
-        lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <DEF_L SYM_L NUM_L>; };
-        rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <DEF_L SYM_L NUM_L>; };
-        lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <DEF_L SYM_L NUM_L>; };
-        rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF_L SYM_L NUM_L>; };
+        lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <DEF SYM NUM>; };
+        rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <DEF SYM NUM>; };
+        lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <DEF SYM NUM>; };
+        rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <DEF SYM NUM>; };
+        lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <DEF SYM NUM>; };
+        rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <DEF SYM NUM>; };
 
         /* Convenience */
         del { key-positions = <4 14>; bindings = <&kp DEL>; };
         esc { key-positions = <5 15>; bindings = <&kp ESC>; };
-        all { key-positions = <20 21>; bindings = <&kp ALL>; layers = <NAV_L>; };
+        all { key-positions = <20 21>; bindings = <&kp ALL>; layers = <NAV>; };
     };
 
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp Z     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
+                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
                 &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp H     &kp E     &kp I     &kp A
                           &kp W     &kp M     &kp G                           &kp D     &kp COMMA &kp DOT
-                                    &sl NAV_L &kp SPACE             &sk LSHFT &sl SYM_L
+                                    &sl NAV &kp SPACE             &sk LSHFT &sl SYM
             >;
         };
         nav_layer {
-            label = "Nav";
             bindings = <
                 &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp TOP   &kp ESC   &kp UARW  &kp TAB   &home
                 &kp LGUI  &kp LALT  &kp LSHFT &kp LCTRL &kp UNDO    &kp BTM   &kp LARW  &kp ENTER &kp RARW  &end
@@ -99,7 +98,6 @@
             >;
         };
         sym_layer {
-            label = "Sym";
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp QMARK
                 &kp TILDE &kp EQUAL &kp MINUS &kp FSLH  &kp GRAVE   &kp BSLH  &kp LCTRL &kp LSHFT &kp LALT  &kp LGUI
@@ -107,8 +105,7 @@
                                               &trans    &trans      &trans    &trans
             >;
         };
-        num_layer {
-            label = "Num";
+        num_ayer {
             bindings = <
                 &none     &none     &none     &none     &none       &none     &none     &none     &none     &none 
                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
