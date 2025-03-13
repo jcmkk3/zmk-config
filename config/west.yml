@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: jcmkk3
+      url-base: https://github.com/jcmkk3
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-keyboard-berylline
+      remote: jcmkk3
+      revision: main
   self:
     path: config

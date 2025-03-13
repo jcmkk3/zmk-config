@@ -1,6 +1,0 @@
-if SHIELD_CHOCV
-
-config ZMK_KEYBOARD_NAME
-    default "ChocV"
-
-endif

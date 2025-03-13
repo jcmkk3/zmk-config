@@ -1,6 +1,0 @@
-if SHIELD_ALPHALPHAPLUS
-
-config ZMK_KEYBOARD_NAME
-    default "Alphalpha+"
-
-endif
