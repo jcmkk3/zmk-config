@@ -1,2 +1,0 @@
-config SHIELD_UT22
-    def_bool $(shields_list_contains,ut22)

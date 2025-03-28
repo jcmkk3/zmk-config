@@ -1,2 +1,0 @@
-config SHIELD_CHOCV
-    def_bool $(shields_list_contains,chocv)

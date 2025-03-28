@@ -17,19 +17,9 @@ include:
     shield: berylline_left
   - board: nice_nano_v2
     shield: berylline_right
-  - board: nice_nano_v2
-    shield: berylline03_left
-  - board: nice_nano_v2
-    shield: berylline03_right
   - board: seeeduino_xiao
     shield: hummingbird
   - board: seeeduino_xiao_ble
     shield: hummingbird
-  - board: nice_nano_v2
-    shield: chocv
-  - board: nice_nano_v2
-    shield: alphalphaplus
-  - board: nice_nano_v2
-    shield: ut22
   - board: nice_nano_v2
     shield: settings_reset
