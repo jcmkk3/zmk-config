@@ -6,8 +6,6 @@ layout:
     thumbs: 2
     drop_pinky: true
     drop_inner: true
-draw_config:
-    n_columns: 2
 layers:
   base:
   - [x, c, l, f, p, k, y, o, u, "'"]
@@ -17,56 +15,18 @@ layers:
   - space
   - shift
   - sym
+  sym:
+  - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
+  - ['\', '=', '+', '*', '`', '~', ctrl, shft, alt, gui]
+  - ['_', '-', '/', '|', <, '>']
+  - ['', '', '', {t: '', type: held}]
+  num:
+  - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
+  - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+  - ['_', '-', '/', '|',',', .]
+  - [{t: '', type: held}, '', '', {t: '', type: held}]
   nav:
   - [f1, f2, f3, f4, f5, top, esc, 🠕, tab, home]
   - [gui, alt, shft, ctrl, undo, btm, 🠔, entr, ➝, end]
   - [cut, copy, paste, bksp, 🠗, del]
   - [{t: '', type: held}, '', '', '']
-  num:
-  - ['', '', '', '', '', '', '', '', '', '']
-  - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-  - ['', '', '', '', '', '']
-  - [{t: '', type: held}, '', '', {t: '', type: held}]
-  sym:
-  - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
-  - ['~', '=', '-', '/', '`', '\', ctrl, shft, alt, gui]
-  - ['_', '+', '*', '|', <, '>']
-  - ['', '', '', {t: '', type: held}]
-combos:
-- p: [1, 2]
-  k: v
-  l: [base]
-- p: [2, 3]
-  k: q
-  l: [base]
-- p: [20, 21]
-  k: z
-  l: [base]
-- p: [1, 11]
-  k: '['
-  draw_separate: true
-- p: [8, 18]
-  k: ']'
-  draw_separate: true
-- p: [2, 12]
-  k: (
-  draw_separate: true
-- p: [7, 17]
-  k: )
-  draw_separate: true
-- p: [3, 13]
-  k: '{'
-  draw_separate: true
-- p: [6, 16]
-  k: '}'
-  draw_separate: true
-- p: [4, 14]
-  k: del
-  draw_separate: true
-- p: [5, 15]
-  k: esc
-  draw_separate: true
-- p: [20, 21]
-  k: all
-  l: [nav]
-  a: bottom
