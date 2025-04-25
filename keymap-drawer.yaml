@@ -28,11 +28,13 @@ layers:
      {t: '|', type: trans}, {t: ',', type: trans}, {t: ".", type: trans}]
   - [{t: '', type: held}, '', '', {t: '', type: held}]
   nav:
-  - [f1, f2, f3, f4, f5, top, esc, 🠕, tab, home]
-  - [gui, alt, shft, ctrl, undo, btm, 🠔, entr, ➝, end]
-  - [cut, copy, paste, bksp, 🠗, del]
+  - [undo, cut, copy, paste, '', '', home, 🠕, end, top]
+  - [gui, alt, shft, ctrl, '', '', 🠔, entr, ➝, btm]
+  - [all, esc, del, bksp, 🠗, tab]
   - [{t: '', type: held}, '', '', '']
 combos:
 - p: [24, 25]
   k: ";"
   l: [base]
+# Need ctrl+del, could be shft+ctrl+bksp
+# Escape doesn't really have many/any shortcuts except ctrl+shift+esc for Windows
