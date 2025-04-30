@@ -20,9 +20,9 @@ layers:
   - shft
   - sym
   edit:
-  - [all, del, esc, undo, rename, pg🠕, tab, 🠕, bksp, top]
+  - [all, undo, esc, del, rename, pg🠕, home, 🠕, end, top]
   - [gui, ctrl, shft, alt, find, pg🠗, 🠔, entr, ➝, btm]
-  - [cut, copy, paste, home, 🠗, end]
+  - [cut, copy, paste, bksp, 🠗, tab]
   - [{t: '', type: held}, '', '', '']
   symbols:
   - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']

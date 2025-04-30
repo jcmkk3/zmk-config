@@ -82,7 +82,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        alphas_layer {
             bindings = <
                 &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
                 &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp H     &kp E     &kp I     &kp A
@@ -90,15 +90,15 @@
                                     &mo EDIT  &kp SPACE             &kp LSHFT &mo SYMBOLS
             >;
         };
-        nav_layer {
+        edit_layer {
             bindings = <
-                &kp ALL   &kp DEL   &kp ESC   &kp UNDO  &kp RENM    &kp PG_UP &kp TAB   &kp UARW  &bspc     &kp TOP
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp RENM    &kp PG_UP &home     &kp UARW  &end      &kp TOP
                 &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp FIND    &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
-                          &kp CUT   &copy     &paste                          &home     &kp DARW  &end
+                          &kp CUT   &copy     &paste                          &bspc     &kp DARW  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
         };
-        sym_layer {
+        symbols_layer {
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp UNDER &kp COLON &kp DQT
                 &kp QMARK &kp EQUAL &kp PLUS  &kp ASTRK &kp GRAVE   &kp TILDE &kp LALT  &kp LSHFT &kp LCTRL &kp LGUI
@@ -106,7 +106,7 @@
                                               &trans    &trans      &trans    &trans
             >;
         };
-        num_layer {
+        numbers_layer {
             bindings = <
                 &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans
                 &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
