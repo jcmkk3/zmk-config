@@ -6,35 +6,64 @@ layout:
     thumbs: 2
     drop_pinky: true
     drop_inner: true
+draw_config:
+    n_columns: 2
+    dark_mode: auto
+    combo_diagrams_scale: 3.1
 layers:
-  base:
+  alphas:
   - [x, c, l, f, p, k, y, o, u, "'"]
   - [r, s, n, t, b, j, h, e, i, a]
   -    [w, m, g,       d, ',', "."]
-  - nav
+  - edt
   - space
-  - shift
+  - shft
   - sym
-  sym:
-  - ['!', '@', '#', $, '%', ^, '&', '?', ':', '"']
-  - ['~', '=', '+', '*', '`', '\', ctrl, shft, alt, gui]
-  - ['_', '-', '/', '|', <, '>']
+  edit:
+  - [all, del, esc, undo, rename, pg🠕, tab, 🠕, bksp, top]
+  - [gui, ctrl, shft, alt, find, pg🠗, 🠔, entr, ➝, btm]
+  - [cut, copy, paste, home, 🠗, end]
+  - [{t: '', type: held}, '', '', '']
+  symbols:
+  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
+  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
+  - ['\', '-', '/', '|', <, '>']
   - ['', '', '', {t: '', type: held}]
-  num:
+  numbers:
   - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
-     {t: ^, type: trans}, {t: '&', type: trans}, {t: '?', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
+     {t: ^, type: trans}, {t: '&', type: trans}, {t: '_', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
   - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-  - [{t: '_', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
+  - [{t: '\', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
      {t: '|', type: trans}, {t: ',', type: trans}, {t: ".", type: trans}]
   - [{t: '', type: held}, '', '', {t: '', type: held}]
-  nav:
-  - [undo, cut, copy, paste, '', '', home, 🠕, end, top]
-  - [gui, alt, shft, ctrl, '', '', 🠔, entr, ➝, btm]
-  - [all, esc, del, bksp, 🠗, tab]
-  - [{t: '', type: held}, '', '', '']
 combos:
+- p: [1, 2]
+  k: v
+  l: [alphas]
+- p: [2, 3]
+  k: q
+  l: [alphas]
+- p: [20, 21]
+  k: z
+  l: [alphas]
 - p: [24, 25]
   k: ";"
-  l: [base]
-# Need ctrl+del, could be shft+ctrl+bksp
-# Escape doesn't really have many/any shortcuts except ctrl+shift+esc for Windows
+  l: [alphas]
+- p: [1, 11]
+  k: '['
+  draw_separate: true
+- p: [8, 18]
+  k: ']'
+  draw_separate: true
+- p: [2, 12]
+  k: (
+  draw_separate: true
+- p: [7, 17]
+  k: )
+  draw_separate: true
+- p: [3, 13]
+  k: '{'
+  draw_separate: true
+- p: [6, 16]
+  k: '}'
+  draw_separate: true
