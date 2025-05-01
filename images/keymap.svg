@@ -639,7 +639,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<text x="30" y="588" class="label" id="Combos">Combos:</text>
+<text x="30" y="588" class="label" id="Combos">combos:</text>
 <g transform="translate(30, 560)" class="layer-combopos-0">
 <g transform="translate(0, 56)">
 <g transform="translate(30, 28)" class="key  combo-separate keypos-0">
