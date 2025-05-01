@@ -8,40 +8,47 @@ layout:
     drop_inner: true
 draw_config:
     n_columns: 2
+    dark_mode: auto
+    combo_diagrams_scale: 3.1
 layers:
-  base:
+  alphas:
   - [x, c, l, f, p, k, y, o, u, "'"]
   - [r, s, n, t, b, j, h, e, i, a]
-  -    [w, m, g,       d, ',', .]
-  - nav
+  -    [w, m, g,       d, ',', "."]
+  - edt
   - space
-  - shift
+  - shft
   - sym
-  nav:
-  - [f1, f2, f3, f4, f5, top, esc, 🠕, tab, home]
-  - [gui, alt, shft, ctrl, undo, btm, 🠔, entr, ➝, end]
-  - [cut, copy, paste, bksp, 🠗, del]
+  edit:
+  - [all, undo, esc, del, rename, pg🠕, home, 🠕, end, top]
+  - [gui, ctrl, shft, alt, find, pg🠗, 🠔, entr, ➝, btm]
+  - [cut, copy, paste, bksp, 🠗, tab]
   - [{t: '', type: held}, '', '', '']
-  num:
-  - ['', '', '', '', '', '', '', '', '', '']
-  - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-  - ['', '', '', '', '', '']
-  - [{t: '', type: held}, '', '', {t: '', type: held}]
-  sym:
-  - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
-  - ['~', '=', '-', '/', '`', '\', ctrl, shft, alt, gui]
-  - ['_', '+', '*', '|', <, '>']
+  symbols:
+  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
+  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
+  - ['\', '-', '/', '|', <, '>']
   - ['', '', '', {t: '', type: held}]
+  numbers:
+  - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
+     {t: ^, type: trans}, {t: '&', type: trans}, {t: '_', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
+  - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+  - [{t: '\', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
+     {t: '|', type: trans}, {t: ',', type: trans}, {t: ".", type: trans}]
+  - [{t: '', type: held}, '', '', {t: '', type: held}]
 combos:
 - p: [1, 2]
   k: v
-  l: [base]
+  l: [alphas]
 - p: [2, 3]
   k: q
-  l: [base]
+  l: [alphas]
 - p: [20, 21]
   k: z
-  l: [base]
+  l: [alphas]
+- p: [24, 25]
+  k: ";"
+  l: [alphas]
 - p: [1, 11]
   k: '['
   draw_separate: true
@@ -60,13 +67,3 @@ combos:
 - p: [6, 16]
   k: '}'
   draw_separate: true
-- p: [4, 14]
-  k: del
-  draw_separate: true
-- p: [5, 15]
-  k: esc
-  draw_separate: true
-- p: [20, 21]
-  k: all
-  l: [nav]
-  a: bottom
