@@ -15,10 +15,7 @@ layers:
   - [x, c, l, f, p, k, y, o, u, "'"]
   - [r, s, n, t, b, j, h, e, i, a]
   -    [w, m, g,       d, ',', "."]
-  - edt
-  - space
-  - shft
-  - sym
+  -    [edt, space, shft, sym]
   edit:
   - [all, undo, esc, del, rename, pg🠕, home, 🠕, end, top]
   - [gui, ctrl, shft, alt, find, pg🠗, 🠔, entr, ➝, btm]
