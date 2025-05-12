@@ -10,29 +10,31 @@ draw_config:
     n_columns: 2
     dark_mode: auto
     combo_diagrams_scale: 3.1
+    style_layer_activators: false
+    append_colon_to_layer_header: false
 layers:
   alphas:
   - [x, c, l, f, p, k, y, o, u, "'"]
   - [r, s, n, t, b, j, h, e, i, a]
   -    [w, m, g,       d, ',', "."]
-  -    [edt, space, shft, sym]
+  -    [edit, space, upper, sym]
   edit:
   - [all, undo, esc, del, rename, pg🠕, home, 🠕, end, top]
   - [gui, ctrl, shft, alt, find, pg🠗, 🠔, entr, ➝, btm]
   - [cut, copy, paste, bksp, 🠗, tab]
-  - [{t: '', type: held}, '', '', '']
+  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
   symbols:
   - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
   - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
   - ['\', '-', '/', '|', <, '>']
-  - ['', '', '', {t: '', type: held}]
+  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
   numbers:
   - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
      {t: ^, type: trans}, {t: '&', type: trans}, {t: '_', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
   - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
   - [{t: '\', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
      {t: '|', type: trans}, {t: ',', type: trans}, {t: ".", type: trans}]
-  - [{t: '', type: held}, '', '', {t: '', type: held}]
+  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
 combos:
 - p: [1, 2]
   k: v
