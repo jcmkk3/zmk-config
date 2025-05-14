@@ -50,7 +50,7 @@
         plus: plus_zoom {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp EQUAL>;
+            bindings = <&kp PLUS>, <&kp LC(EQUAL)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
