@@ -12,8 +12,6 @@
 #define PASTE LC(V)
 #define UNDO LC(Z)
 #define ALL LC(A)
-#define RENM F2
-#define FIND LC(F)
 #define TOP LC(HOME)
 #define BTM LC(END)
 
@@ -99,8 +97,8 @@
         };
         edit_layer {
             bindings = <
-                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp RENM    &kp PG_UP &home     &kp UARW  &end      &kp TOP
-                &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp FIND    &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp PG_UP &home     &kp UARW  &end      &kp TOP
+                &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp F5      &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
                           &kp CUT   &copy     &paste                          &bspc     &kp DARW  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
