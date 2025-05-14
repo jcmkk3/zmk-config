@@ -2,17 +2,19 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define ALPHAS 0
-#define EDIT 1
-#define SYMBOLS 2
-#define NUMBERS 3
+#define UPPER 1
+#define EDIT 2
+#define SYMBOLS 3
+#define NUMBERS 4
+#define FKEYS 5
 
 #define CUT LC(X)
 #define COPY LC(C)
 #define PASTE LC(V)
 #define UNDO LC(Z)
 #define ALL LC(A)
-#define RENM F2
-#define FIND LC(F)
+#define ZOOM_IN LC(EQUAL)
+#define ZOOM_OUT LC(MINUS)
 #define TOP LC(HOME)
 #define BTM LC(END)
 
@@ -50,11 +52,29 @@
         };
     };
 
+    macros {
+        upper: upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &mo UPPER>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &mo UPPER>
+                ;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        number_tri_layer {
             if-layers = <EDIT SYMBOLS>;
             then-layer = <NUMBERS>;
+        };
+        fkeys_tri_layer {
+            if-layers = <UPPER SYMBOLS>;
+            then-layer = <FKEYS>;
         };
     };
 
@@ -84,34 +104,50 @@
         compatible = "zmk,keymap";
         alphas_layer {
             bindings = <
-                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
-                &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp H     &kp E     &kp I     &kp A
-                          &kp W     &kp M     &kp G                           &kp D     &kp COMMA &kp DOT
-                                    &mo EDIT  &kp SPACE             &kp LSHFT &mo SYMBOLS
+                &kp X     &kp C     &kp L     &kp F     &kp P        &kp K     &kp Y     &kp O     &kp U     &kp QUOT
+                &kp R     &kp S     &kp N     &kp T     &kp B        &kp J     &kp H     &kp E     &kp I     &kp A
+                          &kp W     &kp M     &kp G                            &kp D     &kp COMMA &kp DOT
+                                    &mo EDIT  &kp SPACE              &upper    &mo SYMBOLS
+            >;
+        };
+        upper_layer {
+            bindings = <
+                &trans    &trans    &trans    &trans    &trans       &trans    &trans    &trans    &trans    &trans
+                &trans    &trans    &trans    &trans    &trans       &trans    &trans    &trans    &trans    &trans
+                          &trans    &trans    &trans                           &trans    &trans    &trans
+                                    &trans    &trans                 &trans    &trans
             >;
         };
         edit_layer {
             bindings = <
-                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp RENM    &kp PG_UP &home     &kp UARW  &end      &kp TOP
-                &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp FIND    &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
-                          &kp CUT   &copy     &paste                          &bspc     &kp DARW  &kp TAB
-                                              &trans    &trans      &trans    &trans
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp ZOOM_IN  &kp PG_UP &home     &kp UARW  &end      &kp TOP
+                &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp ZOOM_OUT &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
+                          &kp CUT   &copy     &paste                           &bspc     &kp DARW  &kp TAB
+                                              &trans    &trans       &trans    &trans
             >;
         };
         symbols_layer {
             bindings = <
-                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp UNDER &kp COLON &kp DQT
-                &kp QMARK &kp EQUAL &kp PLUS  &kp ASTRK &kp GRAVE   &kp TILDE &kp LALT  &kp LSHFT &kp LCTRL &kp LGUI
-                          &kp BSLH  &kp MINUS &kp FSLH                        &kp PIPE  &kp LT    &kp GT
-                                              &trans    &trans      &trans    &trans
+                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS  &kp UNDER &kp COLON &kp DQT
+                &kp QMARK &kp EQUAL &kp PLUS  &kp ASTRK &kp GRAVE    &kp TILDE &kp LALT  &kp LSHFT &kp LCTRL &kp LGUI
+                          &kp BSLH  &kp MINUS &kp FSLH                         &kp PIPE  &kp LT    &kp GT
+                                              &trans    &trans       &trans    &trans
             >;
         };
         numbers_layer {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans
-                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                          &trans    &trans    &trans                          &trans    &kp COMMA &kp DOT
-                                              &trans    &trans      &trans    &trans
+                &trans    &trans    &trans    &trans    &trans       &trans    &trans    &trans    &trans    &trans
+                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+                          &trans    &trans    &trans                           &trans    &kp COMMA &kp DOT
+                                              &trans    &trans       &trans    &trans
+            >;
+        };
+        fkeys_layer {
+            bindings = <
+                &kp F11   &kp F12   &kp F13   &kp F14   &kp F15      &kp F16   &kp F17   &kp F18   &kp F19   &kp F20
+                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
+                          &none     &none     &none                            &none     &none     &none
+                                              &trans    &trans       &trans    &trans
             >;
         };
     };
