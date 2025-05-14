@@ -21,12 +21,12 @@ layers:
   -    [edit, space, upper, sym]
   edit:
   - [all, undo, esc, del, f2, pg🠕, home, 🠕, end, top]
-  - [gui, ctrl, shft, alt, f5, pg🠗, 🠔, entr, ➝, btm]
+  - [gui, shft, ctrl, alt, f5, pg🠗, 🠔, entr, ➝, btm]
   - [cut, copy, paste, bksp, 🠗, tab]
   - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
   symbols:
   - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
-  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
+  - ['?', '=', '+', '*', '`', '~', alt, ctrl, shft, gui]
   - ['\', '-', '/', '|', <, '>']
   - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
   numbers:
