@@ -1,3 +1,4 @@
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -5,26 +6,19 @@
 #define EDIT 1
 #define SYMBOLS 2
 #define NUMBERS 3
-#define FKEYS 4
 
 #define CUT LC(X)
 #define COPY LC(C)
 #define PASTE LC(V)
 #define UNDO LC(Z)
 #define ALL LC(A)
-#define ZOOM_IN LC(EQUAL)
-#define ZOOM_OUT LC(MINUS)
+#define RENM F2
+#define FIND LC(F)
 #define TOP LC(HOME)
 #define BTM LC(END)
 
 / {
     behaviors {
-        symbols: symbols_fkeys {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mo SYMBOLS>, <&mo FKEYS>;
-            mods = <(MOD_RSFT)>;
-        };
         copy: copy_cua {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -55,6 +49,12 @@
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        plus: plus_zoom {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp EQUAL>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     conditional_layers {
@@ -79,54 +79,46 @@
         z { key-positions = <20 21>; bindings = <&kp Z>; layers = <ALPHAS>; };
 
         semi { key-positions = <24 25>; bindings = <&kp SEMI>; layers = <ALPHAS>; };
+        lpar { key-positions = <3 13>; bindings = <&kp LPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        rpar { key-positions = <6 16>; bindings = <&kp RPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        lbrc { key-positions = <2 12>; bindings = <&kp LBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        rbrc { key-positions = <7 17>; bindings = <&kp RBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
         lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
         rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        lbrc { key-positions = <3 13>; bindings = <&kp LBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rbrc { key-positions = <6 16>; bindings = <&kp RBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
     };
 
     keymap {
         compatible = "zmk,keymap";
         alphas_layer {
             bindings = <
-                &kp X     &kp C     &kp L     &kp F     &kp P        &kp K     &kp Y     &kp O     &kp U     &kp QUOT
-                &kp R     &kp S     &kp N     &kp T     &kp B        &kp J     &kp H     &kp E     &kp I     &kp A
-                          &kp W     &kp M     &kp G                            &kp D     &kp COMMA &kp DOT
-                                    &mo EDIT  &kp SPACE              &kp RSHFT &symbols
+                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
+                &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp H     &kp E     &kp I     &kp A
+                          &kp W     &kp M     &kp G                           &kp D     &kp COMMA &kp DOT
+                                    &mo EDIT  &kp SPACE             &kp LSHFT &mo SYMBOLS
             >;
         };
         edit_layer {
             bindings = <
-                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp ZOOM_IN  &kp PG_UP &home     &kp UARW  &end      &kp TOP
-                &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp ZOOM_OUT &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
-                          &kp CUT   &copy     &paste                           &bspc     &kp DARW  &kp TAB
-                                              &trans    &trans       &trans    &trans
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp RENM    &kp PG_UP &home     &kp UARW  &end      &kp TOP
+                &kp LGUI  &kp LCTRL &kp LSHFT &kp LALT  &kp FIND    &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BTM
+                          &kp CUT   &copy     &paste                          &bspc     &kp DARW  &kp TAB
+                                              &trans    &trans      &trans    &trans
             >;
         };
         symbols_layer {
             bindings = <
-                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS  &kp UNDER &kp COLON &kp DQT
-                &kp QMARK &kp EQUAL &kp PLUS  &kp ASTRK &kp GRAVE    &kp TILDE &kp LALT  &kp LSHFT &kp LCTRL &kp LGUI
-                          &kp BSLH  &kp MINUS &kp FSLH                         &kp PIPE  &kp LT    &kp GT
-                                              &trans    &trans       &mo FKEYS &trans
+                &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp UNDER &kp COLON &kp DQT
+                &kp QMARK &kp EQUAL &plus     &kp ASTRK &kp GRAVE   &kp TILDE &kp LALT  &kp LSHFT &kp LCTRL &kp LGUI
+                          &kp BSLH  &kp MINUS &kp FSLH                        &kp PIPE  &kp LT    &kp GT
+                                              &trans    &trans      &trans    &trans
             >;
         };
         numbers_layer {
             bindings = <
-                &trans    &trans    &trans    &trans    &trans       &trans    &trans    &trans    &trans    &trans
-                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-                          &trans    &trans    &trans                           &trans    &kp COMMA &kp DOT
-                                              &trans    &trans       &trans    &trans
-            >;
-        };
-        fkeys_layer {
-            bindings = <
-                &kp F11   &kp F12   &kp F13   &kp F14   &kp F15      &kp F16   &kp F17   &kp F18   &kp F19   &kp F20
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
-                          &none     &none     &none                            &none     &none     &none
-                                              &trans    &trans       &trans    &trans
+                &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans
+                &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+                          &trans    &trans    &trans                          &trans    &kp COMMA &kp DOT
+                                              &trans    &trans      &trans    &trans
             >;
         };
     };

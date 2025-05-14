@@ -19,6 +19,16 @@ layers:
   - [r, s, n, t, b, j, h, e, i, a]
   -    [w, m, g,       d, ',', "."]
   -    [edit, space, upper, sym]
+  edit:
+  - [all, undo, esc, del, f2, pg🠕, home, 🠕, end, top]
+  - [gui, ctrl, shft, alt, f5, pg🠗, 🠔, entr, ➝, btm]
+  - [cut, copy, paste, bksp, 🠗, tab]
+  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
+  symbols:
+  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
+  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
+  - ['\', '-', '/', '|', <, '>']
+  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
   numbers:
   - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
      {t: ^, type: trans}, {t: '&', type: trans}, {t: '_', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
@@ -26,26 +36,6 @@ layers:
   - [{t: '\', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
      {t: '|', type: trans}, ',', "."]
   - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
-  edit:
-  - [all, undo, esc, del, zoom+, pg🠕, home, 🠕, end, top]
-  - [gui, ctrl, shft, alt, zoom-, pg🠗, 🠔, entr, ➝, btm]
-  - [cut, copy, paste, bksp, 🠗, tab]
-  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
-  f-keys:
-  - [f11, f12, f13, f14, f15, f16, f17, f18, f19, f20]
-  - [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10]
-  - ['', '', '', '', '', '']
-  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: held}, {t: 'sym', type: held}]
-  symbols:
-  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
-  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
-  - ['\', '-', '/', '|', <, '>']
-  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
-  "brackets (alphas/symbols/numbers)":
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '', '', '', '', '']
-  - ['', '', '', '', '', '']
-  - ['', '', '', '']
 combos:
 - p: [1, 2]
   k: v
@@ -59,21 +49,21 @@ combos:
 - p: [24, 25]
   k: ";"
   l: [alphas]
+- p: [3, 13]
+  k: '('
+  draw_separate: true
+- p: [6, 16]
+  k: ')'
+  draw_separate: true
+- p: [2, 12]
+  k: '{'
+  draw_separate: true
+- p: [7, 17]
+  k: '}'
+  draw_separate: true
 - p: [1, 11]
   k: '['
-  l: ["brackets (alphas/symbols/numbers)"]
+  draw_separate: true
 - p: [8, 18]
   k: ']'
-  l: ["brackets (alphas/symbols/numbers)"]
-- p: [2, 12]
-  k: (
-  l: ["brackets (alphas/symbols/numbers)"]
-- p: [7, 17]
-  k: )
-  l: ["brackets (alphas/symbols/numbers)"]
-- p: [3, 13]
-  k: '{'
-  l: ["brackets (alphas/symbols/numbers)"]
-- p: [6, 16]
-  k: '}'
-  l: ["brackets (alphas/symbols/numbers)"]
+  draw_separate: true
