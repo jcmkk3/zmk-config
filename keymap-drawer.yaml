@@ -19,11 +19,6 @@ layers:
   - [r, s, n, t, b, j, h, e, i, a]
   -    [w, m, g,       d, ',', "."]
   -    [edit, space, upper, sym]
-  edit:
-  - [all, undo, esc, del, zoom+, pg🠕, home, 🠕, end, top]
-  - [gui, ctrl, shft, alt, zoom-, pg🠗, 🠔, entr, ➝, btm]
-  - [cut, copy, paste, bksp, 🠗, tab]
-  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
   numbers:
   - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
      {t: ^, type: trans}, {t: '&', type: trans}, {t: '_', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
@@ -31,21 +26,26 @@ layers:
   - [{t: '\', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
      {t: '|', type: trans}, ',', "."]
   - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
-  symbols:
-  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
-  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
-  - ['\', '-', '/', '|', <, '>']
-  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
+  edit:
+  - [all, undo, esc, del, zoom+, pg🠕, home, 🠕, end, top]
+  - [gui, ctrl, shft, alt, zoom-, pg🠗, 🠔, entr, ➝, btm]
+  - [cut, copy, paste, bksp, 🠗, tab]
+  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
   f-keys:
   - [f11, f12, f13, f14, f15, f16, f17, f18, f19, f20]
   - [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10]
   - ['', '', '', '', '', '']
   - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: held}, {t: 'sym', type: held}]
+  symbols:
+  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
+  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
+  - ['\', '-', '/', '|', <, '>']
+  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
   "brackets (alphas/symbols/numbers)":
   - ['', '', '', '', '', '', '', '', '', '']
   - ['', '', '', '', '', '', '', '', '', '']
   - ['', '', '', '', '', '']
-  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
+  - ['', '', '', '']
 combos:
 - p: [1, 2]
   k: v
