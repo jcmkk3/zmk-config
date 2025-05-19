@@ -15,25 +15,25 @@ draw_config:
     footer_text: ""
 layers:
   alphas:
-  - [x, c, l, f, p, k, y, o, u, "'"]
+  - [x, c, l, f, p, k, y, o, u, {t: "'", s: '"'}]
   - [r, s, n, t, b, j, h, e, i, a]
-  -    [w, m, g,       d, ',', "."]
-  -    [edit, space, upper, sym]
+  - [w, m, g, d, ',', '.']
+  - [edit, space, upper, sym]
   edit:
   - [all, undo, esc, del, f2, pg🠕, home, 🠕, end, top]
-  - [gui, ctrl, shft, alt, f5, pg🠗, 🠔, entr, ➝, btm]
+  - [gui, shft, ctrl, alt, f5, pg🠗, 🠔, entr, ➝, btm]
   - [cut, copy, paste, bksp, 🠗, tab]
   - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
   symbols:
-  - ['!', '@', '#', $, '%', ^, '&', '_', ':', '"']
-  - ['?', '=', '+', '*', '`', '~', alt, shft, ctrl, gui]
-  - ['\', '-', '/', '|', <, '>']
+  - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
+  - ['~', '=', '+', '*', '`', '\', alt, ctrl, shft, gui]
+  - ['_', '-', '/', '|', <, '>']
   - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
   numbers:
   - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
-     {t: ^, type: trans}, {t: '&', type: trans}, {t: '_', type: trans}, {t: ':', type: trans}, {t: '"', type: trans}]
+     {t: ^, type: trans}, {t: '&', type: trans}, {t: ';', type: trans}, {t: ':', type: trans}, {t: '?', type: trans}]
   - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-  - [{t: '\', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
+  - [{t: '_', type: trans}, {t: '-', type: trans}, {t: '/', type: trans},
      {t: '|', type: trans}, ',', "."]
   - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
 combos:
@@ -45,9 +45,6 @@ combos:
   l: [alphas]
 - p: [20, 21]
   k: z
-  l: [alphas]
-- p: [24, 25]
-  k: ";"
   l: [alphas]
 - p: [3, 13]
   k: '('
