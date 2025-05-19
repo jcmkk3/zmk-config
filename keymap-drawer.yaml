@@ -15,10 +15,10 @@ draw_config:
     footer_text: ""
 layers:
   alphas:
-  - [x, c, l, f, p, k, y, o, u, "'"]
+  - [x, c, l, f, p, k, y, o, u, {t: "'", s: '"'}]
   - [r, s, n, t, b, j, h, e, i, a]
-  -    [w, m, g,       d, ',', "."]
-  -    [edit, space, upper, sym]
+  - [w, m, g, d, {t: ',', s: "<"}, {t: ".", s: ">"}]
+  - [edit, space, upper, sym]
   edit:
   - [all, undo, esc, del, f2, pg🠕, home, 🠕, end, top]
   - [gui, shft, ctrl, alt, f5, pg🠗, 🠔, entr, ➝, btm]
