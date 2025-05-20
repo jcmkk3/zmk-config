@@ -111,7 +111,7 @@
         compatible = "zmk,keymap";
         alphas_layer {
             bindings = <
-                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
+                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp APOS
                 &lm M0 R  &lm M1 S  &lm M2 N  &lm M3 T  &kp B       &kp J     &rm M3 H  &rm M2 E  &rm M1 I  &rm M0 A
                           &kp W     &kp M     &kp G                           &kp D     &kp COMMA &kp DOT
                                               &mo EDIT  &kp SPACE   &kp LSHFT &mo SYMBOLS
@@ -119,16 +119,16 @@
         };
         edit_layer {
             bindings = <
-                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp PG_UP &home     &kp UARW  &end      &kp TOP
-                &kp M0    &kp M1    &kp M2    &kp M3    &kp F5      &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BOTTOM
-                          &kp CUT   &kp COPY  &kp PASTE                       &bspc     &kp DARW  &kp TAB
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp PG_UP &home     &kp UP    &end      &kp TOP
+                &kp M0    &kp M1    &kp M2    &kp M3    &kp F5      &kp PG_DN &kp LEFT  &kp ENTER &kp RIGHT &kp BOTTOM
+                          &kp CUT   &kp COPY  &kp PASTE                       &bspc     &kp DOWN  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
         };
         symbols_layer {
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp QMARK
-                &kp TILDE &kp EQUAL &plus     &kp ASTRK &kp GRAVE   &kp BSLH  &kp M3    &kp M2    &kp M1    &kp M0
+                &kp TILDE &kp EQUAL &plus     &kp STAR  &kp GRAVE   &kp BSLH  &kp M3    &kp M2    &kp M1    &kp M0
                           &kp UNDER &kp MINUS &kp FSLH                        &kp PIPE  &kp LT    &kp GT
                                               &trans    &trans      &trans    &trans
             >;
