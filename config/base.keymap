@@ -1,12 +1,19 @@
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+/* Layers */
 #define ALPHAS 0
 #define EDIT 1
 #define SYMBOLS 2
 #define NUMBERS 3
 
+/* Mod Sequence (Outer to Inner) */
+#define M0 LGUI
+#define M1 LSHFT
+#define M2 LCTRL
+#define M3 LALT
+
+/* Shortcuts */
 #define CUT LC(X)
 #define COPY LC(C)
 #define PASTE LC(V)
@@ -76,7 +83,7 @@
         compatible = "zmk,keymap";
         alphas_layer {
             bindings = <
-                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp QUOT
+                &kp X     &kp C     &kp L     &kp F     &kp P       &kp K     &kp Y     &kp O     &kp U     &kp APOS
                 &kp R     &kp S     &kp N     &kp T     &kp B       &kp J     &kp H     &kp E     &kp I     &kp A
                           &kp W     &kp M     &kp G                           &kp D     &kp COMMA &kp DOT
                                               &mo EDIT  &kp SPACE   &kp LSHFT &mo SYMBOLS
@@ -84,16 +91,16 @@
         };
         edit_layer {
             bindings = <
-                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp PG_UP &home     &kp UARW  &end      &kp TOP
-                &kp LGUI  &kp LSHFT &kp LCTRL &kp LALT  &kp F5      &kp PG_DN &kp LARW  &kp ENTER &kp RARW  &kp BOTTOM
-                          &kp CUT   &kp COPY  &kp PASTE                       &bspc     &kp DARW  &kp TAB
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp PG_UP &home     &kp UP    &end      &kp TOP
+                &kp M0    &kp M1    &kp M2    &kp M3    &kp F5      &kp PG_DN &kp LEFT  &kp ENTER &kp RIGHT &kp BOTTOM
+                          &kp CUT   &kp COPY  &kp PASTE                       &bspc     &kp DOWN  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
         };
         symbols_layer {
             bindings = <
                 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp SEMI  &kp COLON &kp QMARK
-                &kp TILDE &kp EQUAL &plus     &kp ASTRK &kp GRAVE   &kp BSLH  &kp LALT  &kp LCTRL &kp LSHFT &kp LGUI
+                &kp TILDE &kp EQUAL &plus     &kp STAR  &kp GRAVE   &kp BSLH  &kp M3    &kp M2    &kp M1    &kp M0
                           &kp UNDER &kp MINUS &kp FSLH                        &kp PIPE  &kp LT    &kp GT
                                               &trans    &trans      &trans    &trans
             >;
