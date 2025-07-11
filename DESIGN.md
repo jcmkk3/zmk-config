@@ -323,4 +323,5 @@ Order of mods
 Based on frequency and finger hold strength
 ### Editors
 #### Vim
+- `:wq` is a good bigram (with `q` on bottom)
 #### Emacs
