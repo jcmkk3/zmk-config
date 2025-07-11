@@ -324,4 +324,6 @@ Based on frequency and finger hold strength
 ### Editors
 #### Vim
 - `:wq` is a good bigram (with `q` on bottom)
+#### Kakoune
+- <kbd>esc</kbd> and <kbd>;</kbd> are opposite of each other (layer activation thumb and upper middle finger) and both have a function of resetting
 #### Emacs
