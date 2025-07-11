@@ -74,7 +74,7 @@
                         26  27     28  29              */
 
         v { key-positions = <1 2>; bindings = <&kp V>; layers = <ALPHAS>; };
-        q { key-positions = <2 3>; bindings = <&kp Q>; layers = <ALPHAS>; };
+        q { key-positions = <21 22>; bindings = <&kp Q>; layers = <ALPHAS>; };
         z { key-positions = <20 21>; bindings = <&kp Z>; layers = <ALPHAS>; };
 
         lbrc { key-positions = <1 11>; bindings = <&kp LBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
