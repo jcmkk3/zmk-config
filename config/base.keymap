@@ -9,14 +9,14 @@
 
 /* Mod Sequence (Outer to Inner) */
 #define M0 LGUI
-#define M1 LSHFT
-#define M2 LCTRL
+#define M1 LCTRL
+#define M2 LSHFT
 #define M3 LALT
 
 /* Shortcuts */
-#define CUT LC(X)
-#define COPY LC(C)
-#define PASTE LC(V)
+#define CUT LS(DEL)
+#define COPY LC(INS)
+#define PASTE LS(INS)
 #define UNDO LC(Z)
 #define ALL LC(A)
 #define TOP LC(HOME)
@@ -24,6 +24,12 @@
 
 / {
     behaviors {
+        paste: paste_with_values {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PASTE>, <&kp LC(LS(V))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         home: home_ignoring_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -68,15 +74,15 @@
                         26  27     28  29              */
 
         v { key-positions = <1 2>; bindings = <&kp V>; layers = <ALPHAS>; };
-        q { key-positions = <2 3>; bindings = <&kp Q>; layers = <ALPHAS>; };
         z { key-positions = <20 21>; bindings = <&kp Z>; layers = <ALPHAS>; };
+        q { key-positions = <21 22>; bindings = <&kp Q>; layers = <ALPHAS>; };
 
-        lpar { key-positions = <3 13>; bindings = <&kp LPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rpar { key-positions = <6 16>; bindings = <&kp RPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        lbrc { key-positions = <2 12>; bindings = <&kp LBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rbrc { key-positions = <7 17>; bindings = <&kp RBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        lbkt { key-positions = <1 11>; bindings = <&kp LBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
-        rbkt { key-positions = <8 18>; bindings = <&kp RBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        lbrc { key-positions = <1 11>; bindings = <&kp LBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        rbrc { key-positions = <8 18>; bindings = <&kp RBRC>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        lpar { key-positions = <2 12>; bindings = <&kp LPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        rpar { key-positions = <7 17>; bindings = <&kp RPAR>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        lbkt { key-positions = <3 13>; bindings = <&kp LBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
+        rbkt { key-positions = <6 16>; bindings = <&kp RBKT>; layers = <ALPHAS SYMBOLS NUMBERS>; };
     };
 
     keymap {
@@ -91,9 +97,9 @@
         };
         edit_layer {
             bindings = <
-                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp PG_UP &home     &kp UP    &end      &kp TOP
-                &kp M0    &kp M1    &kp M2    &kp M3    &kp F5      &kp PG_DN &kp LEFT  &kp ENTER &kp RIGHT &kp BOTTOM
-                          &kp CUT   &kp COPY  &kp PASTE                       &bspc     &kp DOWN  &kp TAB
+                &kp ALL   &kp UNDO  &kp ESC   &kp DEL   &kp F2      &kp F4    &home     &kp UP    &end      &kp TOP
+                &kp M0    &kp M1    &kp M2    &kp M3    &kp F3      &kp F5    &kp LEFT  &kp ENTER &kp RIGHT &kp BOTTOM
+                          &kp CUT   &kp COPY  &paste                          &bspc     &kp DOWN  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
         };

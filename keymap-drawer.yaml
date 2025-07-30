@@ -20,46 +20,46 @@ layers:
   - [w, m, g, d, ',', '.']
   - [edit, space, upper, sym]
   edit:
-  - [all, undo, esc, del, f2, pg🠕, home, 🠕, end, top]
-  - [gui, shft, ctrl, alt, f5, pg🠗, 🠔, entr, ➝, btm]
+  - [all, undo, esc, del, f2, f4, home, 🠕, end, top]
+  - [gui, ctrl, shft, alt, f3, f5, 🠔, entr, ➝, btm]
   - [cut, copy, paste, bksp, 🠗, tab]
-  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: trans}]
+  - [{t: edit, type: held}, {t: space, type: trans}, {t: upper, type: trans}, {t: sym, type: trans}]
   symbols:
   - ['!', '@', '#', $, '%', ^, '&', ';', ':', '?']
-  - ['~', '=', '+', '*', '`', '\', alt, ctrl, shft, gui]
+  - ['~', '=', '+', '*', '`', '\', alt, shft, ctrl, gui]
   - ['_', '-', '/', '|', <, '>']
-  - [{t: 'edit', type: trans}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
+  - [{t: edit, type: trans}, {t: space, type: trans}, {t: upper, type: trans}, {t: sym, type: held}]
   numbers:
   - [{t: '!', type: trans}, {t: '@', type: trans}, {t: '#', type: trans}, {t: $, type: trans}, {t: '%', type: trans},
      {t: ^, type: trans}, {t: '&', type: trans}, {t: ';', type: trans}, {t: ':', type: trans}, {t: '?', type: trans}]
   - [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
   - [{t: '_', type: trans}, {t: '-', type: trans}, {t: '/', type: trans}, {t: '|', type: trans}, ',', '.']
-  - [{t: 'edit', type: held}, {t: 'space', type: trans}, {t: 'upper', type: trans}, {t: 'sym', type: held}]
+  - [{t: edit, type: held}, {t: space, type: trans}, {t: upper, type: trans}, {t: sym, type: held}]
 combos:
 - p: [1, 2]
   k: v
   l: [alphas]
-- p: [2, 3]
-  k: q
-  l: [alphas]
 - p: [20, 21]
   k: z
   l: [alphas]
-- p: [3, 13]
-  k: '('
-  draw_separate: true
-- p: [6, 16]
-  k: ')'
-  draw_separate: true
-- p: [2, 12]
+- p: [21, 22]
+  k: q
+  l: [alphas]
+- p: [1, 11]
   k: '{'
   draw_separate: true
-- p: [7, 17]
+- p: [8, 18]
   k: '}'
   draw_separate: true
-- p: [1, 11]
+- p: [2, 12]
+  k: '('
+  draw_separate: true
+- p: [7, 17]
+  k: ')'
+  draw_separate: true
+- p: [3, 13]
   k: '['
   draw_separate: true
-- p: [8, 18]
+- p: [6, 16]
   k: ']'
   draw_separate: true
