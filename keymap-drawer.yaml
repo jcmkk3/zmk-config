@@ -20,7 +20,7 @@ layers:
   - [w, m, g, d, ',', '.']
   - [edit, space, upper, sym]
   edit:
-  - [all, undo, esc, del, f2, f4, home, 🠕, end, top]
+  - [all, esc, undo, del, f2, f4, home, 🠕, end, top]
   - [gui, ctrl, shft, alt, f3, f5, 🠔, entr, ➝, btm]
   - [cut, copy, paste, bksp, 🠗, tab]
   - [{t: edit, type: held}, {t: space, type: trans}, {t: upper, type: trans}, {t: sym, type: trans}]
