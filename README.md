@@ -6,4 +6,4 @@ This repo contains the config for my keyboard's firmware and builds it!
 
 *Generated with [keymap-drawer](https://github.com/caksoylar/keymap-drawer)*
  
-![](images/keymap.svg)
+![](keymap-drawer.svg)
