@@ -93,7 +93,7 @@
             bindings = <
                 &kp ALL   &kp ESC   &kp UNDO  &kp DEL   &kp F2      &kp F4    &home     &kp UP    &end      &kp TOP
                 &kp M0    &kp M1    &kp M2    &kp M3    &kp F3      &kp F5    &kp LEFT  &kp ENTER &kp RIGHT &kp BOTTOM
-                          &kp CUT   &kp COPY  &paste                          &bspc     &kp DOWN  &kp TAB
+                          &kp CUT   &kp COPY  &kp PASTE                       &bspc     &kp DOWN  &kp TAB
                                               &trans    &trans      &trans    &trans
             >;
         };
