@@ -14,9 +14,9 @@
 #define M3 LALT
 
 /* Shortcuts */
-#define CUT LS(DEL)
-#define COPY LC(INS)
-#define PASTE LS(INS)
+#define CUT LC(X)
+#define COPY LC(C)
+#define PASTE LS(V)
 #define UNDO LC(Z)
 #define ALL LC(A)
 #define TOP LC(HOME)
@@ -24,12 +24,6 @@
 
 / {
     behaviors {
-        paste: paste_with_values {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PASTE>, <&kp LC(LS(V))>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
         home: home_ignoring_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
