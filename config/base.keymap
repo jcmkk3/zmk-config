@@ -16,7 +16,7 @@
 /* Shortcuts */
 #define CUT LC(X)
 #define COPY LC(C)
-#define PASTE LS(V)
+#define PASTE LC(V)
 #define UNDO LC(Z)
 #define ALL LC(A)
 #define TOP LC(HOME)
